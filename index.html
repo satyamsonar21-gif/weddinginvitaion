@@ -1420,126 +1420,16 @@
     .venue-residence-link:hover { color: #FFFFFF; border-bottom-color: #FFFFFF; }
 
     /* ==========================================================================
-       11. SECTION 8: DRESS CODE & TACTILE SILK-VELVET FABRIC SWATCHES
+       11. SECTION 8: WITH LOVE FROM OUR FAMILIES & SACRED BLESSINGS (SWAGATOTSUK)
        ========================================================================== */
-    .dresscode-section { padding: 18px 22px 54px; text-align: center; }
-    .dresscode-heading { margin: 6px 0 16px; }
-
-    .dresscode-note {
-      max-width: 344px;
-      margin: 0 auto 28px;
-      font-family: var(--font-serif);
-      font-size: 16px;
-      line-height: 1.74;
-      color: var(--ink-primary);
-    }
-
-    .swatches-row {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 12px;
-      margin: 0 auto;
-    }
-
-    .swatch-btn {
-      background: none;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 9px;
-      width: 62px;
-      padding: 4px 0;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .silk-swatch {
+    .families-section {
       position: relative;
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      background-color: var(--swatch-hex);
-      background-image:
-        radial-gradient(circle at 30% 24%, rgba(255, 255, 255, 0.56) 0%, rgba(255, 255, 255, 0.16) 24%, transparent 56%),
-        radial-gradient(circle at 74% 78%, rgba(12, 20, 24, 0.38) 0%, transparent 58%),
-        linear-gradient(135deg, rgba(255, 255, 255, 0.20) 0%, transparent 50%, rgba(0, 0, 0, 0.22) 100%);
-      border: 1.5px solid rgba(184, 141, 61, 0.82);
-      box-shadow:
-        0 6px 15px rgba(14, 34, 42, 0.20),
-        inset 0 0 0 3px rgba(251, 246, 236, 0.24),
-        inset 0 2px 5px rgba(255, 255, 255, 0.44);
-      transition: transform 0.35s var(--ease-royal), box-shadow 0.35s ease;
-    }
-
-    .swatch-btn.is-active .silk-swatch,
-    .swatch-btn:hover .silk-swatch {
-      transform: translateY(-3px) scale(1.07);
-      box-shadow:
-        0 10px 22px rgba(14, 34, 42, 0.26),
-        0 0 0 3px rgba(223, 190, 116, 0.42),
-        inset 0 2px 6px rgba(255, 255, 255, 0.50);
-    }
-
-    .swatch-name {
-      font-family: var(--font-label);
-      font-weight: 600;
-      font-size: 8.2px;
-      line-height: 1.38;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--ink-warm);
-    }
-
-    .swatch-pairing-caption {
-      margin: 22px auto 0;
-      min-height: 24px;
-      max-width: 340px;
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 15px;
-      color: var(--peacock-royal);
-    }
-
-    /* ==========================================================================
-       12. SECTION 9: ENGRAVED LETTERPRESS RSVP & BLESSINGS SHEET
-       ========================================================================== */
-    .rsvp-section { position: relative; padding: 18px 22px 56px; }
-    .rsvp-heading { margin: 6px 0 8px; }
-
-    .rsvp-sub {
+      padding: 18px 22px 54px;
       text-align: center;
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 15.5px;
-      color: var(--ink-warm);
-      margin-bottom: 24px;
+      overflow: hidden;
     }
 
-    .rsvp-sheet {
-      position: relative;
-      padding: 32px 22px 30px;
-      border-top: 1.2px solid rgba(184, 141, 61, 0.68);
-      border-bottom: 1.2px solid rgba(184, 141, 61, 0.68);
-      background:
-        radial-gradient(ellipse 92% 84% at 50% 50%, rgba(255, 253, 248, 0.72) 0%, rgba(246, 213, 222, 0.16) 100%);
-    }
-
-    .rsvp-sheet::before,
-    .rsvp-sheet::after {
-      content: "";
-      position: absolute;
-      left: 14px;
-      right: 14px;
-      height: 1px;
-      background: rgba(184, 141, 61, 0.34);
-      pointer-events: none;
-    }
-    .rsvp-sheet::before { top: 5px; }
-    .rsvp-sheet::after { bottom: 5px; }
-
-    #rsvpPetalsCanvas {
+    #blessingsCanvas {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -1548,232 +1438,357 @@
       z-index: 6;
     }
 
-    .rsvp-field { margin-bottom: 20px; text-align: left; }
+    .families-heading {
+      margin: 6px 0 12px;
+    }
 
-    .rsvp-field-label {
+    .heritage-peacock-crest {
+      width: 176px;
+      height: auto;
+      margin: 4px auto 12px;
       display: block;
-      font-family: var(--font-label);
+    }
+
+    .auspicious-shloka {
+      font-family: var(--font-serif);
       font-weight: 600;
-      font-size: 9px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold-deep);
-      margin-bottom: 8px;
-    }
-
-    .rsvp-line-input,
-    .rsvp-line-textarea {
-      width: 100%;
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid rgba(140, 99, 30, 0.50);
-      padding: 8px 2px;
-      font-family: var(--font-serif);
-      font-size: 16.5px;
-      color: var(--peacock-deep);
-      border-radius: 0;
-      transition: border-color 0.3s ease;
-    }
-
-    .rsvp-line-textarea { resize: vertical; line-height: 1.5; }
-
-    .rsvp-line-input::placeholder,
-    .rsvp-line-textarea::placeholder {
-      color: rgba(106, 78, 59, 0.54);
-      font-style: italic;
-    }
-
-    .rsvp-line-input:focus,
-    .rsvp-line-textarea:focus {
-      outline: none;
-      border-bottom-color: var(--pigment-rani);
-    }
-
-    .rsvp-seal-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-
-    .rsvp-seal-opt {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 11px 10px;
-      background: rgba(255, 253, 248, 0.45);
-      border: 1px solid rgba(184, 141, 61, 0.48);
-      font-family: var(--font-serif);
-      font-size: 15px;
-      color: var(--peacock-deep);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .rsvp-seal-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      border: 1px solid var(--gold-mid);
-      transition: background-color 0.3s ease, border-color 0.3s ease;
-    }
-
-    .rsvp-seal-opt.is-selected {
-      border-color: var(--pigment-rani);
-      background: rgba(180, 56, 96, 0.09);
+      font-size: 14px;
+      letter-spacing: 0.14em;
       color: var(--pigment-rani);
+      margin-bottom: 10px;
     }
 
-    .rsvp-seal-opt.is-selected .rsvp-seal-dot {
-      background: var(--pigment-rani);
-      border-color: var(--pigment-rani);
-    }
-
-    .rsvp-guests-wrap { transition: opacity 0.35s ease; }
-    .rsvp-guests-wrap.is-dimmed { opacity: 0.38; pointer-events: none; }
-
-    .rsvp-count-row { display: flex; gap: 8px; }
-
-    .rsvp-count-btn {
-      flex: 1;
-      height: 36px;
-      background: rgba(255, 253, 248, 0.45);
-      border: 1px solid rgba(184, 141, 61, 0.48);
+    .families-intro-note {
+      max-width: 342px;
+      margin: 0 auto 24px;
       font-family: var(--font-serif);
-      font-size: 16px;
-      color: var(--peacock-deep);
-      cursor: pointer;
-      transition: all 0.28s ease;
+      font-size: 15.5px;
+      line-height: 1.74;
+      color: var(--ink-primary);
     }
 
-    .rsvp-count-btn.is-selected {
-      background: var(--peacock-deep);
-      border-color: var(--peacock-deep);
-      color: var(--gold-highlight);
-    }
-
-    .rsvp-events-list { display: flex; flex-direction: column; gap: 9px; }
-
-    .rsvp-event-check {
-      display: flex;
+    .families-parivar-grid {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
       align-items: center;
-      gap: 10px;
-      padding: 9px 12px;
-      background: rgba(255, 253, 248, 0.45);
-      border: 1px solid rgba(184, 141, 61, 0.44);
-      cursor: pointer;
-      transition: border-color 0.3s ease, background-color 0.3s ease;
-      user-select: none;
-      -webkit-tap-highlight-color: transparent;
+      gap: 14px;
+      max-width: 368px;
+      margin: 0 auto 24px;
+      padding: 18px 14px;
+      border-top: 1px solid rgba(184, 141, 61, 0.55);
+      border-bottom: 1px solid rgba(184, 141, 61, 0.55);
+      background: radial-gradient(ellipse 90% 80% at 50% 50%, rgba(255, 253, 248, 0.72) 0%, rgba(246, 232, 204, 0.24) 100%);
     }
 
-    .rsvp-event-check input { position: absolute; opacity: 0; pointer-events: none; }
-
-    .rsvp-check-diamond {
-      width: 11px;
-      height: 11px;
-      flex-shrink: 0;
-      border: 1px solid var(--gold-mid);
-      transform: rotate(45deg);
-      transition: all 0.3s ease;
+    .families-parivar-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
     }
 
-    .rsvp-event-check.is-checked {
-      border-color: var(--pigment-rani);
-      background: rgba(180, 56, 96, 0.08);
+    .parivar-divider-line {
+      width: 1px;
+      height: 62px;
+      background: linear-gradient(180deg, transparent 0%, rgba(184, 141, 61, 0.65) 50%, transparent 100%);
     }
 
-    .rsvp-event-check.is-checked .rsvp-check-diamond {
-      background: var(--pigment-rani);
-      border-color: var(--gold-bright);
-      box-shadow: 0 0 0 2px rgba(180, 56, 96, 0.16);
-    }
-
-    .rsvp-event-check-text {
-      font-family: var(--font-serif);
-      font-size: 15px;
-      color: var(--peacock-royal);
-      line-height: 1.3;
-    }
-
-    .rsvp-event-check-meta {
-      margin-left: auto;
+    .parivar-role {
       font-family: var(--font-label);
       font-weight: 600;
       font-size: 8.5px;
-      letter-spacing: 0.14em;
-      color: var(--gold-deep);
+      letter-spacing: 0.2em;
       text-transform: uppercase;
+      color: var(--pigment-rani);
     }
 
-    .rsvp-error-msg {
-      min-height: 18px;
-      margin-bottom: 10px;
+    .parivar-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 17.5px;
+      line-height: 1.28;
+      color: var(--peacock-deep);
+    }
+
+    .parivar-sub {
       font-family: var(--font-serif);
       font-style: italic;
-      font-size: 14px;
-      color: var(--crimson-seal);
+      font-size: 13px;
+      color: var(--ink-warm);
+    }
+
+    .hospitality-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 368px;
+      margin: 0 auto 28px;
+    }
+
+    .hospitality-item {
+      padding: 13px 16px;
+      border: 1px solid rgba(184, 141, 61, 0.42);
+      background: rgba(255, 253, 248, 0.64);
       text-align: center;
     }
 
-    .rsvp-submit-btn {
-      width: 100%;
-      padding: 14px 20px;
+    .hospitality-item-title {
+      font-family: var(--font-label);
+      font-weight: 600;
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--peacock-royal);
+      margin-bottom: 5px;
+    }
+
+    .hospitality-item-text {
+      font-family: var(--font-serif);
+      font-size: 14.2px;
+      line-height: 1.58;
+      color: var(--ink-warm);
+    }
+
+    .blessing-ritual-box {
+      position: relative;
+      z-index: 3;
+      max-width: 356px;
+      margin: 0 auto;
+    }
+
+    .blessing-shower-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 22px;
       border: 1px solid var(--gold-mid);
       background: linear-gradient(135deg, #0E2730 0%, #14505B 55%, #0E2730 100%);
       color: var(--gold-highlight);
       font-family: var(--font-label);
       font-weight: 600;
-      font-size: 10px;
-      letter-spacing: 0.25em;
+      font-size: 9.5px;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       cursor: pointer;
-      transition: filter 0.3s ease;
+      box-shadow: 0 8px 22px rgba(14, 39, 48, 0.20);
+      transition: transform 0.28s var(--ease-royal), filter 0.3s ease, box-shadow 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
     }
 
-    .rsvp-submit-btn:hover { filter: brightness(1.14); }
+    .blessing-shower-btn:hover,
+    .blessing-shower-btn:focus-visible {
+      filter: brightness(1.12);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(14, 39, 48, 0.28);
+      outline: none;
+    }
 
-    .rsvp-confirmation { display: none; text-align: center; padding: 16px 8px; }
-    .rsvp-confirmation.is-visible { display: block; }
+    .blessing-shower-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
 
-    .rsvp-thanks-title {
-      font-family: var(--font-display);
+    .blessing-whisper {
+      margin-top: 13px;
+      font-family: var(--font-serif);
       font-style: italic;
+      font-size: 14.5px;
+      line-height: 1.55;
+      color: var(--peacock-royal);
+      min-height: 24px;
+    }
+
+    .blessing-counter-line {
+      margin-top: 6px;
+      font-family: var(--font-label);
       font-weight: 600;
-      font-size: 27px;
+      font-size: 8.8px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--pigment-rani);
+      min-height: 16px;
+    }
+
+    /* ==========================================================================
+       12. SECTION 9: SAPTAPADI — THE SEVEN SACRED VOWS KEEPSAKE FOLIO
+       ========================================================================== */
+    .vows-section {
+      position: relative;
+      padding: 18px 22px 56px;
+      text-align: center;
+    }
+
+    .vows-heading { margin: 6px 0 8px; }
+
+    .vows-sub {
+      text-align: center;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 15px;
+      color: var(--ink-warm);
+      max-width: 328px;
+      margin: 0 auto 24px;
+      line-height: 1.56;
+    }
+
+    .vows-folio {
+      position: relative;
+      padding: 28px 20px 26px;
+      border: 1px solid rgba(184, 141, 61, 0.65);
+      background:
+        radial-gradient(ellipse 92% 76% at 50% 0%, rgba(252, 226, 184, 0.52) 0%, transparent 66%),
+        radial-gradient(ellipse 88% 74% at 50% 100%, rgba(246, 210, 222, 0.36) 0%, transparent 70%),
+        linear-gradient(180deg, rgba(255, 253, 248, 0.88) 0%, rgba(250, 242, 227, 0.82) 100%);
+      box-shadow: 0 14px 36px rgba(14, 39, 48, 0.08);
+    }
+
+    .vows-folio::before {
+      content: "";
+      position: absolute;
+      inset: 6px;
+      border: 1px solid rgba(184, 141, 61, 0.34);
+      pointer-events: none;
+    }
+
+    .vows-steps-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 22px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .vow-step-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(184, 141, 61, 0.62);
+      background: rgba(255, 253, 248, 0.72);
+      font-family: var(--font-label);
+      font-weight: 600;
+      font-size: 11px;
+      color: var(--gold-deep);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s var(--ease-royal);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .vow-step-btn:hover,
+    .vow-step-btn:focus-visible {
+      border-color: var(--pigment-rani);
+      color: var(--pigment-rani);
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .vow-step-btn.is-active {
+      background: linear-gradient(135deg, #0E2730 0%, #14505B 65%, #0E2730 100%);
+      border-color: var(--gold-bright);
+      color: var(--gold-highlight);
+      box-shadow: 0 6px 14px rgba(14, 39, 48, 0.24), 0 0 0 2px rgba(223, 190, 116, 0.35);
+      transform: scale(1.08);
+    }
+
+    .vow-stage {
+      position: relative;
+      z-index: 2;
+      min-height: 178px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 6px 6px;
+      transition: opacity 0.28s ease, transform 0.28s ease;
+    }
+
+    .vow-stage.is-fading {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+
+    .vow-step-kicker {
+      font-family: var(--font-label);
+      font-weight: 600;
+      font-size: 9px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--pigment-rani);
+      margin-bottom: 6px;
+    }
+
+    .vow-sanskrit {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      color: var(--gold-deep);
+      margin-bottom: 6px;
+    }
+
+    .vow-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 1.25;
       color: var(--peacock-deep);
       margin-bottom: 10px;
     }
 
-    .rsvp-thanks-detail {
-      font-family: var(--font-serif);
-      font-size: 16px;
-      line-height: 1.65;
-      color: var(--ink-primary);
-      margin-bottom: 14px;
-    }
-
-    .rsvp-saved-note {
+    .vow-promise {
       font-family: var(--font-serif);
       font-style: italic;
-      font-size: 15px;
-      color: var(--pigment-rani);
-      margin-bottom: 18px;
+      font-size: 15.2px;
+      line-height: 1.72;
+      color: var(--ink-primary);
+      max-width: 312px;
+      margin: 0 auto;
     }
 
-    .rsvp-edit-btn {
-      background: none;
-      border: none;
-      border-bottom: 1px solid rgba(140, 99, 30, 0.5);
-      padding-bottom: 2px;
+    .vows-nav-row {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(184, 141, 61, 0.34);
+    }
+
+    .vow-nav-btn {
+      background: rgba(255, 253, 248, 0.65);
+      border: 1px solid rgba(184, 141, 61, 0.56);
+      padding: 7px 14px;
+      font-family: var(--font-label);
+      font-weight: 600;
+      font-size: 8.8px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--peacock-deep);
+      cursor: pointer;
+      transition: background-color 0.28s ease, color 0.28s ease, border-color 0.28s ease;
+    }
+
+    .vow-nav-btn:hover,
+    .vow-nav-btn:focus-visible {
+      background: var(--peacock-deep);
+      border-color: var(--peacock-deep);
+      color: var(--gold-highlight);
+      outline: none;
+    }
+
+    .vow-progress-text {
       font-family: var(--font-label);
       font-weight: 600;
       font-size: 9px;
-      letter-spacing: 0.22em;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--gold-deep);
-      cursor: pointer;
     }
 
     /* ==========================================================================
@@ -1871,195 +1886,12 @@
     .closing-base-wreath svg { width: 100%; height: auto; display: block; overflow: visible; }
 
     @media (max-width: 365px) {
-      .swatches-row { gap: 7px; }
-      .swatch-btn { width: 54px; }
-      .silk-swatch { width: 42px; height: 42px; }
       .countdown-value { font-size: 31px; }
-      .rsvp-seal-grid { grid-template-columns: 1fr; }
+      .vow-step-btn { width: 30px; height: 30px; font-size: 10px; }
+      .vows-steps-row { gap: 5px; }
+      .families-parivar-grid { gap: 10px; padding: 14px 10px; }
+      .parivar-name { font-size: 15.5px; }
     }
-  
-    /* ==========================================================================
-       SECTION 8: FAMILIES & SACRED BLESSINGS (SWAGATOTSUK) STYLES
-       ========================================================================== */
-    .families-section {
-      position: relative;
-      padding: 24px 22px 58px;
-      text-align: center;
-      overflow: hidden;
-    }
-    #blessingsCanvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-    }
-    .families-heading {
-      margin: 6px 0 14px;
-    }
-    .heritage-peacock-crest {
-      display: block;
-      margin: 12px auto 14px;
-      max-width: 180px;
-      height: auto;
-    }
-    .auspicious-shloka {
-      font-family: "Cinzel", serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      color: #8B6E32;
-      margin: 10px 0 12px;
-      text-shadow: 0 1px 1px rgba(255,255,255,0.8);
-    }
-    .families-intro-note {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.7;
-      color: #4A5660;
-      max-width: 360px;
-      margin: 0 auto 24px;
-      font-style: italic;
-    }
-    .families-parivar-grid {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      margin: 20px auto 28px;
-      max-width: 380px;
-      padding: 18px 14px;
-      border-top: 1px solid rgba(201, 169, 110, 0.28);
-      border-bottom: 1px solid rgba(201, 169, 110, 0.28);
-      background: rgba(255, 255, 255, 0.35);
-      border-radius: 4px;
-    }
-    .families-parivar-col {
-      flex: 1;
-      text-align: center;
-    }
-    .parivar-role {
-      font-family: "Cinzel", serif;
-      font-size: 9px;
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      color: #8B6E32;
-      margin-bottom: 4px;
-    }
-    .parivar-name {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 19px;
-      font-weight: 600;
-      color: #1E262E;
-      line-height: 1.25;
-      margin-bottom: 2px;
-    }
-    .parivar-sub {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 13px;
-      font-style: italic;
-      color: #72808E;
-    }
-    .parivar-divider-line {
-      width: 1px;
-      height: 42px;
-      background: linear-gradient(180deg, transparent, rgba(201, 169, 110, 0.5), transparent);
-    }
-    .hospitality-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-width: 380px;
-      margin: 0 auto 28px;
-      text-align: left;
-    }
-    .hospitality-card {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 12px 14px;
-      background: rgba(255, 255, 255, 0.45);
-      border: 1px solid rgba(201, 169, 110, 0.22);
-      border-radius: 4px;
-    }
-    .hospitality-spark-bullet {
-      color: #8B6E32;
-      font-size: 12px;
-      line-height: 1.4;
-      flex-shrink: 0;
-    }
-    .hospitality-text-wrap {
-      flex: 1;
-    }
-    .hospitality-title {
-      font-family: "Cinzel", serif;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #8B6E32;
-      margin-bottom: 3px;
-    }
-    .hospitality-desc {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 14px;
-      line-height: 1.5;
-      color: #2D3A45;
-      margin: 0;
-    }
-    .blessing-ritual-box {
-      margin: 20px auto 0;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-    .blessing-shower-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 24px;
-      font-family: "Cinzel", serif;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: #1E262E;
-      background: linear-gradient(135deg, #FDF7E7 0%, #EBD59B 45%, #DFBF77 75%, #FBF2D5 100%);
-      border: 1px solid rgba(181, 146, 74, 0.6);
-      border-radius: 999px;
-      box-shadow: 0 4px 16px rgba(181, 146, 74, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.8);
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .blessing-shower-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(181, 146, 74, 0.32);
-    }
-    .blessing-shower-btn:active {
-      transform: scale(0.97);
-    }
-    .blessing-whisper {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 13.5px;
-      font-style: italic;
-      color: #72808E;
-      margin-top: 10px;
-    }
-    .blessing-counter-line {
-      font-family: "Cinzel", serif;
-      font-size: 9.5px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #8B6E32;
-      margin-top: 6px;
-      min-height: 16px;
-      font-weight: 600;
-    }
-
   </style>
 </head>
 
@@ -2305,13 +2137,13 @@
           </p>
 
           <div class="reveal reveal-delay-2">
-            <h2 class="couple-name gold-foil-text" id="groomFullName"> Savita ShriMalve</h2>
+            <h2 class="couple-name gold-foil-text" id="groomFullName">Chi. Deepam Dahiwal</h2>
           </div>
 
           <div class="couple-ampersand gold-foil-text reveal reveal-delay-3" aria-hidden="true">&amp;</div>
 
           <div class="reveal reveal-delay-3">
-            <h2 class="couple-name gold-foil-text" id="brideFullName"> Deepam Dahiwal</h2>
+            <h2 class="couple-name gold-foil-text" id="brideFullName">Chi. Sau. Ka. Savita ShriMalve</h2>
           </div>
 
           <p class="hero-families-sub reveal reveal-delay-3" id="heroFamiliesSub">
@@ -2325,7 +2157,7 @@
             <div class="hero-art-clip">
               <!-- Live Flickering-Diya Mewar Gouache Canvas (Instant Native Render & Fallback) -->
               <canvas id="mandapArtCanvas"></canvas>
-              <!-- Bespoke Hand-Painted Jaipur Watercolor Illustration (Blends Seamlessly When Ready) -->
+              <!-- Optional Bespoke Hand-Painted Jaipur Watercolor Illustration -->
               <img id="heroAtelierImg" class="atelier-img-layer" alt="Hand-painted royal Indian wedding courtyard watercolor" />
             </div>
 
@@ -2387,7 +2219,7 @@
         </p>
       </div>
 
-      <p class="welcome-signature gold-foil-text reveal reveal-delay-2" id="welcomeSignature">Savita &amp; Deepam</p>
+      <p class="welcome-signature gold-foil-text reveal reveal-delay-2" id="welcomeSignature">Deepam &amp; Savita</p>
       <div class="floral-divider reveal reveal-delay-2" data-divider="welcome"></div>
     </section>
 
@@ -2549,7 +2381,6 @@
         Your gracious presence and heartfelt blessings are the greatest treasure you could bestow upon Deepam &amp; Savita as two families unite as one.
       </p>
 
-
       <!-- Symmetrical Hosting Families Band -->
       <div class="families-parivar-grid reveal reveal-delay-3">
         <div class="families-parivar-col">
@@ -2566,9 +2397,7 @@
       </div>
 
       <!-- Three Gracious Indian Wedding Hospitality Notes -->
-      <div class="hospitality-list reveal reveal-delay-3" id="hospitalityList">
-        <!-- Injected cleanly from INVITE_CONFIG -->
-      </div>
+      <div class="hospitality-list reveal reveal-delay-3" id="hospitalityList"></div>
 
       <!-- Interactive Shower of Floral Blessings & Akshata Ritual -->
       <div class="blessing-ritual-box reveal reveal-delay-4">
@@ -2589,99 +2418,28 @@
     </section>
 
     <!-- ======================================================================
-         SECTION 9: ENGRAVED LETTERPRESS RSVP & BLESSINGS SHEET
+         SECTION 9: SAPTAPADI — THE SEVEN SACRED VOWS KEEPSAKE FOLIO
          ====================================================================== -->
-    <section class="rsvp-section" id="rsvpSection">
-      <div class="floral-divider reveal" data-divider="rsvp"></div>
-      <p class="micro-label reveal reveal-delay-1" style="margin-top: 24px;">KINDLY RESPOND</p>
-      <h2 class="script-heading rsvp-heading reveal reveal-delay-2">Blessings &amp; RSVP</h2>
-      <p class="rsvp-sub reveal reveal-delay-2">Please let us know which festivities you will grace with your presence</p>
+    <section class="vows-section" id="vowsSection">
+      <div class="floral-divider reveal" data-divider="vows"></div>
+      <p class="micro-label reveal reveal-delay-1" style="margin-top: 24px;">॥ सप्तपदी ॥ &nbsp;&bull;&nbsp; SEVEN SACRED STEPS</p>
+      <h2 class="script-heading vows-heading reveal reveal-delay-2">The Seven Sacred Vows</h2>
+      <p class="vows-sub reveal reveal-delay-2">Tap each step around the sacred fire to read the timeless promises Deepam &amp; Savita take together</p>
 
-      <div class="rsvp-sheet reveal reveal-delay-3">
-        <canvas id="rsvpPetalsCanvas" aria-hidden="true"></canvas>
+      <div class="vows-folio reveal reveal-delay-3">
+        <div class="vows-steps-row" id="vowsStepsRow" role="tablist" aria-label="Seven Sacred Vows"></div>
 
-        <form id="rsvpForm" novalidate>
-          <div class="rsvp-field">
-            <label for="rsvpName" class="rsvp-field-label">Guest Name(s)</label>
-            <input
-              type="text"
-              id="rsvpName"
-              class="rsvp-line-input"
-              placeholder="e.g., Shri Rajesh &amp; Smt. Sneha Patil"
-              autocomplete="name"
-              required
-            />
-          </div>
+        <div class="vow-stage" id="vowStage" role="tabpanel" aria-live="polite">
+          <p class="vow-step-kicker" id="vowStepKicker">FIRST SACRED STEP</p>
+          <p class="vow-sanskrit" id="vowSanskrit">प्रथमं पदम् — अन्न व पोषण</p>
+          <h3 class="vow-title" id="vowTitle">Nourishment &amp; Care</h3>
+          <p class="vow-promise" id="vowPromise">“Together we vow to nourish our home with warmth, abundance, and tender care in every season of life.”</p>
+        </div>
 
-          <div class="rsvp-field">
-            <span class="rsvp-field-label">Attendance</span>
-            <div class="rsvp-seal-grid" role="radiogroup" aria-label="Wedding attendance">
-              <button type="button" class="rsvp-seal-opt is-selected" data-attend="accept" aria-pressed="true">
-                <span class="rsvp-seal-dot" aria-hidden="true"></span>
-                <span>Joyfully Accepts</span>
-              </button>
-              <button type="button" class="rsvp-seal-opt" data-attend="decline" aria-pressed="false">
-                <span class="rsvp-seal-dot" aria-hidden="true"></span>
-                <span>Regretfully Declines</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="rsvp-field rsvp-guests-wrap" id="rsvpGuestsWrap">
-            <span class="rsvp-field-label">Number of Guests</span>
-            <div class="rsvp-count-row" id="rsvpCountRow" role="radiogroup" aria-label="Number of guests">
-              <button type="button" class="rsvp-count-btn" data-count="1">1</button>
-              <button type="button" class="rsvp-count-btn is-selected" data-count="2">2</button>
-              <button type="button" class="rsvp-count-btn" data-count="3">3</button>
-              <button type="button" class="rsvp-count-btn" data-count="4">4</button>
-              <button type="button" class="rsvp-count-btn" data-count="5">5</button>
-            </div>
-          </div>
-
-          <div class="rsvp-field rsvp-guests-wrap" id="rsvpCeremoniesWrap">
-            <span class="rsvp-field-label">Ceremonies Attending</span>
-            <div class="rsvp-events-list" id="rsvpEventsList">
-              <label class="rsvp-event-check is-checked">
-                <input type="checkbox" value="Pooja (20 Dec)" checked />
-                <span class="rsvp-check-diamond" aria-hidden="true"></span>
-                <span class="rsvp-event-check-text">Pooja &amp; Paath Poojan</span>
-                <span class="rsvp-event-check-meta">20 Dec</span>
-              </label>
-              <label class="rsvp-event-check is-checked">
-                <input type="checkbox" value="Engagement & Haldi (26 Dec)" checked />
-                <span class="rsvp-check-diamond" aria-hidden="true"></span>
-                <span class="rsvp-event-check-text">Engagement &amp; Haldi</span>
-                <span class="rsvp-event-check-meta">26 Dec</span>
-              </label>
-              <label class="rsvp-event-check is-checked">
-                <input type="checkbox" value="Marriage (27 Dec)" checked />
-                <span class="rsvp-check-diamond" aria-hidden="true"></span>
-                <span class="rsvp-event-check-text">Marriage — Shubh Vivah</span>
-                <span class="rsvp-event-check-meta">27 Dec</span>
-              </label>
-            </div>
-          </div>
-
-          <div class="rsvp-field" style="margin-bottom: 18px;">
-            <label for="rsvpNote" class="rsvp-field-label">Warm Blessing Message (Optional)</label>
-            <textarea
-              id="rsvpNote"
-              class="rsvp-line-textarea"
-              rows="2"
-              placeholder="Share a heartfelt blessing for Deepam &amp; Savita..."
-            ></textarea>
-          </div>
-
-          <p class="rsvp-error-msg" id="rsvpErrorMsg" role="alert"></p>
-
-          <button type="submit" class="rsvp-submit-btn">SEND BLESSINGS &amp; RSVP</button>
-        </form>
-
-        <div class="rsvp-confirmation" id="rsvpConfirmation" aria-live="polite">
-          <h3 class="rsvp-thanks-title" id="rsvpThanksTitle">With Heartfelt Gratitude</h3>
-          <p class="rsvp-thanks-detail" id="rsvpThanksDetail"></p>
-          <p class="rsvp-saved-note" id="rsvpSavedNote"></p>
-          <button type="button" class="rsvp-edit-btn" id="rsvpEditBtn">Update Reply</button>
+        <div class="vows-nav-row">
+          <button type="button" class="vow-nav-btn" id="vowPrevBtn" aria-label="Previous vow">&larr; Prev</button>
+          <span class="vow-progress-text" id="vowProgressText">Vow 1 of 7</span>
+          <button type="button" class="vow-nav-btn" id="vowNextBtn" aria-label="Next vow">Next &rarr;</button>
         </div>
       </div>
     </section>
@@ -2858,23 +2616,93 @@
         mapsUrl: "https://www.google.com/maps/search/?api=1&query=2626+Marathe+Galli+Shirpur+Maharashtra"
       },
 
-      dressCode: {
-        heading: "Royal Festive Traditional",
-        note: "We joyfully invite you to adorn vibrant Indian ethnic silhouettes—handwoven silk sarees, zari lehengas, embroidered kurtas, and regal bandhgalas inspired by our auspicious festive palette.",
-        swatches: [
-          { name: "Marigold Saffron", hex: "#E0922C", pairing: "Marigold Saffron — Radiant tissue silks & festive Haldi hues" },
-          { name: "Rani Rose", hex: "#B43860", pairing: "Rani Rose — Paithani & zari weaves with heirloom gold" },
-          { name: "Royal Peacock", hex: "#165A64", pairing: "Royal Peacock — Deep silk bandhgalas & emerald accents" },
-          { name: "Champagne Gold", hex: "#CCA96E", pairing: "Champagne Gold — Banarasi brocades & subtle shimmer" },
-          { name: "Soft Ivory", hex: "#F2E9DB", pairing: "Soft Ivory — Classic raw silk kurtas & pearl elegance" }
+      families: {
+        heading: "With Love From Our Families",
+        shloka: "॥ शुभमंगल सावधान ॥",
+        introNote:
+          "Your gracious presence and heartfelt blessings are the greatest treasure you could bestow upon Deepam & Savita as two families unite as one.",
+        groomFamily: {
+          role: "Groom's Family",
+          name: "Dahiwal Parivar",
+          sub: "Shirpur, Maharashtra"
+        },
+        brideFamily: {
+          role: "Bride's Family",
+          name: "ShriMalve Parivar",
+          sub: "With Love & Warmth"
+        },
+        hospitality: [
+          {
+            title: "Festive Indian Attire",
+            text: "Adorn vibrant silk sarees, zari lehengas, embroidered kurtas, or regal bandhgalas in marigold, rani rose, peacock teal, or ivory gold."
+          },
+          {
+            title: "Traditional Feast & Warmth",
+            text: "Join us following the Shubh Vivah Muhurat for a festive Maharashtrian wedding feast lovingly prepared for our cherished guests."
+          },
+          {
+            title: "Your Blessings Above All",
+            text: "No boxed gifts please — your warm arrival, joyful smiles, and heartfelt blessings for Deepam & Savita are our most treasured gift."
+          }
+        ],
+        blessingWhispers: [
+          "॥ सौभाग्यवती भव ॥ May Deepam & Savita's union bloom with eternal joy & grace.",
+          "May sacred akshata & marigold petals bless their home with harmony and laughter.",
+          "Wishing Deepam & Savita a lifetime of devotion, warmth, and togetherness.",
+          "॥ शुभमंगल सावधान ॥ Showered with love from cherished family & friends."
         ]
       },
 
+      saptapadiVows: [
+        {
+          stepLabel: "FIRST SACRED STEP",
+          sanskrit: "प्रथमं पदम् — अन्न व पोषण",
+          title: "Nourishment & Care",
+          promise: "“Together we vow to nourish our home with warmth, abundance, and tender care in every season of life.”"
+        },
+        {
+          stepLabel: "SECOND SACRED STEP",
+          sanskrit: "द्वितीयं पदम् — बल व आरोग्य",
+          title: "Strength & Harmony",
+          promise: "“We promise to stand beside each other in mind, body, and spirit, drawing quiet strength from our shared bond.”"
+        },
+        {
+          stepLabel: "THIRD SACRED STEP",
+          sanskrit: "तृतीयं पदम् — समृद्धी व धर्म",
+          title: "Prosperity & Grace",
+          promise: "“We vow to build a life of honest effort, gratitude, and generosity, sharing our blessings with all we love.”"
+        },
+        {
+          stepLabel: "FOURTH SACRED STEP",
+          sanskrit: "चतुर्थं पदम् — सुख व परिवार",
+          title: "Joy & Family",
+          promise: "“We promise to honor both our families with deep respect and fill our courtyard with laughter, peace, and love.”"
+        },
+        {
+          stepLabel: "FIFTH SACRED STEP",
+          sanskrit: "पंचमं पदम् — मंगल व संतान",
+          title: "Noble Legacy",
+          promise: "“We pray for auspicious beginnings and vow to nurture timeless values, kindness, and compassion for generations to come.”"
+        },
+        {
+          stepLabel: "SIXTH SACRED STEP",
+          sanskrit: "षष्ठं पदम् — ऋतु व स्वास्थ्य",
+          title: "Health & Togetherness",
+          promise: "“Through sunshine and monsoon alike, we vow to walk hand in hand in good health, patience, and devotion.”"
+        },
+        {
+          stepLabel: "SEVENTH SACRED STEP",
+          sanskrit: "सप्तमं पदम् — सख्य व मैत्री",
+          title: "Eternal Friendship",
+          promise: "“With this seventh step, we become lifelong companions and truest friends—two hearts united forever as one.”"
+        }
+      ],
+
       closingMessage: "Your presence & blessings will make our celebration truly complete.",
 
-      // Enable bespoke hand-painted watercolor artwork generation via Gemini API
-      // (seamlessly blends over native canvas paintings; degrades gracefully offline)
-      enableAtelierWatercolors: true,
+      // Optional Gemini API key for custom watercolor overlays (native canvas art renders instantly when empty)
+      enableAtelierWatercolors: false,
+      geminiApiKey: "",
 
       // Optional External Override URLs
       musicUrl: "",
@@ -2883,17 +2711,11 @@
     };
 
     /* ==========================================================================
-       1. BESPOKE ATELIER WATERCOLOR ILLUSTRATION ENGINE (GEMINI IMAGE API)
+       1. OPTIONAL ATELIER WATERCOLOR ILLUSTRATION ENGINE
        ========================================================================== */
     const AtelierWatercolorGenerator = (() => {
-      const apiKey = "";
-      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-image:generateContent?key=${apiKey}`;
-
-      /**
-       * Fetches a bespoke hand-painted watercolor illustration with silent
-       * exponential backoff (1s -> 2s -> 4s) for throttling resilience.
-       */
-      async function generateWatercolor(prompt, maxRetries = 3) {
+      async function generateWatercolor(prompt, apiKey, maxRetries = 2) {
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp-image-generation:generateContent?key=${encodeURIComponent(apiKey)}`;
         const payload = {
           contents: [{ parts: [{ text: prompt }] }],
           generationConfig: { responseModalities: ["TEXT", "IMAGE"] }
@@ -2917,7 +2739,7 @@
               return null;
             }
           } catch (err) {
-            // Silent retry on transient network error
+            // Silent fallback to instant native canvas paintings
           }
 
           if (attempt < maxRetries - 1) {
@@ -2927,22 +2749,17 @@
         return null;
       }
 
-      /**
-       * Generates bespoke Jaipur watercolor paintings for the Hero Jharokha,
-       * the illuminated Palace Venue Card, and all 4 Ceremony Folio Cards.
-       * Uses native canvas paintings immediately so the invite never looks blank.
-       */
       async function hydrateAtelierPaintings() {
-        if (!INVITE_CONFIG.enableAtelierWatercolors) return;
+        const apiKey = (INVITE_CONFIG.geminiApiKey || "").trim();
+        if (!INVITE_CONFIG.enableAtelierWatercolors || !apiKey) return;
 
-        // 1. Hero Courtyard Pichwai Twin Peacocks & Lotus Pool Watercolor
         const heroImg = document.getElementById("heroAtelierImg");
         const heroBadge = document.getElementById("heroArtBadge");
         if (heroImg && !INVITE_CONFIG.couplePhotoUrl) {
           if (heroBadge) heroBadge.classList.add("is-loading");
           const heroPrompt =
             "Museum-grade traditional hand-painted Jaipur Pichwai watercolor and gouache painting of an ornate sandstone palace archway with hanging marigold and blush rose floral garlands, two royal blue-emerald peacocks perched gracefully on left and right, and blooming pink lotuses floating on a tranquil teal courtyard pond, painted on textured warm ivory #FBF6EC cotton rag paper with soft open ivory center space and delicate feathery watercolor edges, authentic hand-painted luxury wedding stationery artwork, zero text, no words, no people, no 3D render, not plastic.";
-          const heroUrl = await generateWatercolor(heroPrompt);
+          const heroUrl = await generateWatercolor(heroPrompt, apiKey);
           if (heroBadge) heroBadge.classList.remove("is-loading");
           if (heroUrl) {
             heroImg.src = heroUrl;
@@ -2950,19 +2767,17 @@
           }
         }
 
-        // 2. Nocturnal Illuminated Indian Heritage Palace Watercolor for Venue Card
         const venueBg = document.getElementById("venuePhotoBg");
         if (venueBg && !INVITE_CONFIG.venuePhotoUrl) {
           const venuePrompt =
             "Hand-painted fine-art nocturnal watercolor and gouache illustration of a grand royal Indian sandstone heritage palace pavilion at twilight with glowing warm golden arched windows, brass courtyard lanterns, and a deep peacock midnight blue sky, soft painterly brushstrokes on textured paper, romantic luxury wedding invitation insert artwork, zero text, no letters, no people, not glossy 3D.";
-          const venueUrl = await generateWatercolor(venuePrompt);
+          const venueUrl = await generateWatercolor(venuePrompt, apiKey);
           if (venueUrl) {
             venueBg.style.backgroundImage = `url("${venueUrl}")`;
             venueBg.classList.add("has-photo");
           }
         }
 
-        // 3. Staggered Hand-Painted Ceremony Miniatures (Pooja, Engagement, Haldi, Shubh Vivah)
         for (let idx = 0; idx < INVITE_CONFIG.schedule.length; idx++) {
           const item = INVITE_CONFIG.schedule[idx];
           const imgEl = document.getElementById(`ceremonyImg_${idx}`);
@@ -2970,7 +2785,7 @@
           if (!imgEl || !item.artPrompt) continue;
 
           if (badgeEl) badgeEl.classList.add("is-loading");
-          const url = await generateWatercolor(item.artPrompt);
+          const url = await generateWatercolor(item.artPrompt, apiKey);
           if (badgeEl) badgeEl.classList.remove("is-loading");
           if (url) {
             imgEl.src = url;
@@ -3301,7 +3116,6 @@
         sCtx.fillStyle = sky;
         sCtx.fillRect(0, 0, width, height);
 
-        // Chhatri Domes
         sCtx.fillStyle = "rgba(20, 80, 91, 0.14)";
         sCtx.strokeStyle = "rgba(156, 114, 42, 0.52)";
         sCtx.lineWidth = 0.85;
@@ -3318,7 +3132,6 @@
           sCtx.stroke();
         });
 
-        // Marigold & Rose Toran Swags
         const drawSwag = (x1, y1, mx, my, x2, y2) => {
           for (let i = 0; i <= 8; i++) {
             const t = i / 8;
@@ -3337,7 +3150,6 @@
         drawPichwaiPeacock(sCtx, cx - 64, poolTop - 15, 1, 0.68);
         drawPichwaiPeacock(sCtx, cx + 64, poolTop - 15, -1, 0.68);
 
-        // Teal Lotus Pond
         const poolGrad = sCtx.createLinearGradient(0, poolTop, 0, height);
         poolGrad.addColorStop(0, "rgba(20, 80, 91, 0.34)");
         poolGrad.addColorStop(1, "rgba(30, 117, 128, 0.14)");
@@ -3381,29 +3193,30 @@
 
       function renderFlickeringDiyas() {
         time += 0.045;
-        ctx.clearRect(0, 0, width, height);
-        ctx.drawImage(staticCanvas, 0, 0, width, height);
+        if (width > 0 && height > 0) {
+          ctx.clearRect(0, 0, width, height);
+          ctx.drawImage(staticCanvas, 0, 0, width, height);
 
-        const cx = width * 0.5;
-        const poolTop = height * 0.72;
-        [{ x: cx - 44, y: poolTop - 4, ph: 0 }, { x: cx + 44, y: poolTop - 4, ph: 1.9 }].forEach((d) => {
-          const fl = 0.88 + Math.sin(time * 2.4 + d.ph) * 0.08 + Math.sin(time * 5.1 + d.ph) * 0.04;
-          const halo = ctx.createRadialGradient(d.x, d.y - 6, 1, d.x, d.y - 6, 24 * fl);
-          halo.addColorStop(0, "rgba(255, 234, 168, 0.68)");
-          halo.addColorStop(1, "rgba(234, 168, 68, 0)");
-          ctx.fillStyle = halo;
-          ctx.beginPath();
-          ctx.arc(d.x, d.y - 6, 24 * fl, 0, Math.PI * 2);
-          ctx.fill();
+          const cx = width * 0.5;
+          const poolTop = height * 0.72;
+          [{ x: cx - 44, y: poolTop - 4, ph: 0 }, { x: cx + 44, y: poolTop - 4, ph: 1.9 }].forEach((d) => {
+            const fl = 0.88 + Math.sin(time * 2.4 + d.ph) * 0.08 + Math.sin(time * 5.1 + d.ph) * 0.04;
+            const halo = ctx.createRadialGradient(d.x, d.y - 6, 1, d.x, d.y - 6, 24 * fl);
+            halo.addColorStop(0, "rgba(255, 234, 168, 0.68)");
+            halo.addColorStop(1, "rgba(234, 168, 68, 0)");
+            ctx.fillStyle = halo;
+            ctx.beginPath();
+            ctx.arc(d.x, d.y - 6, 24 * fl, 0, Math.PI * 2);
+            ctx.fill();
 
-          ctx.fillStyle = "rgba(238, 148, 38, 0.94)";
-          ctx.beginPath();
-          ctx.moveTo(d.x, d.y);
-          ctx.quadraticCurveTo(d.x + 3.8, d.y - 4, d.x, d.y - 11 * fl);
-          ctx.quadraticCurveTo(d.x - 3.8, d.y - 4, d.x, d.y);
-          ctx.fill();
-        });
-
+            ctx.fillStyle = "rgba(238, 148, 38, 0.94)";
+            ctx.beginPath();
+            ctx.moveTo(d.x, d.y);
+            ctx.quadraticCurveTo(d.x + 3.8, d.y - 4, d.x, d.y - 11 * fl);
+            ctx.quadraticCurveTo(d.x - 3.8, d.y - 4, d.x, d.y);
+            ctx.fill();
+          });
+        }
         requestAnimationFrame(renderFlickeringDiyas);
       }
 
@@ -3632,24 +3445,26 @@
 
       function animate() {
         t += 0.025;
-        ctx.clearRect(0, 0, w, h);
-        drawPalaceOverlay();
+        if (w > 0 && h > 0) {
+          ctx.clearRect(0, 0, w, h);
+          drawPalaceOverlay();
 
-        for (let i = 0; i < lights.length; i++) {
-          const b = lights[i];
-          b.x += b.vx + Math.sin(b.ph) * 0.08;
-          b.y += b.vy;
-          b.ph += 0.018;
-          if (b.y < -26) { b.y = h + 22; b.x = Math.random() * w; }
-          if (b.x < -26) b.x = w + 20;
-          if (b.x > w + 26) b.x = -20;
+          for (let i = 0; i < lights.length; i++) {
+            const b = lights[i];
+            b.x += b.vx + Math.sin(b.ph) * 0.08;
+            b.y += b.vy;
+            b.ph += 0.018;
+            if (b.y < -26) { b.y = h + 22; b.x = Math.random() * w; }
+            if (b.x < -26) b.x = w + 20;
+            if (b.x > w + 26) b.x = -20;
 
-          const a = b.baseAlpha * (0.72 + Math.sin(b.ph * 1.4) * 0.28);
-          const g = ctx.createRadialGradient(b.x, b.y, 0.5, b.x, b.y, b.r);
-          g.addColorStop(0, b.isFirefly ? `rgba(255, 246, 200, ${a})` : `rgba(246, 208, 134, ${a})`);
-          g.addColorStop(1, "rgba(232, 186, 98, 0)");
-          ctx.fillStyle = g;
-          ctx.beginPath(); ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2); ctx.fill();
+            const a = b.baseAlpha * (0.72 + Math.sin(b.ph * 1.4) * 0.28);
+            const g = ctx.createRadialGradient(b.x, b.y, 0.5, b.x, b.y, b.r);
+            g.addColorStop(0, b.isFirefly ? `rgba(255, 246, 200, ${a})` : `rgba(246, 208, 134, ${a})`);
+            g.addColorStop(1, "rgba(232, 186, 98, 0)");
+            ctx.fillStyle = g;
+            ctx.beginPath(); ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2); ctx.fill();
+          }
         }
         requestAnimationFrame(animate);
       }
@@ -3919,186 +3734,240 @@
       const canvas = document.getElementById("scratchCanvas");
       const fxCanvas = document.getElementById("scratchFxCanvas");
       const fallbackBtn = document.getElementById("scratchFallbackBtn");
-      if (!canvas || !fxCanvas || !section) return;
+      if (!section || !canvas) return;
 
       const ctx = canvas.getContext("2d", { willReadFrequently: true });
-      const fxCtx = fxCanvas.getContext("2d");
+      const fxCtx = fxCanvas ? fxCanvas.getContext("2d") : null;
 
-      let isDrawing = false, isRevealed = false, lastPoint = null, moveCount = 0, fxRunning = false;
+      let w = 272;
+      let h = 268;
+      let dpr = 1;
+      let isDrawing = false;
+      let isRevealed = false;
+      let lastPt = null;
+      let strokeTicks = 0;
+
       const fxParticles = [];
+      let fxAnimating = false;
 
-      function paintFoil() {
+      function syncFxSize() {
+        if (!fxCanvas || !fxCtx) return;
+        const rect = fxCanvas.getBoundingClientRect();
+        if (!rect.width || !rect.height) return;
+        const fDpr = Math.min(window.devicePixelRatio || 1, 2);
+        fxCanvas.width = Math.floor(rect.width * fDpr);
+        fxCanvas.height = Math.floor(rect.height * fDpr);
+        fxCtx.setTransform(fDpr, 0, 0, fDpr, 0, 0);
+      }
+
+      function spawnFx(x, y, count, burst = false) {
+        if (!fxCanvas || !fxCtx) return;
+        const offsetX = 34;
+        const offsetY = 34;
+        const palette = ["250, 235, 202", "223, 190, 116", "234, 158, 50", "180, 56, 96"];
+        for (let i = 0; i < count; i++) {
+          const ang = Math.random() * Math.PI * 2;
+          const spd = burst ? 1.5 + Math.random() * 4.2 : 0.4 + Math.random() * 1.6;
+          fxParticles.push({
+            x: x + offsetX,
+            y: y + offsetY,
+            vx: Math.cos(ang) * spd,
+            vy: Math.sin(ang) * spd - (burst ? 1.4 : 0.3),
+            size: burst ? 2.2 + Math.random() * 3.4 : 1.4 + Math.random() * 2.2,
+            alpha: 0.95,
+            tint: palette[i % palette.length],
+            rot: Math.random() * Math.PI * 2,
+            vrot: (Math.random() - 0.5) * 0.14
+          });
+        }
+        if (!fxAnimating) {
+          fxAnimating = true;
+          requestAnimationFrame(stepFx);
+        }
+      }
+
+      function stepFx() {
+        if (!fxCanvas || !fxCtx) { fxAnimating = false; return; }
+        const rect = fxCanvas.getBoundingClientRect();
+        fxCtx.clearRect(0, 0, rect.width, rect.height);
+        for (let i = fxParticles.length - 1; i >= 0; i--) {
+          const p = fxParticles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += 0.06;
+          p.vx *= 0.98;
+          p.rot += p.vrot;
+          p.alpha -= 0.022;
+          if (p.alpha <= 0.02) {
+            fxParticles.splice(i, 1);
+            continue;
+          }
+          fxCtx.save();
+          fxCtx.translate(p.x, p.y);
+          fxCtx.rotate(p.rot);
+          fxCtx.fillStyle = `rgba(${p.tint}, ${p.alpha})`;
+          fxCtx.fillRect(-p.size * 0.6, -p.size * 0.35, p.size * 1.2, p.size * 0.7);
+          fxCtx.restore();
+        }
+        if (fxParticles.length > 0) {
+          requestAnimationFrame(stepFx);
+        } else {
+          fxAnimating = false;
+        }
+      }
+
+      function paintGoldFoil() {
+        if (isRevealed) return;
         const rect = canvas.getBoundingClientRect();
         if (!rect.width || !rect.height) return;
-        const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        const w = rect.width, h = rect.height;
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        w = rect.width;
+        h = rect.height;
         canvas.width = Math.floor(w * dpr);
         canvas.height = Math.floor(h * dpr);
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-        const foil = ctx.createLinearGradient(0, 0, w, h);
-        foil.addColorStop(0, "#C7A052");
-        foil.addColorStop(0.28, "#F0DA9E");
-        foil.addColorStop(0.52, "#D4AE62");
-        foil.addColorStop(0.78, "#F6E4B4");
-        foil.addColorStop(1, "#B58C3E");
         ctx.globalCompositeOperation = "source-over";
-        ctx.fillStyle = foil;
+
+        // Burnished 24K Gold Foil Base Gradient
+        const grad = ctx.createLinearGradient(0, 0, w, h);
+        grad.addColorStop(0, "#B48634");
+        grad.addColorStop(0.24, "#DFBE74");
+        grad.addColorStop(0.48, "#F4DCA2");
+        grad.addColorStop(0.72, "#BA8D3A");
+        grad.addColorStop(1, "#9B6E24");
+        ctx.fillStyle = grad;
         ctx.fillRect(0, 0, w, h);
 
-        for (let i = 0; i < 380; i++) {
-          ctx.fillStyle = i % 2 === 0 ? "rgba(255, 253, 240, 0.16)" : "rgba(116, 78, 20, 0.09)";
-          ctx.fillRect(0, Math.random() * h, w, 0.8);
-        }
-
+        // Subtle Brushed Metallic Grain Lines
         ctx.save();
-        ctx.translate(w * 0.5, h * 0.44);
-        ctx.strokeStyle = "rgba(112, 76, 22, 0.36)";
-        ctx.lineWidth = 1;
-        ctx.beginPath(); ctx.arc(0, 0, 38, 0, Math.PI * 2); ctx.stroke();
-        [-0.7, -0.35, 0, 0.35, 0.7].forEach((ang) => {
-          ctx.save(); ctx.rotate(ang);
-          ctx.beginPath(); ctx.moveTo(0, 12); ctx.quadraticCurveTo(9, -6, 0, -24); ctx.quadraticCurveTo(-9, -6, 0, 12); ctx.stroke();
-          ctx.restore();
-        });
+        for (let i = 0; i < 95; i++) {
+          const y = (i / 95) * h;
+          ctx.strokeStyle = i % 2 === 0 ? "rgba(255, 248, 224, 0.14)" : "rgba(110, 72, 16, 0.10)";
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(0, y);
+          ctx.lineTo(w, y + (i % 3 - 1) * 2);
+          ctx.stroke();
+        }
         ctx.restore();
 
-        ctx.fillStyle = "rgba(92, 60, 16, 0.82)";
-        ctx.font = "600 10px Cinzel, serif";
+        // Delicate Embossed Ornamental Ring & Diamond Crest
+        const cx = w * 0.5;
+        const cy = h * 0.52;
+        ctx.strokeStyle = "rgba(112, 74, 18, 0.36)";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.arc(cx, cy, 56, 0, Math.PI * 2);
+        ctx.stroke();
+
+        ctx.setLineDash([2.5, 3.5]);
+        ctx.beginPath();
+        ctx.arc(cx, cy, 48, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Center Monogram & Gentle Scratch Cue
+        ctx.fillStyle = "rgba(92, 58, 12, 0.78)";
         ctx.textAlign = "center";
-        ctx.fillText("RUB GENTLY TO REVEAL", w * 0.5, h * 0.70);
+        ctx.font = "600 10px 'Cinzel', serif";
+        ctx.fillText("RUB TO REVEAL", cx, cy - 4);
+        ctx.font = "italic 14px 'Lora', Georgia, serif";
+        ctx.fillText("Our Sacred Date", cx, cy + 16);
+
+        syncFxSize();
       }
 
-      function sizeFx() {
-        const rect = fxCanvas.getBoundingClientRect();
-        const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        fxCanvas.width = Math.floor((rect.width || 350) * dpr);
-        fxCanvas.height = Math.floor((rect.height || 350) * dpr);
-        fxCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      function getPoint(e) {
+        const rect = canvas.getBoundingClientRect();
+        return {
+          x: e.clientX - rect.left,
+          y: e.clientY - rect.top
+        };
       }
 
-      function startFxLoop() {
-        if (fxRunning) return;
-        fxRunning = true;
-        const rect = fxCanvas.getBoundingClientRect();
-        const fw = rect.width || 350, fh = rect.height || 350;
-
-        function loop() {
-          fxCtx.clearRect(0, 0, fw, fh);
-          for (let i = fxParticles.length - 1; i >= 0; i--) {
-            const p = fxParticles[i];
-            p.x += p.vx + (p.kind === "petal" ? Math.sin(p.y * 0.04) * 0.35 : 0);
-            p.y += p.vy;
-            p.rot += p.vrot;
-            p.alpha -= p.kind === "spark" ? 0.032 : 0.0055;
-            if (p.alpha <= 0.02 || p.y > fh + 20) { fxParticles.splice(i, 1); continue; }
-            fxCtx.save();
-            fxCtx.translate(p.x, p.y);
-            fxCtx.rotate(p.rot);
-            fxCtx.fillStyle = `rgba(${p.tint}, ${p.alpha})`;
-            fxCtx.beginPath();
-            if (p.kind === "petal") fxCtx.ellipse(0, 0, p.size, p.size * 0.52, 0, 0, Math.PI * 2);
-            else fxCtx.arc(0, 0, p.size, 0, Math.PI * 2);
-            fxCtx.fill();
-            fxCtx.restore();
-          }
-          if (fxParticles.length > 0) requestAnimationFrame(loop);
-          else fxRunning = false;
-        }
-        requestAnimationFrame(loop);
-      }
-
-      function spawnSparks(x, y) {
-        for (let i = 0; i < 3; i++) {
-          fxParticles.push({
-            kind: "spark", x: x + 34 + (Math.random() - 0.5) * 14, y: y + 34 + (Math.random() - 0.5) * 14,
-            vx: (Math.random() - 0.5) * 1.8, vy: -0.5 + Math.random() * 2.2,
-            size: 1.5 + Math.random() * 1.8, rot: 0, vrot: 0, tint: "234, 194, 108", alpha: 0.92
-          });
-        }
-        startFxLoop();
-      }
-
-      function completeReveal() {
+      function scratchTo(pt) {
         if (isRevealed) return;
-        isRevealed = true;
-        canvas.classList.add("is-cleared");
-        section.classList.add("is-revealed");
-        const rect = fxCanvas.getBoundingClientRect();
-        const fw = rect.width || 350, fh = rect.height || 350;
-        const colors = ["180, 56, 96", "234, 158, 50", "246, 208, 218", "240, 206, 134"];
-        for (let i = 0; i < 28; i++) {
-          fxParticles.push({
-            kind: "petal", x: fw * 0.16 + Math.random() * fw * 0.68, y: fh * 0.1 + Math.random() * fh * 0.36,
-            vx: (Math.random() - 0.5) * 1.2, vy: 0.45 + Math.random() * 1.05,
-            size: 5 + Math.random() * 4.5, rot: Math.random() * Math.PI * 2, vrot: (Math.random() - 0.5) * 0.05,
-            tint: colors[i % colors.length], alpha: 0.88
-          });
+        ctx.globalCompositeOperation = "destination-out";
+        ctx.lineCap = "round";
+        ctx.lineJoin = "round";
+        ctx.lineWidth = 42;
+        ctx.beginPath();
+        if (lastPt) {
+          ctx.moveTo(lastPt.x, lastPt.y);
+          ctx.lineTo(pt.x, pt.y);
+          ctx.stroke();
+        } else {
+          ctx.arc(pt.x, pt.y, 21, 0, Math.PI * 2);
+          ctx.fill();
         }
-        startFxLoop();
+        lastPt = pt;
+        spawnFx(pt.x, pt.y, 2, false);
+
+        strokeTicks++;
+        if (strokeTicks % 6 === 0) {
+          checkRevealProgress();
+        }
       }
 
-      function checkRatio() {
+      function checkRevealProgress() {
         if (isRevealed) return;
         try {
           const img = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-          let cleared = 0, total = 0;
-          for (let i = 3; i < img.length; i += 64) { total++; if (img[i] < 110) cleared++; }
-          if (total > 0 && cleared / total >= 0.38) completeReveal();
+          let cleared = 0;
+          let total = 0;
+          const step = 32; // Sample every 8th pixel for crisp performance
+          for (let i = 3; i < img.length; i += step) {
+            total++;
+            if (img[i] < 128) cleared++;
+          }
+          if (total > 0 && cleared / total >= 0.42) {
+            revealAll();
+          }
         } catch (err) {}
       }
 
-      function getCoords(evt) {
-        const rect = canvas.getBoundingClientRect();
-        const src = evt.touches && evt.touches[0] ? evt.touches[0] : evt;
-        return { x: src.clientX - rect.left, y: src.clientY - rect.top };
+      function revealAll() {
+        if (isRevealed) return;
+        isRevealed = true;
+        isDrawing = false;
+        section.classList.add("is-revealed");
+        canvas.classList.add("is-cleared");
+        spawnFx(w * 0.5, h * 0.5, 42, true);
       }
 
-      function scratchAt(pt) {
+      canvas.addEventListener("pointerdown", (e) => {
         if (isRevealed) return;
-        ctx.globalCompositeOperation = "destination-out";
-        const drawBrush = (x, y) => {
-          const grad = ctx.createRadialGradient(x, y, 4, x, y, 26);
-          grad.addColorStop(0, "rgba(0,0,0,1)");
-          grad.addColorStop(0.7, "rgba(0,0,0,0.85)");
-          grad.addColorStop(1, "rgba(0,0,0,0)");
-          ctx.fillStyle = grad;
-          ctx.beginPath(); ctx.arc(x, y, 26, 0, Math.PI * 2); ctx.fill();
-        };
-        if (lastPoint) {
-          const dx = pt.x - lastPoint.x, dy = pt.y - lastPoint.y;
-          const steps = Math.max(1, Math.ceil(Math.hypot(dx, dy) / 6));
-          for (let s = 1; s <= steps; s++) drawBrush(lastPoint.x + (dx * s) / steps, lastPoint.y + (dy * s) / steps);
-        } else {
-          drawBrush(pt.x, pt.y);
-        }
-        lastPoint = pt;
-        spawnSparks(pt.x, pt.y);
-        if (++moveCount % 10 === 0) checkRatio();
-      }
+        isDrawing = true;
+        lastPt = null;
+        try { canvas.setPointerCapture(e.pointerId); } catch (err) {}
+        scratchTo(getPoint(e));
+      });
 
-      canvas.addEventListener("mousedown", (e) => { isDrawing = true; lastPoint = null; scratchAt(getCoords(e)); });
-      window.addEventListener("mousemove", (e) => { if (isDrawing) scratchAt(getCoords(e)); });
-      window.addEventListener("mouseup", () => { if (isDrawing) { isDrawing = false; lastPoint = null; checkRatio(); } });
-
-      canvas.addEventListener("touchstart", (e) => {
-        if (isRevealed) return;
-        e.preventDefault();
-        isDrawing = true; lastPoint = null; scratchAt(getCoords(e));
-      }, { passive: false });
-      canvas.addEventListener("touchmove", (e) => {
+      canvas.addEventListener("pointermove", (e) => {
         if (!isDrawing || isRevealed) return;
-        e.preventDefault();
-        scratchAt(getCoords(e));
-      }, { passive: false });
-      canvas.addEventListener("touchend", () => { if (isDrawing) { isDrawing = false; lastPoint = null; checkRatio(); } });
+        scratchTo(getPoint(e));
+      });
 
-      if (fallbackBtn) fallbackBtn.addEventListener("click", completeReveal);
-      paintFoil();
-      sizeFx();
-      window.addEventListener("resize", () => { sizeFx(); if (!isRevealed) paintFoil(); });
+      const endScratch = () => {
+        if (!isDrawing) return;
+        isDrawing = false;
+        lastPt = null;
+        checkRevealProgress();
+      };
+
+      canvas.addEventListener("pointerup", endScratch);
+      canvas.addEventListener("pointercancel", endScratch);
+
+      if (fallbackBtn) {
+        fallbackBtn.addEventListener("click", revealAll);
+      }
+
+      paintGoldFoil();
+      window.addEventListener("resize", () => {
+        if (!isRevealed) paintGoldFoil();
+        else syncFxSize();
+      });
     }
-
 
     /* ==========================================================================
        9. LIVE EDITORIAL COUNTDOWN TIMER
@@ -4126,176 +3995,211 @@
     }
 
     /* ==========================================================================
-       10. BESPOKE LETTERPRESS RSVP & BLESSINGS ENGINE (LOCALSTORAGE + PETALS)
+       10. INTERACTIVE FLORAL BLESSINGS & SACRED AKSHATA SHOWER (SECTION 8)
        ========================================================================== */
-    function initRsvpCard() {
-      const STORAGE_KEY = "royal_wedding_rsvp_deepam_savita_v2";
-      const form = document.getElementById("rsvpForm");
-      const nameInput = document.getElementById("rsvpName");
-      const noteInput = document.getElementById("rsvpNote");
-      const errorMsg = document.getElementById("rsvpErrorMsg");
-      const guestsWrap = document.getElementById("rsvpGuestsWrap");
-      const ceremoniesWrap = document.getElementById("rsvpCeremoniesWrap");
-      const eventLabels = document.querySelectorAll(".rsvp-event-check");
-      const sealBtns = document.querySelectorAll(".rsvp-seal-opt");
-      const countBtns = document.querySelectorAll(".rsvp-count-btn");
-      const confirmationEl = document.getElementById("rsvpConfirmation");
-      const thanksTitle = document.getElementById("rsvpThanksTitle");
-      const thanksDetail = document.getElementById("rsvpThanksDetail");
-      const savedNoteEl = document.getElementById("rsvpSavedNote");
-      const editBtn = document.getElementById("rsvpEditBtn");
-      const petalsCanvas = document.getElementById("rsvpPetalsCanvas");
-      if (!form) return;
+    function initBlessingsShower() {
+      const STORAGE_KEY = "royal_wedding_blessings_count_deepam_savita_v1";
+      const btn = document.getElementById("blessingShowerBtn");
+      const whisperEl = document.getElementById("blessingWhisper");
+      const counterEl = document.getElementById("blessingCounterLine");
+      const canvas = document.getElementById("blessingsCanvas");
+      if (!btn || !canvas) return;
 
-      let attendance = "accept";
-      let guestCount = 2;
+      const ctx = canvas.getContext("2d");
+      const whispers = INVITE_CONFIG.families?.blessingWhispers || [
+        "॥ शुभमंगल सावधान ॥ Showered with love & sacred akshata."
+      ];
 
-      function setAttendance(val) {
-        attendance = val;
-        sealBtns.forEach((btn) => {
-          const active = btn.dataset.attend === val;
-          btn.classList.toggle("is-selected", active);
-          btn.setAttribute("aria-pressed", String(active));
-        });
-        guestsWrap.classList.toggle("is-dimmed", val === "decline");
-        if (ceremoniesWrap) ceremoniesWrap.classList.toggle("is-dimmed", val === "decline");
-      }
-
-      function setGuestCount(val) {
-        guestCount = Number(val);
-        countBtns.forEach((btn) => btn.classList.toggle("is-selected", Number(btn.dataset.count) === guestCount));
-      }
-
-      function getSelectedCeremonies() {
-        const picked = [];
-        eventLabels.forEach((label) => {
-          const cb = label.querySelector("input");
-          if (cb && cb.checked) picked.push(cb.value);
-        });
-        return picked;
-      }
-
-      function setSelectedCeremonies(list) {
-        eventLabels.forEach((label) => {
-          const cb = label.querySelector("input");
-          if (!cb) return;
-          const checked = Array.isArray(list) ? list.includes(cb.value) : true;
-          cb.checked = checked;
-          label.classList.toggle("is-checked", checked);
-        });
-      }
-
-      function burstRsvpPetals() {
-        if (!petalsCanvas) return;
-        const rect = petalsCanvas.getBoundingClientRect();
-        const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        const w = rect.width || 320, h = rect.height || 260;
-        petalsCanvas.width = Math.floor(w * dpr);
-        petalsCanvas.height = Math.floor(h * dpr);
-        const ctx = petalsCanvas.getContext("2d");
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-        const colors = ["180, 56, 96", "234, 158, 50", "246, 208, 218", "223, 190, 116"];
-        const pieces = Array.from({ length: 24 }, (_, i) => ({
-          x: w * 0.2 + Math.random() * w * 0.6, y: h * 0.15 + Math.random() * h * 0.2,
-          vx: (Math.random() - 0.5) * 1.4, vy: 0.6 + Math.random() * 1.1,
-          size: 4.5 + Math.random() * 3.8, rot: Math.random() * Math.PI * 2, vrot: (Math.random() - 0.5) * 0.06,
-          tint: colors[i % colors.length], alpha: 0.9
-        }));
-
-        function step() {
-          ctx.clearRect(0, 0, w, h);
-          let alive = false;
-          pieces.forEach((p) => {
-            p.x += p.vx + Math.sin(p.y * 0.04) * 0.3;
-            p.y += p.vy;
-            p.rot += p.vrot;
-            p.alpha -= 0.009;
-            if (p.alpha > 0.02) {
-              alive = true;
-              ctx.save();
-              ctx.translate(p.x, p.y);
-              ctx.rotate(p.rot);
-              ctx.fillStyle = `rgba(${p.tint}, ${p.alpha})`;
-              ctx.beginPath();
-              ctx.ellipse(0, 0, p.size, p.size * 0.54, 0, 0, Math.PI * 2);
-              ctx.fill();
-              ctx.restore();
-            }
-          });
-          if (alive) requestAnimationFrame(step);
-          else ctx.clearRect(0, 0, w, h);
-        }
-        requestAnimationFrame(step);
-      }
-
-      function showConfirmation(data, animate) {
-        form.style.display = "none";
-        confirmationEl.classList.add("is-visible");
-        if (data.attendance === "accept") {
-          const guestWord = data.guests === 1 ? "1 cherished guest" : `${data.guests} cherished guests`;
-          const eventStr = data.ceremonies && data.ceremonies.length ? ` for ${data.ceremonies.join(", ")}` : "";
-          thanksTitle.textContent = "With Heartfelt Gratitude";
-          thanksDetail.textContent = `Dear ${data.name}, we are overjoyed to welcome ${guestWord}${eventStr} to celebrate with ${INVITE_CONFIG.coupleShort} in Shirpur.`;
-        } else {
-          thanksTitle.textContent = "You Will Be Missed";
-          thanksDetail.textContent = `Dear ${data.name}, thank you for letting us know. Your warm blessings mean the world to ${INVITE_CONFIG.coupleShort}.`;
-        }
-        savedNoteEl.textContent = data.note ? `“${data.note}”` : "";
-        savedNoteEl.style.display = data.note ? "block" : "none";
-        if (animate) burstRsvpPetals();
-      }
-
-      sealBtns.forEach((btn) => btn.addEventListener("click", () => setAttendance(btn.dataset.attend)));
-      countBtns.forEach((btn) => btn.addEventListener("click", () => setGuestCount(btn.dataset.count)));
-      eventLabels.forEach((label) => {
-        const cb = label.querySelector("input");
-        if (cb) cb.addEventListener("change", () => label.classList.toggle("is-checked", cb.checked));
-      });
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const name = nameInput.value.trim();
-        if (!name) {
-          errorMsg.textContent = "Please share your name so we may welcome you warmly.";
-          nameInput.focus();
-          return;
-        }
-        const ceremonies = attendance === "accept" ? getSelectedCeremonies() : [];
-        if (attendance === "accept" && ceremonies.length === 0) {
-          errorMsg.textContent = "Please select at least one ceremony you plan to attend.";
-          return;
-        }
-        errorMsg.textContent = "";
-        const payload = { name, attendance, guests: attendance === "accept" ? guestCount : 0, ceremonies, note: noteInput.value.trim() };
-        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(payload)); } catch (err) {}
-        showConfirmation(payload, true);
-      });
-
-      editBtn.addEventListener("click", () => {
-        confirmationEl.classList.remove("is-visible");
-        form.style.display = "block";
-        nameInput.focus();
-      });
-
+      let count = 0;
+      let whisperIdx = 0;
       try {
-        const raw = localStorage.getItem(STORAGE_KEY);
-        if (raw) {
-          const saved = JSON.parse(raw);
-          if (saved && saved.name) {
-            nameInput.value = saved.name;
-            noteInput.value = saved.note || "";
-            setAttendance(saved.attendance || "accept");
-            if (saved.guests) setGuestCount(saved.guests);
-            if (saved.ceremonies) setSelectedCeremonies(saved.ceremonies);
-            showConfirmation(saved, false);
-          }
-        }
+        const saved = parseInt(localStorage.getItem(STORAGE_KEY) || "0", 10);
+        if (!Number.isNaN(saved) && saved > 0) count = saved;
       } catch (err) {}
+
+      function renderCounter() {
+        if (!counterEl) return;
+        if (count <= 0) {
+          counterEl.textContent = "";
+        } else {
+          counterEl.textContent =
+            count === 1
+              ? "1 Sacred Blessing Showered"
+              : `${count} Sacred Blessings Showered`;
+        }
+      }
+
+      renderCounter();
+
+      const pieces = [];
+      let animating = false;
+
+      function syncSize() {
+        const rect = canvas.getBoundingClientRect();
+        if (!rect.width || !rect.height) return { w: 360, h: 480 };
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.floor(rect.width * dpr);
+        canvas.height = Math.floor(rect.height * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        return { w: rect.width, h: rect.height };
+      }
+
+      function spawnShower() {
+        const { w, h } = syncSize();
+        const tints = [
+          { kind: "petal", rgb: "180, 56, 96" },
+          { kind: "petal", rgb: "234, 158, 50" },
+          { kind: "petal", rgb: "242, 184, 198" },
+          { kind: "akshata", rgb: "248, 224, 148" },
+          { kind: "akshata", rgb: "223, 178, 72" }
+        ];
+
+        for (let i = 0; i < 38; i++) {
+          const t = tints[i % tints.length];
+          pieces.push({
+            kind: t.kind,
+            rgb: t.rgb,
+            x: w * 0.08 + Math.random() * (w * 0.84),
+            y: -14 - Math.random() * 140,
+            vx: (Math.random() - 0.5) * 1.1,
+            vy: 1.2 + Math.random() * 1.9,
+            size: t.kind === "akshata" ? 2.6 + Math.random() * 1.8 : 4.8 + Math.random() * 3.8,
+            rot: Math.random() * Math.PI * 2,
+            vrot: (Math.random() - 0.5) * 0.08,
+            sway: Math.random() * Math.PI * 2,
+            alpha: 0.94,
+            maxY: h + 24
+          });
+        }
+
+        if (!animating) {
+          animating = true;
+          requestAnimationFrame(step);
+        }
+      }
+
+      function step() {
+        const rect = canvas.getBoundingClientRect();
+        ctx.clearRect(0, 0, rect.width, rect.height);
+        for (let i = pieces.length - 1; i >= 0; i--) {
+          const p = pieces[i];
+          p.sway += 0.05;
+          p.x += p.vx + Math.sin(p.sway) * 0.55;
+          p.y += p.vy;
+          p.rot += p.vrot;
+          if (p.y > p.maxY * 0.78) p.alpha -= 0.025;
+          if (p.y > p.maxY || p.alpha <= 0.02) {
+            pieces.splice(i, 1);
+            continue;
+          }
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rot);
+          ctx.fillStyle = `rgba(${p.rgb}, ${p.alpha})`;
+          ctx.beginPath();
+          if (p.kind === "akshata") {
+            ctx.ellipse(0, 0, p.size * 1.35, p.size * 0.45, 0, 0, Math.PI * 2);
+          } else {
+            ctx.ellipse(0, 0, p.size, p.size * 0.56, 0, 0, Math.PI * 2);
+          }
+          ctx.fill();
+          ctx.restore();
+        }
+        if (pieces.length > 0) {
+          requestAnimationFrame(step);
+        } else {
+          animating = false;
+        }
+      }
+
+      btn.addEventListener("click", () => {
+        count++;
+        try { localStorage.setItem(STORAGE_KEY, String(count)); } catch (err) {}
+        renderCounter();
+        if (whisperEl) {
+          whisperEl.textContent = whispers[whisperIdx % whispers.length];
+          whisperIdx++;
+        }
+        spawnShower();
+      });
     }
 
     /* ==========================================================================
-       11. MULTI-EVENT CALENDAR KEEPSAKE (.ICS GENERATOR FOR ALL 4 CEREMONIES)
+       11. INTERACTIVE SAPTAPADI — SEVEN SACRED VOWS FOLIO
+       ========================================================================== */
+    function initSaptapadiVows() {
+      const stepsRow = document.getElementById("vowsStepsRow");
+      const stage = document.getElementById("vowStage");
+      const kickerEl = document.getElementById("vowStepKicker");
+      const sanskritEl = document.getElementById("vowSanskrit");
+      const titleEl = document.getElementById("vowTitle");
+      const promiseEl = document.getElementById("vowPromise");
+      const progressEl = document.getElementById("vowProgressText");
+      const prevBtn = document.getElementById("vowPrevBtn");
+      const nextBtn = document.getElementById("vowNextBtn");
+      const vows = INVITE_CONFIG.saptapadiVows || [];
+      if (!stepsRow || !stage || vows.length === 0) return;
+
+      let activeIdx = 0;
+
+      stepsRow.innerHTML = vows
+        .map(
+          (_, i) => `
+        <button
+          type="button"
+          class="vow-step-btn ${i === 0 ? "is-active" : ""}"
+          data-vow="${i}"
+          role="tab"
+          aria-selected="${i === 0 ? "true" : "false"}"
+          aria-label="Sacred Vow ${i + 1}"
+        >${i + 1}</button>
+      `
+        )
+        .join("");
+
+      const stepBtns = stepsRow.querySelectorAll(".vow-step-btn");
+
+      function renderVow(idx, animate = true) {
+        activeIdx = (idx + vows.length) % vows.length;
+        stepBtns.forEach((btn, i) => {
+          const on = i === activeIdx;
+          btn.classList.toggle("is-active", on);
+          btn.setAttribute("aria-selected", String(on));
+        });
+
+        const applyContent = () => {
+          const v = vows[activeIdx];
+          if (kickerEl) kickerEl.textContent = v.stepLabel;
+          if (sanskritEl) sanskritEl.textContent = v.sanskrit;
+          if (titleEl) titleEl.textContent = v.title;
+          if (promiseEl) promiseEl.textContent = v.promise;
+          if (progressEl) progressEl.textContent = `Vow ${activeIdx + 1} of ${vows.length}`;
+        };
+
+        if (!animate) {
+          applyContent();
+          return;
+        }
+
+        stage.classList.add("is-fading");
+        setTimeout(() => {
+          applyContent();
+          stage.classList.remove("is-fading");
+        }, 160);
+      }
+
+      stepBtns.forEach((btn) => {
+        btn.addEventListener("click", () => renderVow(Number(btn.dataset.vow), true));
+      });
+
+      if (prevBtn) prevBtn.addEventListener("click", () => renderVow(activeIdx - 1, true));
+      if (nextBtn) nextBtn.addEventListener("click", () => renderVow(activeIdx + 1, true));
+
+      renderVow(0, false);
+    }
+
+    /* ==========================================================================
+       12. MULTI-EVENT CALENDAR KEEPSAKE (.ICS GENERATOR FOR ALL 4 CEREMONIES)
        ========================================================================== */
     function initAddToCalendar() {
       const btn = document.getElementById("addCalendarBtn");
@@ -4349,7 +4253,7 @@
     }
 
     /* ==========================================================================
-       12. HYDRATE ALL COPY, COLORFUL CEREMONY FOLIOS & BOTANICAL ARTWORK
+       13. HYDRATE ALL COPY, COLORFUL CEREMONY FOLIOS & BOTANICAL ARTWORK
        ========================================================================== */
     function hydrateInvitation() {
       const setText = (id, value) => {
@@ -4396,8 +4300,34 @@
       const poojaLink = document.getElementById("poojaMapLink");
       if (poojaLink) poojaLink.href = INVITE_CONFIG.poojaResidence.mapsUrl;
 
-      setText("dressCodeTitle", INVITE_CONFIG.dressCode.heading);
-      setText("dressCodeNote", INVITE_CONFIG.dressCode.note);
+      // Hydrate Section 8: Families & Hospitality Notes
+      const fam = INVITE_CONFIG.families;
+      if (fam) {
+        setText("familiesHeading", fam.heading);
+        setText("familiesShloka", fam.shloka);
+        setText("familiesIntroNote", fam.introNote);
+        setText("groomFamilyRole", fam.groomFamily.role);
+        setText("groomFamilyName", fam.groomFamily.name);
+        setText("groomFamilySub", fam.groomFamily.sub);
+        setText("brideFamilyRole", fam.brideFamily.role);
+        setText("brideFamilyName", fam.brideFamily.name);
+        setText("brideFamilySub", fam.brideFamily.sub);
+
+        const hospList = document.getElementById("hospitalityList");
+        if (hospList && Array.isArray(fam.hospitality)) {
+          hospList.innerHTML = fam.hospitality
+            .map(
+              (item) => `
+            <div class="hospitality-item">
+              <p class="hospitality-item-title">${item.title}</p>
+              <p class="hospitality-item-text">${item.text}</p>
+            </div>
+          `
+            )
+            .join("");
+        }
+      }
+
       setText("closingMessage", INVITE_CONFIG.closingMessage);
       setText("closingCrestInitials", INVITE_CONFIG.initials);
       setText("closingNames", INVITE_CONFIG.coupleShort);
@@ -4484,36 +4414,6 @@
         });
       }
 
-      // Render Interactive Silk-Velvet Fabric Medallions
-      const swatchesRow = document.getElementById("swatchesRow");
-      const captionEl = document.getElementById("swatchPairingCaption");
-      if (swatchesRow) {
-        swatchesRow.innerHTML = INVITE_CONFIG.dressCode.swatches
-          .map(
-            (sw, i) => `
-          <button type="button" class="swatch-btn ${i === 0 ? "is-active" : ""}" data-idx="${i}" role="listitem" aria-label="${sw.name}">
-            <span class="silk-swatch" style="--swatch-hex: ${sw.hex};"></span>
-            <span class="swatch-name">${sw.name}</span>
-          </button>
-        `
-          )
-          .join("");
-
-        const btns = swatchesRow.querySelectorAll(".swatch-btn");
-        if (captionEl && INVITE_CONFIG.dressCode.swatches[0]) {
-          captionEl.textContent = INVITE_CONFIG.dressCode.swatches[0].pairing;
-        }
-        btns.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const idx = Number(btn.dataset.idx);
-            btns.forEach((b) => b.classList.toggle("is-active", b === btn));
-            if (captionEl && INVITE_CONFIG.dressCode.swatches[idx]) {
-              captionEl.textContent = INVITE_CONFIG.dressCode.swatches[idx].pairing;
-            }
-          });
-        });
-      }
-
       // Optional Real Photo Overrides
       if (INVITE_CONFIG.couplePhotoUrl) {
         const photoEl = document.getElementById("couplePhotoBlend");
@@ -4537,7 +4437,7 @@
     }
 
     /* ==========================================================================
-       13. SCROLL CHOREOGRAPHY & ENTRY GATE ORCHESTRATION
+       14. SCROLL CHOREOGRAPHY & ENTRY GATE ORCHESTRATION
        ========================================================================== */
     function initScrollReveals() {
       const els = document.querySelectorAll(".reveal");
@@ -4559,150 +4459,15 @@
       els.forEach((el) => io.observe(el));
     }
 
-    
-    /* ==========================================================================
-       12. INTERACTIVE SACRED FAMILY BLESSINGS & AKSHATA SHOWER
-       ========================================================================== */
-    function initBlessingsShower() {
-      const canvas = document.getElementById("blessingsCanvas");
-      const btn = document.getElementById("blessingShowerBtn");
-      const whisper = document.getElementById("blessingWhisper");
-      const counterEl = document.getElementById("blessingCounterLine");
-      const hospList = document.getElementById("hospitalityList");
-
-      if (hospList && hospList.children.length === 0) {
-        const items = [
-          {
-            title: "Traditional Maharashtrian Swagat",
-            desc: "Welcoming every esteemed guest with fragrant ittar, auspicious aarti, and traditional rose water."
-          },
-          {
-            title: "Royal Pure Vegetarian Feast",
-            desc: "Authentic regional delicacies and festive sweets prepared with warmth, love, and sacred culinary traditions."
-          },
-          {
-            title: "Atithi Satkar & Hospitality Assistance",
-            desc: "Dedicated family members and reception hosts in Shirpur are at your service for comfortable seating and venue guidance."
-          }
-        ];
-        hospList.innerHTML = items
-          .map(
-            function(it) {
-              return '<div class="hospitality-card">' +
-                '<span class="hospitality-spark-bullet" aria-hidden="true">&#10022;</span>' +
-                '<div class="hospitality-text-wrap">' +
-                '<h4 class="hospitality-title">' + it.title + '</h4>' +
-                '<p class="hospitality-desc">' + it.desc + '</p>' +
-                '</div></div>';
-            }
-          )
-          .join("");
-      }
-
-      if (!canvas || !btn) return;
-
-      const ctx = canvas.getContext("2d");
-      let w = 0, h = 0, dpr = 1, rafId = null, running = false;
-      const particles = [];
-      let blessingCount = 0;
-
-      function resize() {
-        const rect = canvas.getBoundingClientRect();
-        dpr = Math.min(window.devicePixelRatio || 1, 2);
-        w = rect.width || window.innerWidth;
-        h = rect.height || 420;
-        canvas.width = Math.floor(w * dpr);
-        canvas.height = Math.floor(h * dpr);
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      }
-
-      function spawnShower() {
-        resize();
-        const colors = [
-          "180, 56, 96",
-          "234, 158, 50",
-          "246, 212, 222",
-          "240, 206, 134",
-          "255, 248, 220"
-        ];
-        for (let i = 0; i < 48; i++) {
-          const kind = i % 4 === 0 ? "rice" : "petal";
-          particles.push({
-            kind: kind,
-            x: Math.random() * w,
-            y: -10 - Math.random() * 80,
-            vx: (Math.random() - 0.5) * 1.6,
-            vy: kind === "rice" ? 2.2 + Math.random() * 2.8 : 1.2 + Math.random() * 1.8,
-            size: kind === "rice" ? 1.8 + Math.random() * 1.4 : 4.5 + Math.random() * 4.2,
-            rot: Math.random() * Math.PI * 2,
-            vrot: (Math.random() - 0.5) * 0.08,
-            tint: colors[i % colors.length],
-            alpha: 0.95
-          });
-        }
-        if (!running) {
-          running = true;
-          loop();
-        }
-      }
-
-      function loop() {
-        ctx.clearRect(0, 0, w, h);
-        for (let i = particles.length - 1; i >= 0; i--) {
-          const p = particles[i];
-          p.x += p.vx + Math.sin(p.y * 0.03) * 0.35;
-          p.y += p.vy;
-          p.rot += p.vrot;
-          p.alpha -= 0.007;
-          if (p.alpha <= 0.02 || p.y > h + 20) {
-            particles.splice(i, 1);
-            continue;
-          }
-          ctx.save();
-          ctx.translate(p.x, p.y);
-          ctx.rotate(p.rot);
-          ctx.fillStyle = "rgba(" + p.tint + ", " + p.alpha + ")";
-          ctx.beginPath();
-          if (p.kind === "petal") {
-            ctx.ellipse(0, 0, p.size, p.size * 0.56, 0, 0, Math.PI * 2);
-          } else {
-            ctx.ellipse(0, 0, p.size * 0.7, p.size * 1.8, 0, 0, Math.PI * 2);
-          }
-          ctx.fill();
-          ctx.restore();
-        }
-        if (particles.length > 0) {
-          rafId = requestAnimationFrame(loop);
-        } else {
-          running = false;
-        }
-      }
-
-      btn.addEventListener("click", () => {
-        blessingCount++;
-        spawnShower();
-        if (counterEl) {
-          counterEl.textContent = "? " + blessingCount + " SACRED " + (blessingCount === 1 ? "BLESSING" : "BLESSINGS") + " SHOWERED UPON DEEPAM & SAVITA ?";
-        }
-        if (whisper) {
-          whisper.textContent = "May your heartfelt blessings illuminate their sacred journey.";
-        }
-        try { if (navigator.vibrate) navigator.vibrate(40); } catch (e) {}
-      });
-
-      resize();
-      window.addEventListener("resize", resize);
-    }
-
     window.addEventListener("load", () => {
       hydrateInvitation();
       initMandapPaintingCanvas();
       initVenuePalaceCanvas();
       initScratchCard();
       initCountdown();
-      initRsvpCard();
-      initAddToCalendar();
       initBlessingsShower();
+      initSaptapadiVows();
+      initAddToCalendar();
 
       const music = new RoyalMusicEngine(INVITE_CONFIG.musicUrl);
       const canopyFx = initCanopyParticles();
@@ -4725,7 +4490,7 @@
         });
       }
 
-      // Begin painting bespoke Jaipur watercolor illustrations seamlessly in the background
+      // Optionally paint Gemini watercolor overlays if an API key is configured
       AtelierWatercolorGenerator.hydrateAtelierPaintings();
 
       let opened = false;
