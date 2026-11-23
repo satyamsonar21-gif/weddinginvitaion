@@ -1,0 +1,4452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Meera &amp; Aarav — Royal Wedding Invitation</title>
+
+  <!-- Bespoke Editorial & Royal Calligraphy Typography (Google Fonts Only) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Pinyon+Script&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* ==========================================================================
+       1. ROYAL ATELIER DESIGN TOKENS & CHAMPAGNE COTTON PAPER BASE
+       ========================================================================== */
+    :root {
+      --backdrop-midnight: #0E1C21;
+      --peacock-deep: #0F252C;
+      --peacock-royal: #173C44;
+      --peacock-velvet: #132E35;
+
+      --paper-ivory: #FAF5EE;
+      --paper-champagne: #F3E9DD;
+      --wash-rose: #F3D8D6;
+      --wash-marigold: #F3E5CA;
+      --wash-sage: #D9E6E2;
+
+      --ink-primary: #1B2D33;
+      --ink-secondary: #536368;
+      --ink-warm: #6E5847;
+
+      --pigment-rani: #9E3B52;
+      --pigment-peony: #C97A86;
+      --pigment-marigold: #D49238;
+      --pigment-saffron: #DF9E42;
+      --pigment-emerald: #476B5C;
+
+      --gold-deep: #9E762D;
+      --gold-mid: #B58C3E;
+      --gold-bright: #E6C77E;
+      --gold-highlight: #F6E5B5;
+      --ivory-ink: #FAF4E8;
+
+      --font-script: 'Pinyon Script', cursive;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-label: 'Cinzel', serif;
+
+      --ease-royal: cubic-bezier(0.22, 1, 0.36, 1);
+      --sheet-max: 440px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--backdrop-midnight);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      min-height: 100dvh;
+      background:
+        radial-gradient(ellipse 75% 42% at 50% 15%, rgba(28, 66, 75, 0.72) 0%, rgba(14, 28, 33, 0.96) 58%, #081215 100%);
+      color: var(--ink-primary);
+      font-family: var(--font-serif);
+      display: flex;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+    /* Scroll locked until royal wax seal is tapped */
+    body.scroll-locked {
+      overflow: hidden;
+      height: 100dvh;
+      touch-action: none;
+    }
+
+    /* ==========================================================================
+       2. CONTINUOUS HANDMADE CHAMPAGNE SILK & COTTON-RAG STATIONERY SHEET
+       ========================================================================== */
+    .stationery-sheet {
+      position: relative;
+      width: 100%;
+      max-width: var(--sheet-max);
+      min-height: 100dvh;
+      background-color: var(--paper-ivory);
+      /* Layered hand-washed watercolor blooms along the entire scroll */
+      background-image:
+        radial-gradient(ellipse 92% 420px at 12% 4%, rgba(243, 216, 214, 0.56) 0%, transparent 70%),
+        radial-gradient(ellipse 84% 440px at 90% 10%, rgba(243, 229, 202, 0.62) 0%, transparent 68%),
+        radial-gradient(ellipse 90% 480px at 18% 23%, rgba(217, 230, 226, 0.54) 0%, transparent 70%),
+        radial-gradient(ellipse 88% 520px at 84% 37%, rgba(243, 216, 214, 0.48) 0%, transparent 70%),
+        radial-gradient(ellipse 94% 520px at 20% 51%, rgba(243, 229, 202, 0.58) 0%, transparent 72%),
+        radial-gradient(ellipse 88% 480px at 82% 65%, rgba(217, 230, 226, 0.52) 0%, transparent 68%),
+        radial-gradient(ellipse 92% 520px at 16% 80%, rgba(243, 216, 214, 0.50) 0%, transparent 72%),
+        radial-gradient(ellipse 96% 480px at 54% 95%, rgba(243, 229, 202, 0.62) 0%, transparent 74%),
+        linear-gradient(180deg, #FAF5EE 0%, #F6EFE5 50%, #F3E9DD 100%);
+      box-shadow:
+        0 0 0 1px rgba(230, 199, 126, 0.22),
+        0 28px 100px rgba(3, 10, 13, 0.78),
+        inset 1px 0 0 rgba(255, 252, 245, 0.7),
+        inset -1px 0 0 rgba(158, 118, 45, 0.18);
+      overflow-x: hidden;
+      z-index: 1;
+    }
+
+    /* Fixed 300gsm cotton-rag fiber texture overlay */
+    .cotton-grain-overlay {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: var(--sheet-max);
+      height: 100dvh;
+      pointer-events: none;
+      z-index: 900;
+      opacity: 0.045;
+      mix-blend-mode: multiply;
+    }
+
+    .svg-defs-vault {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    /* ==========================================================================
+       3. ROYAL EDITORIAL TYPOGRAPHY, GOLD FOIL TEXT & REVEALS
+       ========================================================================== */
+    .micro-label {
+      font-family: var(--font-label);
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 1.7;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: var(--gold-deep);
+    }
+
+    .script-heading {
+      font-family: var(--font-script);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--peacock-royal);
+    }
+
+    /* Burnished 24k Gold Foil Text Effect */
+    .gold-foil-text {
+      background: linear-gradient(
+        118deg,
+        #8F6822 0%,
+        #C79F4B 24%,
+        #F4DFAB 48%,
+        #B58C3E 72%,
+        #8B6420 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: goldSheenFlow 9s ease-in-out infinite;
+    }
+
+    /* Bright champagne-gold foil for dark royal peacock backgrounds */
+    .gold-foil-text--bright {
+      background: linear-gradient(
+        118deg,
+        #C9A252 0%,
+        #F7E7BA 32%,
+        #E6C77E 56%,
+        #FFF2CE 78%,
+        #B58C3E 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: goldSheenFlow 8s ease-in-out infinite;
+    }
+
+    @keyframes goldSheenFlow {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .floral-divider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 6px 0;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .floral-divider svg {
+      width: 244px;
+      height: auto;
+      overflow: visible;
+    }
+
+    /* Dignified scroll reveals */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition:
+        opacity 1.1s var(--ease-royal),
+        transform 1.1s var(--ease-royal);
+      will-change: opacity, transform;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.12s; }
+    .reveal-delay-2 { transition-delay: 0.24s; }
+    .reveal-delay-3 { transition-delay: 0.36s; }
+    .reveal-delay-4 { transition-delay: 0.48s; }
+
+    /* ==========================================================================
+       4. PERSISTENT MINIMALIST GOLD-RIMMED AUDIO TOGGLE BUTTON
+       ========================================================================== */
+    .audio-toggle {
+      position: fixed;
+      top: 16px;
+      right: max(16px, calc(50% - 220px + 16px));
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(181, 140, 62, 0.72);
+      background: rgba(250, 245, 238, 0.76);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: var(--gold-deep);
+      box-shadow:
+        0 2px 10px rgba(15, 37, 44, 0.14),
+        inset 0 0 0 2px rgba(246, 229, 181, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 950;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-6px);
+      transition:
+        opacity 0.8s var(--ease-royal),
+        transform 0.8s var(--ease-royal),
+        background-color 0.35s ease,
+        border-color 0.35s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .audio-toggle.is-ready {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .audio-toggle:hover {
+      background: rgba(250, 245, 238, 0.94);
+      border-color: var(--gold-deep);
+    }
+
+    .audio-toggle:focus-visible {
+      outline: 1px solid var(--gold-mid);
+      outline-offset: 3px;
+    }
+
+    .audio-toggle svg {
+      width: 15px;
+      height: 15px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.3;
+      stroke-linecap: round;
+    }
+
+    .audio-toggle.is-playing .wave-1 { animation: waveBreathe 1.4s ease-in-out infinite; }
+    .audio-toggle.is-playing .wave-2 { animation: waveBreathe 1.4s ease-in-out 0.25s infinite; }
+    .audio-toggle.is-playing .wave-3 { animation: waveBreathe 1.4s ease-in-out 0.5s infinite; }
+    .audio-toggle.is-playing .wave-4 { animation: waveBreathe 1.4s ease-in-out 0.18s infinite; }
+
+    .audio-toggle .icon-wave { display: none; }
+    .audio-toggle .icon-muted { display: block; }
+    .audio-toggle.is-playing .icon-wave { display: block; }
+    .audio-toggle.is-playing .icon-muted { display: none; }
+
+    @keyframes waveBreathe {
+      0%, 100% { transform: scaleY(0.5); transform-origin: center; }
+      50% { transform: scaleY(1.12); transform-origin: center; }
+    }
+
+    /* ==========================================================================
+       5. SECTION 1: ENTRY GATE — ROYAL PEACOCK DAMASK, IVORY ENVELOPE & CANOPY
+       ========================================================================== */
+    .entry-gate {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: var(--sheet-max);
+      height: 100dvh;
+      z-index: 800;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 90% 56% at 50% 22%, #1D454E 0%, #132E35 54%, #0B1D22 100%);
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      transition: opacity 0.95s var(--ease-royal);
+    }
+
+    .entry-gate.is-dismissed {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Intricate Tone-on-Tone Gold Filigree Damask Backdrop Overlay */
+    .entry-damask-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.72;
+    }
+
+    /* Delicate gilded perimeter frame on Entry Gate */
+    .entry-gold-frame {
+      position: absolute;
+      inset: 12px;
+      border: 1px solid rgba(230, 199, 126, 0.28);
+      pointer-events: none;
+      z-index: 2;
+      transition: opacity 0.7s ease;
+    }
+
+    .entry-gold-frame::after {
+      content: '';
+      position: absolute;
+      inset: 5px;
+      border: 1px solid rgba(230, 199, 126, 0.14);
+    }
+
+    .entry-gate.is-opening .entry-gold-frame {
+      opacity: 0;
+    }
+
+    /* Warm golden sunbeams revealed as silk canopy parts */
+    .canopy-sunbeams {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 78% 58% at 50% 28%, rgba(252, 236, 194, 0.72) 0%, rgba(246, 224, 174, 0.24) 44%, transparent 72%),
+        linear-gradient(122deg, transparent 20%, rgba(255, 244, 216, 0.42) 45%, transparent 64%),
+        linear-gradient(108deg, transparent 48%, rgba(246, 214, 206, 0.34) 64%, transparent 80%);
+      opacity: 0;
+      transition: opacity 1.1s var(--ease-royal);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .entry-gate.is-opening .canopy-sunbeams {
+      opacity: 1;
+    }
+
+    /* Ambient floating petals & gold-leaf sparks canvas */
+    #canopyCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 12;
+    }
+
+    /* Twin Pleated Translucent Champagne-Ivory Sheer Silk Canopy Drapes */
+    .silk-canopy {
+      position: absolute;
+      inset: -6% -8%;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    .silk-drape {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 62%;
+      opacity: 0;
+      will-change: transform, opacity;
+      transition:
+        transform 1.7s cubic-bezier(0.26, 0.05, 0.18, 1),
+        opacity 0.65s ease;
+    }
+
+    .silk-drape--left-back {
+      left: -4%;
+      background:
+        repeating-linear-gradient(
+          94deg,
+          rgba(250, 242, 228, 0.16) 0px,
+          rgba(255, 249, 238, 0.62) 24px,
+          rgba(226, 206, 174, 0.22) 48px,
+          rgba(255, 252, 244, 0.56) 76px,
+          rgba(218, 198, 166, 0.14) 104px
+        );
+      mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.96) 68%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.96) 68%, transparent 100%);
+    }
+
+    .silk-drape--left-front {
+      left: -6%;
+      width: 58%;
+      background:
+        repeating-linear-gradient(
+          86deg,
+          rgba(255, 251, 242, 0.28) 0px,
+          rgba(255, 248, 232, 0.76) 20px,
+          rgba(232, 212, 180, 0.20) 42px,
+          rgba(255, 253, 246, 0.64) 66px
+        );
+      mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.92) 62%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.92) 62%, transparent 100%);
+    }
+
+    .silk-drape--right-back {
+      right: -4%;
+      background:
+        repeating-linear-gradient(
+          86deg,
+          rgba(218, 198, 166, 0.14) 0px,
+          rgba(255, 252, 244, 0.56) 28px,
+          rgba(226, 206, 174, 0.22) 56px,
+          rgba(255, 249, 238, 0.62) 82px,
+          rgba(250, 242, 228, 0.16) 104px
+        );
+      mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.96) 68%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.96) 68%, transparent 100%);
+    }
+
+    .silk-drape--right-front {
+      right: -6%;
+      width: 58%;
+      background:
+        repeating-linear-gradient(
+          94deg,
+          rgba(255, 253, 246, 0.64) 0px,
+          rgba(232, 212, 180, 0.20) 24px,
+          rgba(255, 248, 232, 0.76) 46px,
+          rgba(255, 251, 242, 0.28) 66px
+        );
+      mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.92) 62%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.92) 62%, transparent 100%);
+    }
+
+    .entry-gate.is-opening .silk-drape {
+      opacity: 0.94;
+    }
+
+    .entry-gate.is-opening .silk-drape--left-back {
+      transform: translateX(-86%) skewX(6deg) scaleX(0.82);
+    }
+
+    .entry-gate.is-opening .silk-drape--left-front {
+      transform: translateX(-104%) skewX(10deg) scaleX(0.74);
+      transition-delay: 0.08s;
+    }
+
+    .entry-gate.is-opening .silk-drape--right-back {
+      transform: translateX(86%) skewX(-6deg) scaleX(0.82);
+    }
+
+    .entry-gate.is-opening .silk-drape--right-front {
+      transform: translateX(104%) skewX(-10deg) scaleX(0.74);
+      transition-delay: 0.08s;
+    }
+
+    /* Entry Script Header Above Envelope */
+    .entry-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 41%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 26px 28px 8px;
+      text-align: center;
+      z-index: 6;
+      transition:
+        opacity 0.72s var(--ease-royal),
+        transform 0.92s var(--ease-royal);
+    }
+
+    .entry-gate.is-opening .entry-header {
+      opacity: 0;
+      transform: translateY(-22px);
+    }
+
+    .entry-lotus-crest {
+      width: 78px;
+      height: auto;
+      margin-bottom: 12px;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.25));
+    }
+
+    .entry-title {
+      font-family: var(--font-script);
+      font-size: clamp(48px, 12.6vw, 58px);
+      font-weight: 400;
+      line-height: 1.12;
+      filter: drop-shadow(0 3px 12px rgba(7, 16, 19, 0.48));
+    }
+
+    .entry-tap-cue {
+      margin-top: 10px;
+      font-family: var(--font-label);
+      font-size: 9.5px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold-highlight);
+      animation: tapPulse 3.4s ease-in-out infinite;
+    }
+
+    @keyframes tapPulse {
+      0%, 100% { opacity: 0.45; }
+      50% { opacity: 0.98; }
+    }
+
+    /* Scalloped Ivory-Champagne Velvet Envelope Stage */
+    .envelope-stage {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 60%;
+      z-index: 8;
+      perspective: 1250px;
+      transition:
+        transform 1.25s cubic-bezier(0.3, 0.05, 0.2, 1),
+        opacity 1.05s ease;
+      transform-origin: bottom center;
+    }
+
+    .entry-gate.is-opening .envelope-stage {
+      transform: translateY(46%);
+      opacity: 0;
+      transition-delay: 0.34s;
+    }
+
+    /* Deep Crimson-Peacock Silk Envelope Lining */
+    .envelope-lining {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 10%, #8E3046 0%, #5A1E2E 58%, #3B131E 100%);
+      border-top: 1.5px solid rgba(230, 199, 126, 0.72);
+      box-shadow: 0 -14px 36px rgba(4, 11, 14, 0.45);
+    }
+
+    .envelope-pocket {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .envelope-pocket svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* 3D Scalloped Top Flap */
+    .envelope-flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 58%;
+      transform-origin: top center;
+      transform-style: preserve-3d;
+      transition: transform 0.98s cubic-bezier(0.32, 0.04, 0.2, 1);
+      z-index: 9;
+      filter: drop-shadow(0 10px 18px rgba(10, 22, 26, 0.28));
+    }
+
+    .entry-gate.is-opening .envelope-flap {
+      transform: rotateX(172deg);
+      transition-delay: 0.14s;
+    }
+
+    .envelope-flap svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Sculpted 3D Crimson-Rose & Gold-Dusted Royal Wax Seal */
+    .wax-seal-wrap {
+      position: absolute;
+      top: 47%;
+      left: 50%;
+      width: 96px;
+      height: 96px;
+      transform: translate(-50%, -50%);
+      z-index: 11;
+      transition:
+        transform 0.6s var(--ease-royal),
+        opacity 0.52s ease;
+      filter:
+        drop-shadow(0 8px 16px rgba(24, 9, 14, 0.46))
+        drop-shadow(0 2px 4px rgba(24, 9, 14, 0.34));
+    }
+
+    .entry-gate.is-opening .wax-seal-wrap {
+      transform: translate(-50%, -68%) scale(1.12);
+      opacity: 0;
+    }
+
+    .wax-seal-wrap svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .wax-initials {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      font-size: 19px;
+      letter-spacing: 0.08em;
+    }
+
+    /* ==========================================================================
+       6. SECTION 2: OPULENT HERO INVITATION (SCALLOPED JHAROKHA ARCH)
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      min-height: 100dvh;
+      padding: 20px 14px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Ornate Full-Height Gilded Scalloped Jharokha Double-Arch Container */
+    .hero-jharokha-frame {
+      position: relative;
+      width: 100%;
+      padding: 58px 22px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      min-height: calc(100dvh - 48px);
+    }
+
+    .hero-arch-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .gold-sheen-stroke {
+      animation: strokeShimmer 6.5s ease-in-out infinite;
+    }
+
+    @keyframes strokeShimmer {
+      0%, 100% { opacity: 0.78; }
+      50% { opacity: 1; }
+    }
+
+    /* Lush Colorful Watercolor Floral Garlands Across Hero Corners */
+    .hero-garland {
+      position: absolute;
+      top: -10px;
+      width: 186px;
+      height: auto;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .hero-garland--left { left: -12px; }
+    .hero-garland--right { right: -12px; transform: scaleX(-1); }
+
+    .hero-stack {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      padding-top: 8px;
+    }
+
+    .hero-royal-crest {
+      width: 96px;
+      height: auto;
+      margin: 0 auto 14px;
+      display: block;
+    }
+
+    .hero-overline {
+      max-width: 280px;
+      margin: 0 auto 22px;
+      color: var(--peacock-royal);
+    }
+
+    .couple-name {
+      font-family: var(--font-script);
+      font-size: clamp(46px, 12.2vw, 55px);
+      font-weight: 400;
+      line-height: 1.08;
+      padding: 2px 6px;
+    }
+
+    .parentage-label {
+      font-family: var(--font-label);
+      font-size: 8.5px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--pigment-rani);
+      margin-top: 5px;
+    }
+
+    .parentage-names {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 15.5px;
+      color: var(--ink-warm);
+      margin-top: 2px;
+      line-height: 1.45;
+    }
+
+    .couple-ampersand {
+      font-family: var(--font-script);
+      font-size: 38px;
+      line-height: 1;
+      margin: 10px 0 6px;
+    }
+
+    /* Lower Hero Centerpiece: Arched Heritage Udaipur Courtyard Vignette */
+    .hero-centerpiece {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      margin: 22px auto 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .courtyard-vignette-wrap {
+      position: relative;
+      width: 296px;
+      max-width: 100%;
+      height: 232px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .courtyard-vignette-wrap svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    /* Optional real couple portrait override seamlessly masked into arch */
+    .couple-photo-blend {
+      width: 248px;
+      height: 226px;
+      object-fit: cover;
+      object-position: center top;
+      display: none;
+      border-radius: 130px 130px 6px 6px;
+      border: 1px solid rgba(181, 140, 62, 0.55);
+      box-shadow: 0 0 0 5px rgba(250, 245, 238, 0.8), 0 0 0 6px rgba(181, 140, 62, 0.35);
+      mask-image: radial-gradient(ellipse 84% 84% at 50% 48%, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, 0.15) 100%);
+      -webkit-mask-image: radial-gradient(ellipse 84% 84% at 50% 48%, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, 0.15) 100%);
+    }
+
+    /* ==========================================================================
+       7. SECTION 3: WELCOME BLESSING ("A BEAUTIFUL BEGINNING")
+       ========================================================================== */
+    .welcome-section {
+      position: relative;
+      padding: 54px 34px 44px;
+      text-align: center;
+    }
+
+    /* Delicate vertical gold filigree side hairlines */
+    .welcome-side-rule {
+      position: absolute;
+      top: 46px;
+      bottom: 64px;
+      width: 1px;
+      background: linear-gradient(180deg, transparent 0%, rgba(181, 140, 62, 0.45) 20%, rgba(181, 140, 62, 0.45) 80%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .welcome-side-rule--left { left: 20px; }
+    .welcome-side-rule--right { right: 20px; }
+
+    .welcome-heading {
+      font-size: 42px;
+      margin-bottom: 24px;
+    }
+
+    .welcome-body-wrap {
+      max-width: 326px;
+      margin: 0 auto 24px;
+      text-align: left;
+    }
+
+    .welcome-body {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.82;
+      color: var(--ink-primary);
+    }
+
+    /* Illuminated Royal Gold Drop-Cap */
+    .illuminated-dropcap {
+      float: left;
+      font-family: var(--font-label);
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 1;
+      padding: 6px 11px 5px;
+      margin: 4px 12px 2px 0;
+      border: 1px solid rgba(181, 140, 62, 0.62);
+      background:
+        radial-gradient(circle at 50% 35%, rgba(246, 229, 181, 0.42) 0%, rgba(243, 216, 214, 0.24) 100%);
+      box-shadow: inset 0 0 0 2.5px var(--paper-ivory), inset 0 0 0 3.2px rgba(158, 59, 82, 0.28);
+      color: var(--pigment-rani);
+    }
+
+    .welcome-signature {
+      font-family: var(--font-script);
+      font-size: 34px;
+      margin: 6px 0 36px;
+    }
+
+    /* ==========================================================================
+       8. SECTION 4: INTERACTIVE 24K GOLD-LEAF "SCRATCH TO REVEAL" DATE MEDALLION
+       ========================================================================== */
+    .scratch-section {
+      padding: 24px 24px 48px;
+      text-align: center;
+    }
+
+    .scratch-heading-slot {
+      position: relative;
+      height: 54px;
+      margin: 8px 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .scratch-heading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      transition: opacity 0.85s var(--ease-royal), transform 0.85s var(--ease-royal);
+    }
+
+    .scratch-heading--after {
+      opacity: 0;
+      transform: translateY(6px);
+      pointer-events: none;
+    }
+
+    .scratch-section.is-revealed .scratch-heading--before {
+      opacity: 0;
+      transform: translateY(-6px);
+      pointer-events: none;
+    }
+
+    .scratch-section.is-revealed .scratch-heading--after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Ornate Scalloped Mughal Arch Gilded Frame */
+    .scratch-arch-outer {
+      position: relative;
+      width: 292px;
+      max-width: 100%;
+      height: 334px;
+      margin: 0 auto;
+      padding: 12px;
+      border-radius: 156px 156px 8px 8px;
+      border: 1.2px solid rgba(181, 140, 62, 0.72);
+      background:
+        radial-gradient(ellipse at 50% 35%, rgba(246, 229, 181, 0.35) 0%, rgba(250, 245, 238, 0.5) 100%);
+      box-shadow:
+        0 10px 30px rgba(23, 60, 68, 0.08),
+        inset 0 0 0 4px rgba(250, 245, 238, 0.85),
+        inset 0 0 0 5px rgba(158, 59, 82, 0.25);
+    }
+
+    .scratch-arch-crest {
+      position: absolute;
+      top: -19px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 102px;
+      height: auto;
+      z-index: 6;
+      pointer-events: none;
+    }
+
+    .scratch-arch-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 144px 144px 4px 4px;
+      border: 1px solid rgba(181, 140, 62, 0.65);
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 50% 42%, #FFFDF9 0%, #F7EFE4 66%, #EFE2D2 100%);
+    }
+
+    /* Embossed Letterpress Date Layer Underneath Gold Foil */
+    .scratch-revealed-layer {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 36px 20px 24px;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .scratch-watermark {
+      position: absolute;
+      width: 174px;
+      height: auto;
+      opacity: 0.1;
+      pointer-events: none;
+    }
+
+    .scratch-revealed-label {
+      font-family: var(--font-label);
+      font-size: 9.5px;
+      letter-spacing: 0.28em;
+      color: var(--pigment-rani);
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .scratch-date-main {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      font-size: 31px;
+      letter-spacing: 0.03em;
+      color: var(--peacock-royal);
+      line-height: 1.18;
+      position: relative;
+      z-index: 2;
+    }
+
+    .scratch-date-ornament {
+      width: 84px;
+      height: auto;
+      margin: 12px auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .scratch-date-sub {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 16.5px;
+      color: var(--ink-warm);
+      letter-spacing: 0.02em;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Interactive 24k Gold-Leaf Metallic Foil Canvas */
+    #scratchCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      cursor: crosshair;
+      touch-action: none;
+      transition: opacity 0.9s var(--ease-royal);
+    }
+
+    #scratchCanvas.is-cleared {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #scratchParticlesCanvas {
+      position: absolute;
+      inset: -44px;
+      width: calc(100% + 88px);
+      height: calc(100% + 88px);
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .scratch-fallback-btn {
+      margin-top: 18px;
+      background: none;
+      border: none;
+      border-bottom: 1px solid rgba(158, 118, 45, 0.45);
+      padding: 6px 2px 3px;
+      font-family: var(--font-label);
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      cursor: pointer;
+      transition: opacity 0.55s ease, color 0.3s ease;
+    }
+
+    .scratch-fallback-btn:hover {
+      color: var(--pigment-rani);
+    }
+
+    .scratch-section.is-revealed .scratch-fallback-btn {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* ==========================================================================
+       9. SECTION 5: GILDED EDITORIAL LIVE COUNTDOWN TIMER
+       ========================================================================== */
+    .countdown-section {
+      padding: 24px 20px 52px;
+      text-align: center;
+    }
+
+    .countdown-heading {
+      font-size: 40px;
+      margin: 8px 0 30px;
+    }
+
+    .countdown-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      max-width: 374px;
+      margin: 0 auto;
+    }
+
+    /* Open airy hairline arch framing around each numeral (zero clunky boxes) */
+    .countdown-unit {
+      flex: 1;
+      min-width: 0;
+      padding: 14px 4px 10px;
+      border-top: 1px solid rgba(181, 140, 62, 0.46);
+      border-bottom: 1px solid rgba(181, 140, 62, 0.26);
+      border-radius: 42px 42px 0 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .countdown-value {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 1.06;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.02em;
+    }
+
+    .countdown-label {
+      font-family: var(--font-label);
+      font-size: 8.5px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-secondary);
+      margin-top: 7px;
+    }
+
+    /* Tiny ruby & gold diamond separator */
+    .countdown-sep {
+      width: 5px;
+      height: 5px;
+      flex-shrink: 0;
+      background: var(--pigment-rani);
+      border: 1px solid var(--gold-mid);
+      transform: rotate(45deg);
+      margin-top: -12px;
+      opacity: 0.72;
+    }
+
+    .countdown-status {
+      margin-top: 18px;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 16px;
+      color: var(--pigment-rani);
+      display: none;
+    }
+
+    /* ==========================================================================
+       10. SECTION 6: COLORFUL ROYAL CELEBRATION TIMELINE
+       ========================================================================== */
+    .timeline-section {
+      padding: 24px 22px 54px;
+      text-align: center;
+    }
+
+    .timeline-heading {
+      font-size: 42px;
+      margin: 8px 0 38px;
+    }
+
+    .timeline-list {
+      position: relative;
+      max-width: 380px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    /* Hairline gold-beaded vertical spine */
+    .timeline-spine {
+      position: absolute;
+      top: 16px;
+      bottom: 34px;
+      left: 96px;
+      width: 1px;
+      background: linear-gradient(
+        180deg,
+        rgba(181, 140, 62, 0.2) 0%,
+        rgba(181, 140, 62, 0.72) 15%,
+        rgba(181, 140, 62, 0.72) 85%,
+        rgba(181, 140, 62, 0.2) 100%
+      );
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 80px 32px 1fr;
+      align-items: start;
+      padding: 12px 10px 26px 4px;
+      position: relative;
+      border-radius: 12px;
+      /* Soft distinctive watercolor pigment wash behind each celebration */
+      background: radial-gradient(ellipse 85% 95% at 70% 45%, var(--event-glow) 0%, transparent 74%);
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 10px;
+    }
+
+    .timeline-time {
+      text-align: right;
+      font-family: var(--font-label);
+      font-weight: 500;
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      color: var(--gold-deep);
+      padding-top: 8px;
+      line-height: 1.3;
+    }
+
+    .timeline-node-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 9px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Jewel-colored faceted diamond node with gold rim */
+    .timeline-jewel {
+      width: 10px;
+      height: 10px;
+      background: var(--event-jewel);
+      border: 1.5px solid var(--gold-bright);
+      transform: rotate(45deg);
+      box-shadow:
+        0 0 0 3px var(--paper-ivory),
+        0 0 0 4px rgba(181, 140, 62, 0.34);
+    }
+
+    .timeline-content {
+      padding-left: 6px;
+    }
+
+    .timeline-title-row {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .timeline-motif-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      color: var(--event-jewel);
+    }
+
+    .timeline-event-title {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.2;
+      color: var(--peacock-royal);
+    }
+
+    .timeline-event-sub {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--ink-warm);
+      margin-top: 4px;
+      padding-left: 33px;
+    }
+
+    /* ==========================================================================
+       11. SECTION 7: OPULENT MIDNIGHT-PEACOCK & GOLD FOIL VENUE CARD
+       ========================================================================== */
+    .venue-section {
+      padding: 24px 0 54px;
+    }
+
+    .venue-card {
+      position: relative;
+      margin: 20px 18px 0;
+      min-height: 404px;
+      background:
+        radial-gradient(ellipse 92% 54% at 50% 106%, rgba(235, 178, 86, 0.34) 0%, rgba(212, 146, 56, 0.12) 38%, transparent 70%),
+        linear-gradient(172deg, #0D2026 0%, #132F37 46%, #1D3C45 100%);
+      color: var(--ivory-ink);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 58px 30px;
+      text-align: center;
+      overflow: hidden;
+      box-shadow: 0 18px 44px rgba(14, 28, 33, 0.28);
+    }
+
+    .venue-photo-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 0;
+      filter: saturate(0.68) contrast(1.06);
+    }
+
+    .venue-photo-bg.has-photo {
+      opacity: 0.25;
+    }
+
+    /* Intricate Architectural Palace Jharokha Gold-Foil Etching (18% opacity) */
+    .venue-etching {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.18;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Double Gold-Hairline Scalloped Inset Frame SVG */
+    .venue-scallop-frame {
+      position: absolute;
+      inset: 10px;
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    #venueBokehCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .venue-content {
+      position: relative;
+      z-index: 4;
+      max-width: 308px;
+    }
+
+    .venue-label {
+      color: var(--gold-bright);
+      margin-bottom: 14px;
+    }
+
+    .venue-name {
+      font-family: var(--font-script);
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .venue-address {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.66;
+      color: rgba(250, 244, 232, 0.84);
+      margin-bottom: 28px;
+    }
+
+    .venue-map-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border: 1px solid rgba(230, 199, 126, 0.68);
+      background: rgba(230, 199, 126, 0.08);
+      color: var(--gold-highlight);
+      text-decoration: none;
+      font-family: var(--font-label);
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      transition:
+        background-color 0.4s ease,
+        border-color 0.4s ease,
+        color 0.4s ease;
+    }
+
+    .venue-map-btn:hover,
+    .venue-map-btn:focus-visible {
+      background: rgba(230, 199, 126, 0.2);
+      border-color: var(--gold-highlight);
+      color: #FFFFFF;
+      outline: none;
+    }
+
+    /* ==========================================================================
+       12. SECTION 8: DRESS CODE & TACTILE SILK-VELVET FABRIC SWATCHES
+       ========================================================================== */
+    .dresscode-section {
+      padding: 24px 24px 52px;
+      text-align: center;
+    }
+
+    .dresscode-heading {
+      font-size: 42px;
+      margin: 8px 0 16px;
+    }
+
+    .dresscode-note {
+      font-family: var(--font-serif);
+      font-size: 16.5px;
+      line-height: 1.76;
+      color: var(--ink-primary);
+      max-width: 336px;
+      margin: 0 auto 28px;
+    }
+
+    .swatches-row {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 12px;
+      flex-wrap: nowrap;
+      margin: 0 auto;
+    }
+
+    .swatch-btn {
+      background: none;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 60px;
+      cursor: pointer;
+      padding: 2px 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Tactile 48px Silk-Velvet Medallion with Embroidered Gold Double-Rim */
+    .silk-swatch {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: var(--swatch-color);
+      background-image:
+        radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.14) 24%, transparent 54%),
+        linear-gradient(138deg, rgba(255, 255, 255, 0.24) 0%, transparent 44%, rgba(0, 0, 0, 0.34) 100%),
+        repeating-linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.035) 0px,
+          rgba(255, 255, 255, 0.035) 1px,
+          rgba(0, 0, 0, 0.04) 1px,
+          rgba(0, 0, 0, 0.04) 2px
+        );
+      box-shadow:
+        inset 0 1.5px 3px rgba(255, 255, 255, 0.5),
+        inset 0 -3px 7px rgba(10, 14, 18, 0.34),
+        0 0 0 1.5px rgba(181, 140, 62, 0.72),
+        0 0 0 3.5px var(--paper-ivory),
+        0 0 0 4.5px rgba(181, 140, 62, 0.35),
+        0 6px 12px rgba(23, 60, 68, 0.16);
+      transition: transform 0.45s var(--ease-royal), box-shadow 0.45s ease;
+    }
+
+    .silk-swatch::after {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border-radius: 50%;
+      border: 1px dashed rgba(246, 229, 181, 0.46);
+      pointer-events: none;
+    }
+
+    .swatch-btn:hover .silk-swatch,
+    .swatch-btn.is-active .silk-swatch {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow:
+        inset 0 1.5px 3px rgba(255, 255, 255, 0.54),
+        inset 0 -3px 7px rgba(10, 14, 18, 0.34),
+        0 0 0 1.8px var(--gold-deep),
+        0 0 0 4px var(--paper-ivory),
+        0 0 0 5.2px rgba(158, 59, 82, 0.48),
+        0 10px 18px rgba(23, 60, 68, 0.2);
+    }
+
+    .swatch-name {
+      margin-top: 11px;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 11.5px;
+      line-height: 1.25;
+      color: var(--ink-warm);
+    }
+
+    .swatch-caption {
+      margin-top: 18px;
+      min-height: 22px;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 14.5px;
+      color: var(--peacock-royal);
+      transition: opacity 0.35s ease;
+    }
+
+    /* ==========================================================================
+       13. SECTION 9: BESPOKE LETTERPRESS RSVP & BLESSINGS REPLY SHEET
+       ========================================================================== */
+    .rsvp-section {
+      position: relative;
+      padding: 24px 24px 54px;
+      text-align: center;
+    }
+
+    .rsvp-heading {
+      font-size: 42px;
+      margin: 8px 0 10px;
+    }
+
+    .rsvp-sub {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 15.5px;
+      color: var(--ink-warm);
+      margin-bottom: 26px;
+    }
+
+    /* Engraved Reply Sheet directly on Cotton Paper (Zero SaaS boxes) */
+    .rsvp-sheet {
+      position: relative;
+      max-width: 356px;
+      margin: 0 auto;
+      padding: 32px 22px 30px;
+      border-top: 1px solid rgba(181, 140, 62, 0.58);
+      border-bottom: 1px solid rgba(181, 140, 62, 0.58);
+      background:
+        radial-gradient(ellipse 90% 80% at 50% 50%, rgba(255, 252, 246, 0.56) 0%, transparent 76%);
+    }
+
+    .rsvp-sheet::before,
+    .rsvp-sheet::after {
+      content: '';
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      height: 1px;
+      background: rgba(158, 59, 82, 0.24);
+      pointer-events: none;
+    }
+
+    .rsvp-sheet::before { top: 5px; }
+    .rsvp-sheet::after { bottom: 5px; }
+
+    .rsvp-field {
+      margin-bottom: 24px;
+      text-align: left;
+    }
+
+    .rsvp-field-label {
+      display: block;
+      font-family: var(--font-label);
+      font-size: 9px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      margin-bottom: 7px;
+    }
+
+    .rsvp-line-input,
+    .rsvp-line-textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(181, 140, 62, 0.56);
+      padding: 8px 2px 7px;
+      font-family: var(--font-serif);
+      font-size: 18px;
+      color: var(--peacock-royal);
+      border-radius: 0;
+      outline: none;
+      transition: border-color 0.35s ease;
+    }
+
+    .rsvp-line-textarea {
+      resize: none;
+      min-height: 54px;
+      line-height: 1.5;
+    }
+
+    .rsvp-line-input::placeholder,
+    .rsvp-line-textarea::placeholder {
+      color: rgba(83, 99, 104, 0.52);
+      font-style: italic;
+    }
+
+    .rsvp-line-input:focus,
+    .rsvp-line-textarea:focus {
+      border-bottom-color: var(--pigment-rani);
+    }
+
+    /* Engraved Attendance Wax-Seal Toggle Buttons */
+    .rsvp-seal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .rsvp-seal-opt {
+      position: relative;
+      padding: 11px 8px;
+      background: transparent;
+      border: 1px solid rgba(181, 140, 62, 0.48);
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 15.5px;
+      color: var(--ink-warm);
+      cursor: pointer;
+      transition: all 0.4s var(--ease-royal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .rsvp-seal-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 1px solid var(--gold-mid);
+      transition: all 0.35s ease;
+      flex-shrink: 0;
+    }
+
+    .rsvp-seal-opt.is-selected {
+      border-color: var(--pigment-rani);
+      background: rgba(158, 59, 82, 0.08);
+      color: var(--pigment-rani);
+      font-weight: 500;
+    }
+
+    .rsvp-seal-opt.is-selected .rsvp-seal-dot {
+      background: radial-gradient(circle at 35% 35%, #D98A96 0%, #9E3B52 70%);
+      border-color: var(--gold-bright);
+      box-shadow: 0 0 0 2px rgba(158, 59, 82, 0.16);
+    }
+
+    /* Guest Count Gilded Selector (1-5) */
+    .rsvp-guests-wrap {
+      transition: opacity 0.35s ease;
+    }
+
+    .rsvp-guests-wrap.is-dimmed {
+      opacity: 0.38;
+      pointer-events: none;
+    }
+
+    .rsvp-count-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .rsvp-count-btn {
+      flex: 1;
+      height: 38px;
+      background: transparent;
+      border: 1px solid rgba(181, 140, 62, 0.42);
+      font-family: var(--font-serif);
+      font-size: 18px;
+      color: var(--ink-primary);
+      cursor: pointer;
+      transition: all 0.35s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .rsvp-count-btn.is-selected {
+      background: var(--peacock-royal);
+      border-color: var(--gold-mid);
+      color: var(--gold-highlight);
+    }
+
+    .rsvp-error-msg {
+      min-height: 18px;
+      margin-bottom: 12px;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 14px;
+      color: var(--pigment-rani);
+      text-align: center;
+    }
+
+    .rsvp-submit-btn {
+      width: 100%;
+      padding: 13px 20px;
+      border: 1px solid var(--gold-deep);
+      background:
+        linear-gradient(125deg, #132F37 0%, #1B424B 52%, #132F37 100%);
+      color: var(--gold-highlight);
+      font-family: var(--font-label);
+      font-size: 10px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow:
+        inset 0 0 0 2.5px rgba(230, 199, 126, 0.22),
+        0 6px 18px rgba(19, 47, 55, 0.18);
+      transition: transform 0.35s var(--ease-royal), background-color 0.35s ease;
+    }
+
+    .rsvp-submit-btn:hover {
+      transform: translateY(-1px);
+      border-color: var(--gold-bright);
+    }
+
+    /* Wax-Seal Confirmation Stamp View */
+    .rsvp-confirmation {
+      display: none;
+      padding: 14px 6px 6px;
+      text-align: center;
+      position: relative;
+    }
+
+    .rsvp-confirmation.is-visible {
+      display: block;
+      animation: fadeLift 0.85s var(--ease-royal) forwards;
+    }
+
+    @keyframes fadeLift {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .rsvp-stamp-badge {
+      width: 74px;
+      height: 74px;
+      margin: 0 auto 14px;
+      animation: waxStampPress 0.72s cubic-bezier(0.22, 1.25, 0.36, 1) forwards;
+      filter: drop-shadow(0 5px 10px rgba(74, 24, 38, 0.26));
+    }
+
+    @keyframes waxStampPress {
+      0% { opacity: 0; transform: scale(1.42) rotate(-10deg); }
+      65% { opacity: 1; transform: scale(0.95) rotate(2deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+
+    .rsvp-thanks-title {
+      font-family: var(--font-script);
+      font-size: 36px;
+      color: var(--peacock-royal);
+      margin-bottom: 8px;
+    }
+
+    .rsvp-thanks-detail {
+      font-family: var(--font-serif);
+      font-size: 16.5px;
+      line-height: 1.68;
+      color: var(--ink-primary);
+      margin-bottom: 12px;
+    }
+
+    .rsvp-saved-note {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 15px;
+      color: var(--pigment-rani);
+      margin-bottom: 18px;
+    }
+
+    .rsvp-edit-btn {
+      background: none;
+      border: none;
+      border-bottom: 1px solid rgba(158, 118, 45, 0.45);
+      font-family: var(--font-label);
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      padding: 4px 2px;
+      cursor: pointer;
+    }
+
+    #rsvpPetalsCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 6;
+    }
+
+    /* ==========================================================================
+       14. SECTION 10: DOUBLE-ARCH GOLD-FOIL CLOSING KEEPSAKE & ADD TO CALENDAR
+       ========================================================================== */
+    .closing-section {
+      padding: 20px 22px 66px;
+      text-align: center;
+    }
+
+    .closing-arch-wrap {
+      position: relative;
+      max-width: 356px;
+      margin: 22px auto 0;
+      padding: 74px 28px 54px;
+    }
+
+    .closing-arch-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .closing-inner {
+      position: relative;
+      z-index: 2;
+    }
+
+    .closing-message {
+      font-family: var(--font-script);
+      font-size: 35px;
+      line-height: 1.28;
+      color: var(--peacock-royal);
+      max-width: 274px;
+      margin: 0 auto 20px;
+    }
+
+    .closing-monogram-crest {
+      width: 86px;
+      height: auto;
+      margin: 0 auto 14px;
+      display: block;
+    }
+
+    .closing-names {
+      font-family: var(--font-script);
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .closing-footer-line {
+      font-family: var(--font-label);
+      font-size: 8.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      line-height: 1.8;
+      color: var(--ink-secondary);
+      margin-bottom: 24px;
+    }
+
+    .calendar-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 22px;
+      background: rgba(250, 245, 238, 0.82);
+      border: 1px solid rgba(181, 140, 62, 0.72);
+      color: var(--gold-deep);
+      font-family: var(--font-label);
+      font-size: 9.5px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.35s ease;
+    }
+
+    .calendar-btn:hover {
+      background: var(--peacock-royal);
+      border-color: var(--gold-mid);
+      color: var(--gold-highlight);
+    }
+
+    .calendar-feedback {
+      margin-top: 10px;
+      min-height: 18px;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 13.5px;
+      color: var(--pigment-emerald);
+    }
+
+    /* Lush Watercolor Floral Wreath along Closing Arch Base */
+    .closing-base-wreath {
+      position: relative;
+      z-index: 2;
+      margin: 16px auto -28px;
+      width: 280px;
+      max-width: 100%;
+      pointer-events: none;
+    }
+
+    /* ==========================================================================
+       15. RESPONSIVE REFINEMENTS FOR COMPACT MOBILE VIEWPORTS
+       ========================================================================== */
+    @media (max-width: 365px) {
+      .swatches-row { gap: 7px; }
+      .swatch-btn { width: 54px; }
+      .silk-swatch { width: 42px; height: 42px; }
+      .timeline-spine { left: 82px; }
+      .timeline-item { grid-template-columns: 66px 32px 1fr; }
+      .countdown-value { font-size: 32px; }
+      .rsvp-seal-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="scroll-locked">
+
+  <!-- ========================================================================
+       SHARED SVG DEFS: COTTON GRAIN, WATERCOLOR PIGMENTS & 24K GOLD GRADIENTS
+       ======================================================================== -->
+  <svg class="svg-defs-vault" aria-hidden="true">
+    <defs>
+      <!-- Tactile 300gsm Cotton-Rag Paper Fiber Grain -->
+      <filter id="cotton-grain-filter" x="0%" y="0%" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="3" stitchTiles="stitch" result="noise" />
+        <feColorMatrix type="saturate" values="0" in="noise" />
+      </filter>
+
+      <!-- Hand-Painted Watercolor Petal Pigment Pipeline (Rani Rose, Peony, Marigold, Jasmine) -->
+      <filter id="wc-petal" x="-30%" y="-30%" width="160%" height="160%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.036 0.045" numOctaves="4" seed="11" result="turb" />
+        <feDisplacementMap in="SourceGraphic" in2="turb" scale="6.5" xChannelSelector="R" yChannelSelector="G" result="disp" />
+        <feGaussianBlur in="disp" stdDeviation="0.6" result="soft" />
+        <feComponentTransfer in="soft">
+          <feFuncA type="linear" slope="0.96" />
+        </feComponentTransfer>
+      </filter>
+
+      <!-- Hand-Painted Emerald Sage & Eucalyptus Foliage Pigment Filter -->
+      <filter id="wc-leaf" x="-26%" y="-26%" width="152%" height="152%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.044" numOctaves="3" seed="7" result="lturb" />
+        <feDisplacementMap in="SourceGraphic" in2="lturb" scale="4.4" xChannelSelector="R" yChannelSelector="B" result="ldisp" />
+        <feGaussianBlur in="ldisp" stdDeviation="0.45" />
+      </filter>
+
+      <!-- Soft Atmospheric Paper Pigment Bleed Wash -->
+      <filter id="wc-wash" x="-42%" y="-42%" width="184%" height="184%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="3" seed="23" result="wturb" />
+        <feDisplacementMap in="SourceGraphic" in2="wturb" scale="16" xChannelSelector="R" yChannelSelector="G" result="wdisp" />
+        <feGaussianBlur in="wdisp" stdDeviation="7.5" />
+      </filter>
+
+      <!-- Burnished 24k Gold Foil Metallic Linear Gradients -->
+      <linearGradient id="gold-foil-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#9E762D" />
+        <stop offset="28%" stop-color="#E6C77E" />
+        <stop offset="52%" stop-color="#F6E5B5" />
+        <stop offset="76%" stop-color="#B58C3E" />
+        <stop offset="100%" stop-color="#9E762D" />
+      </linearGradient>
+
+      <linearGradient id="gold-foil-vertical" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#E6C77E" />
+        <stop offset="25%" stop-color="#9E762D" />
+        <stop offset="55%" stop-color="#F6E5B5" />
+        <stop offset="82%" stop-color="#B58C3E" />
+        <stop offset="100%" stop-color="#9E762D" />
+      </linearGradient>
+
+      <!-- Royal Peacock Backdrop Tone-on-Tone Gold Filigree Damask Pattern -->
+      <pattern id="royal-damask-gold" width="84" height="84" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="#E6C77E" stroke-linecap="round">
+          <g stroke-opacity="0.16" stroke-width="0.75">
+            <!-- Central Mughal Lotus & Paisley Medallion -->
+            <path d="M42 7 C51 17, 62 24, 62 37 C62 49, 53 56, 42 64 C31 56, 22 49, 22 37 C22 24, 33 17, 42 7 Z" />
+            <path d="M42 16 C48 24, 54 29, 54 37 C54 45, 48 50, 42 55 C36 50, 30 45, 30 37 C30 29, 36 24, 42 16 Z" />
+            <path d="M42 26 C45 31, 45 39, 42 44 C39 39, 39 31, 42 26 Z" />
+            <!-- Corner Scalloped Paisley Tendrils -->
+            <path d="M0 42 C10 35, 16 28, 18 18 M84 42 C74 35, 68 28, 66 18" />
+            <path d="M0 42 C10 49, 16 56, 18 66 M84 42 C74 49, 68 56, 66 66" />
+            <path d="M24 72 C32 67, 38 69, 42 78 C46 69, 52 67, 60 72" />
+            <circle cx="42" cy="36" r="1.5" fill="#E6C77E" fill-opacity="0.2" />
+            <circle cx="10" cy="10" r="1.3" />
+            <circle cx="74" cy="10" r="1.3" />
+          </g>
+        </g>
+      </pattern>
+
+      <!-- Ivory-Champagne Velvet Envelope Tone-on-Tone Filigree Pattern -->
+      <pattern id="envelope-filigree" width="74" height="74" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke-linecap="round">
+          <g stroke="rgba(255, 252, 245, 0.56)" stroke-width="0.8" transform="translate(0.5, 0.5)">
+            <path d="M37 6 C45 15, 54 22, 54 33 C54 43, 46 49, 37 56 C28 49, 20 43, 20 33 C20 22, 29 15, 37 6 Z" />
+            <path d="M37 16 C42 22, 46 26, 46 33 C46 39, 42 43, 37 47 C32 43, 28 39, 28 33 C28 26, 32 22, 37 16 Z" />
+            <path d="M0 37 C8 31, 14 25, 16 17 M74 37 C66 31, 60 25, 58 17" />
+            <path d="M0 37 C8 43, 14 49, 16 57 M74 37 C66 43, 60 49, 58 57" />
+          </g>
+          <g stroke="rgba(181, 140, 62, 0.17)" stroke-width="0.72">
+            <path d="M37 6 C45 15, 54 22, 54 33 C54 43, 46 49, 37 56 C28 49, 20 43, 20 33 C20 22, 29 15, 37 6 Z" />
+            <path d="M37 16 C42 22, 46 26, 46 33 C46 39, 42 43, 37 47 C32 43, 28 39, 28 33 C28 26, 32 22, 37 16 Z" />
+            <path d="M0 37 C8 31, 14 25, 16 17 M74 37 C66 31, 60 25, 58 17" />
+            <path d="M0 37 C8 43, 14 49, 16 57 M74 37 C66 43, 60 49, 58 57" />
+          </g>
+        </g>
+      </pattern>
+
+      <!-- Velvet Ivory-Champagne Envelope Fold Gradients -->
+      <linearGradient id="env-ivory-left" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#F7EFE4" />
+        <stop offset="100%" stop-color="#E7D8C4" />
+      </linearGradient>
+
+      <linearGradient id="env-ivory-right" x1="100%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#F5ECE0" />
+        <stop offset="100%" stop-color="#E3D2BC" />
+      </linearGradient>
+
+      <linearGradient id="env-ivory-bottom" x1="50%" y1="0%" x2="50%" y2="100%">
+        <stop offset="0%" stop-color="#FCF7F0" />
+        <stop offset="56%" stop-color="#F1E6D6" />
+        <stop offset="100%" stop-color="#E4D3BC" />
+      </linearGradient>
+
+      <linearGradient id="env-flap-ivory" x1="50%" y1="0%" x2="50%" y2="100%">
+        <stop offset="0%" stop-color="#FDF9F2" />
+        <stop offset="66%" stop-color="#F2E7D8" />
+        <stop offset="100%" stop-color="#E6D6C1" />
+      </linearGradient>
+
+      <!-- Sculpted 3D Crimson-Rose & Gold-Dusted Royal Wax Seal Gradients -->
+      <radialGradient id="wax-crimson-grad" cx="34%" cy="28%" r="70%">
+        <stop offset="0%" stop-color="#D4667B" />
+        <stop offset="34%" stop-color="#A83A52" />
+        <stop offset="76%" stop-color="#7B2238" />
+        <stop offset="100%" stop-color="#561425" />
+      </radialGradient>
+
+      <radialGradient id="wax-well-crimson" cx="62%" cy="64%" r="68%">
+        <stop offset="0%" stop-color="#B1425A" />
+        <stop offset="65%" stop-color="#8A2A40" />
+        <stop offset="100%" stop-color="#5D1728" />
+      </radialGradient>
+    </defs>
+  </svg>
+
+  <!-- Fixed Subtle Cotton-Rag Paper Grain Overlay -->
+  <svg class="cotton-grain-overlay" aria-hidden="true">
+    <rect width="100%" height="100%" filter="url(#cotton-grain-filter)" />
+  </svg>
+
+  <!-- Persistent Gold-Rimmed Minimalist Circular Audio Toggle -->
+  <button
+    type="button"
+    id="audioToggleBtn"
+    class="audio-toggle"
+    aria-label="Toggle ambient royal soundtrack"
+    aria-pressed="false"
+  >
+    <svg class="icon-wave" viewBox="0 0 18 18" aria-hidden="true">
+      <line class="wave-1" x1="3.5" y1="6.5" x2="3.5" y2="11.5" />
+      <line class="wave-2" x1="7" y1="3.8" x2="7" y2="14.2" />
+      <line class="wave-3" x1="10.5" y1="5.2" x2="10.5" y2="12.8" />
+      <line class="wave-4" x1="14" y1="7.2" x2="14" y2="10.8" />
+    </svg>
+    <svg class="icon-muted" viewBox="0 0 18 18" aria-hidden="true">
+      <line x1="6.5" y1="4.8" x2="6.5" y2="13.2" />
+      <line x1="11.5" y1="4.8" x2="11.5" y2="13.2" />
+    </svg>
+  </button>
+
+  <!-- ========================================================================
+       SECTION 1: ENTRY GATE — ROYAL PEACOCK ENVELOPE & SHEER SILK CANOPY
+       ======================================================================== -->
+  <div
+    id="entryGate"
+    class="entry-gate"
+    role="button"
+    tabindex="0"
+    aria-label="Tap the royal wax seal to open wedding invitation"
+  >
+    <!-- Deep Peacock Tone-on-Tone Gold Filigree Damask Backdrop -->
+    <svg class="entry-damask-bg" aria-hidden="true">
+      <rect width="100%" height="100%" fill="url(#royal-damask-gold)" />
+    </svg>
+
+    <div class="entry-gold-frame" aria-hidden="true"></div>
+    <div class="canopy-sunbeams" aria-hidden="true"></div>
+
+    <!-- Twin Pleated Champagne-Ivory Sheer Silk Canopy Drapes -->
+    <div class="silk-canopy" aria-hidden="true">
+      <div class="silk-drape silk-drape--left-back"></div>
+      <div class="silk-drape silk-drape--left-front"></div>
+      <div class="silk-drape silk-drape--right-back"></div>
+      <div class="silk-drape silk-drape--right-front"></div>
+    </div>
+
+    <!-- Floating Rose Petals, Marigold Petals & Gold-Leaf Sparks Canvas -->
+    <canvas id="canopyCanvas" aria-hidden="true"></canvas>
+
+    <!-- Gold-Shimmering Calligraphy Header Above Envelope -->
+    <div class="entry-header">
+      <svg class="entry-lotus-crest" viewBox="0 0 110 42" fill="none" aria-hidden="true">
+        <path d="M8 22 L34 22 M76 22 L102 22" stroke="url(#gold-foil-grad)" stroke-width="0.75" />
+        <path d="M55 6 C59 13, 62 18, 55 26 C48 18, 51 13, 55 6 Z" stroke="url(#gold-foil-grad)" stroke-width="0.9" fill="rgba(230,199,126,0.22)" />
+        <path d="M55 26 C46 22, 41 16, 42 11 C48 14, 52 19, 55 26 Z" stroke="url(#gold-foil-grad)" stroke-width="0.8" fill="rgba(230,199,126,0.12)" />
+        <path d="M55 26 C64 22, 69 16, 68 11 C62 14, 58 19, 55 26 Z" stroke="url(#gold-foil-grad)" stroke-width="0.8" fill="rgba(230,199,126,0.12)" />
+        <path d="M36 28 C44 33, 66 33, 74 28" stroke="url(#gold-foil-grad)" stroke-width="0.75" />
+        <circle cx="55" cy="34" r="1.6" fill="#F6E5B5" />
+        <circle cx="28" cy="22" r="1.3" fill="#E6C77E" />
+        <circle cx="82" cy="22" r="1.3" fill="#E6C77E" />
+      </svg>
+      <h1 class="entry-title gold-foil-text--bright" id="entryTitle">You're Invited</h1>
+      <p class="entry-tap-cue" id="entryTapCue">Tap the Seal to Open</p>
+    </div>
+
+    <!-- Scalloped Ivory-Champagne Velvet Envelope -->
+    <div class="envelope-stage">
+      <div class="envelope-lining"></div>
+
+      <!-- Envelope Pocket with Gilded Filigree & Botanical Corner Engravings -->
+      <div class="envelope-pocket" aria-hidden="true">
+        <svg viewBox="0 0 440 520" preserveAspectRatio="none">
+          <!-- Left Side Fold -->
+          <polygon points="0,0 220,236 0,520" fill="url(#env-ivory-left)" />
+          <polygon points="0,0 220,236 0,520" fill="url(#envelope-filigree)" opacity="0.9" />
+          <!-- Right Side Fold -->
+          <polygon points="440,0 220,236 440,520" fill="url(#env-ivory-right)" />
+          <polygon points="440,0 220,236 440,520" fill="url(#envelope-filigree)" opacity="0.9" />
+          <!-- Bottom Flap Fold -->
+          <polygon points="0,520 220,204 440,520" fill="url(#env-ivory-bottom)" />
+          <polygon points="0,520 220,204 440,520" fill="url(#envelope-filigree)" opacity="0.95" />
+          <!-- Gilded Double-Filigree Seam Lines -->
+          <polyline points="0,520 220,204 440,520" fill="none" stroke="url(#gold-foil-grad)" stroke-width="1.3" />
+          <polyline points="12,520 220,218 428,520" fill="none" stroke="rgba(181,140,62,0.42)" stroke-width="0.75" />
+          <!-- Delicate Bottom Botanical Engraving Flourishes -->
+          <g stroke="rgba(158,118,45,0.44)" stroke-width="0.8" fill="none">
+            <path d="M150,478 C178,464 202,464 220,476 C238,464 262,464 290,478" />
+            <path d="M220,456 L223,465 L232,468 L223,471 L220,480 L217,471 L208,468 L217,465 Z" fill="rgba(181,140,62,0.18)" />
+            <path d="M24,492 C36,474 52,466 72,466 M416,492 C404,474 388,466 368,466" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- 3D Scalloped Ivory Flap with Gilded Double-Filigree Border -->
+      <div class="envelope-flap" aria-hidden="true">
+        <svg viewBox="0 0 440 296" preserveAspectRatio="none">
+          <path
+            d="M 0,0 L 440,0 L 440,28
+               Q 418,52 394,56
+               Q 378,88 352,94
+               Q 336,124 310,130
+               Q 294,162 268,170
+               Q 250,204 220,224
+               Q 190,204 172,170
+               Q 146,162 130,130
+               Q 104,124 88,94
+               Q 62,88 46,56
+               Q 22,52 0,28 Z"
+            fill="url(#env-flap-ivory)"
+          />
+          <path
+            d="M 0,0 L 440,0 L 440,28
+               Q 418,52 394,56
+               Q 378,88 352,94
+               Q 336,124 310,130
+               Q 294,162 268,170
+               Q 250,204 220,224
+               Q 190,204 172,170
+               Q 146,162 130,130
+               Q 104,124 88,94
+               Q 62,88 46,56
+               Q 22,52 0,28 Z"
+            fill="url(#envelope-filigree)"
+            opacity="0.96"
+          />
+          <!-- Outer Burnished Gold Foil Scalloped Trim -->
+          <path
+            d="M 0,28
+               Q 22,52 46,56
+               Q 62,88 88,94
+               Q 104,124 130,130
+               Q 146,162 172,170
+               Q 190,204 220,224
+               Q 250,204 268,170
+               Q 294,162 310,130
+               Q 336,124 352,94
+               Q 378,88 394,56
+               Q 418,52 440,28"
+            fill="none"
+            stroke="url(#gold-foil-grad)"
+            stroke-width="2"
+          />
+          <!-- Inner Filigree Gold Hairline Trim -->
+          <path
+            d="M 10,18
+               Q 30,40 53,44
+               Q 69,74 94,80
+               Q 110,108 135,114
+               Q 151,144 176,153
+               Q 193,184 220,204
+               Q 247,184 264,153
+               Q 289,144 305,114
+               Q 330,108 346,80
+               Q 371,74 387,44
+               Q 410,40 430,18"
+            fill="none"
+            stroke="rgba(181,140,62,0.56)"
+            stroke-width="0.85"
+          />
+          <!-- Corner Engraved Paisley Flourishes on Flap -->
+          <g stroke="rgba(158,118,45,0.42)" stroke-width="0.75" fill="none">
+            <path d="M22,12 C38,14 48,22 54,34 M32,10 C48,10 60,16 68,26" />
+            <path d="M418,12 C402,14 392,22 386,34 M408,10 C392,10 380,16 372,26" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- Sculpted 3D Crimson-Rose & Gold-Dusted Royal Wax Seal -->
+      <div class="wax-seal-wrap" id="waxSealWrap" aria-hidden="true">
+        <svg viewBox="0 0 116 116">
+          <!-- Organic Hand-Pressed Crimson Wax Body -->
+          <path
+            d="M58,6 C71,5 84,11 94,20 C104,29 110,42 108,56 C110,69 104,83 94,93 C84,103 71,109 57,108 C43,110 29,104 20,94 C10,84 5,70 7,56 C6,42 12,28 22,19 C32,10 45,5 58,6 Z"
+            fill="url(#wax-crimson-grad)"
+          />
+          <!-- Gold-Dusted Rim Shimmer & Highlights -->
+          <path
+            d="M58,11 C70,10 82,15 90,23 C98,31 104,43 102,56 C104,67 99,79 90,88 C81,97 69,103 57,102 C44,103 33,98 24,89 C15,80 11,68 13,56 C12,43 17,31 26,23 C35,14 46,10 58,11 Z"
+            fill="none"
+            stroke="url(#gold-foil-grad)"
+            stroke-opacity="0.58"
+            stroke-width="1.35"
+          />
+          <!-- Recessed Wax Stamp Well -->
+          <circle cx="58" cy="57.5" r="34" fill="url(#wax-well-crimson)" stroke="rgba(42,10,18,0.52)" stroke-width="1.5" />
+          <circle cx="58" cy="57.5" r="30.2" fill="none" stroke="url(#gold-foil-grad)" stroke-width="0.9" stroke-opacity="0.72" />
+          <!-- Miniature Gold-Dusted Lotus Crown & Laurel -->
+          <path d="M58,31 C60.5,35 61.5,38 58,41 C54.5,38 55.5,35 58,31 Z" fill="#F6E5B5" opacity="0.84" />
+          <path d="M38,71 C43,78 50,81 58,81 C66,81 73,78 78,71" fill="none" stroke="#E6C77E" stroke-width="0.8" opacity="0.78" />
+          <!-- Gold-Dusted Micro Flecks on Wax Rim -->
+          <circle cx="24" cy="34" r="1.1" fill="#F6E5B5" opacity="0.72" />
+          <circle cx="92" cy="40" r="1.2" fill="#E6C77E" opacity="0.68" />
+          <circle cx="84" cy="86" r="1" fill="#F6E5B5" opacity="0.7" />
+          <circle cx="30" cy="82" r="1.1" fill="#E6C77E" opacity="0.62" />
+          <!-- Embossed Gold-Dusted Monogram Initials -->
+          <text x="58.7" y="64.5" text-anchor="middle" class="wax-initials" fill="rgba(42,10,18,0.65)" id="waxInitialsShadow">M &amp; A</text>
+          <text x="58" y="63.6" text-anchor="middle" class="wax-initials" fill="url(#gold-foil-grad)" id="waxInitials">M &amp; A</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       CONTINUOUS ROYAL CHAMPAGNE COTTON STATIONERY SHEET
+       ======================================================================== -->
+  <main class="stationery-sheet" id="invitationSheet">
+
+    <!-- ======================================================================
+         SECTION 2: OPULENT HERO INVITATION (SCALLOPED JHAROKHA ARCH)
+         ====================================================================== -->
+    <section class="hero-section" id="heroSection">
+      <div class="hero-jharokha-frame">
+        <!-- Ornate Full-Height Gilded Scalloped Mughal Jharokha Double-Arch Border -->
+        <svg class="hero-arch-svg" viewBox="0 0 412 820" preserveAspectRatio="none" fill="none" aria-hidden="true">
+          <!-- Outer Scalloped Jharokha Arch -->
+          <path
+            class="gold-sheen-stroke"
+            d="M 10,810 L 10,136
+               Q 12,108 32,96
+               Q 42,68 70,62
+               Q 86,38 118,36
+               Q 142,18 176,22
+               Q 194,8 206,4
+               Q 218,8 236,22
+               Q 270,18 294,36
+               Q 326,38 342,62
+               Q 370,68 380,96
+               Q 400,108 402,136
+               L 402,810 Z"
+            stroke="url(#gold-foil-vertical)"
+            stroke-width="1.6"
+          />
+          <!-- Inner Fine Hairline Companion Arch -->
+          <path
+            d="M 18,802 L 18,140
+               Q 20,115 39,104
+               Q 48,78 75,72
+               Q 90,50 121,48
+               Q 144,30 177,34
+               Q 195,21 206,16
+               Q 217,21 235,34
+               Q 268,30 291,48
+               Q 322,50 337,72
+               Q 364,78 373,104
+               Q 392,115 394,140
+               L 394,802 Z"
+            stroke="rgba(181, 140, 62, 0.48)"
+            stroke-width="0.85"
+          />
+          <!-- Corner Paisley Gold Finials at Base -->
+          <path d="M18,780 C34,780 42,788 42,802 M394,780 C378,780 370,788 370,802" stroke="url(#gold-foil-grad)" stroke-width="0.9" />
+          <circle cx="206" cy="11" r="2.2" fill="#B58C3E" />
+        </svg>
+
+        <!-- Lush Hand-Painted Colorful Watercolor Corner Garlands -->
+        <div class="hero-garland hero-garland--left" id="heroGarlandLeft" aria-hidden="true"></div>
+        <div class="hero-garland hero-garland--right" id="heroGarlandRight" aria-hidden="true"></div>
+
+        <!-- Editorial Royal Stack -->
+        <div class="hero-stack">
+          <!-- Royal Lotus & Star Filigree Crest Medallion -->
+          <svg class="hero-royal-crest reveal" viewBox="0 0 120 48" fill="none" aria-hidden="true">
+            <path d="M8 26 L38 26 M82 26 L112 26" stroke="url(#gold-foil-grad)" stroke-width="0.75" />
+            <!-- Soft Watercolor Rose Quartz Wash Behind Lotus -->
+            <circle cx="60" cy="24" r="16" fill="#F3D8D6" opacity="0.55" />
+            <!-- Sculpted Royal Lotus Petals -->
+            <path d="M60 6 C65 14, 67 20, 60 30 C53 20, 55 14, 60 6 Z" stroke="url(#gold-foil-grad)" stroke-width="0.95" fill="rgba(158, 59, 82, 0.14)" />
+            <path d="M60 30 C50 25, 44 19, 45 12 C52 15, 57 21, 60 30 Z" stroke="url(#gold-foil-grad)" stroke-width="0.85" fill="rgba(212, 146, 56, 0.14)" />
+            <path d="M60 30 C70 25, 76 19, 75 12 C68 15, 63 21, 60 30 Z" stroke="url(#gold-foil-grad)" stroke-width="0.85" fill="rgba(212, 146, 56, 0.14)" />
+            <path d="M60 31 C48 31, 40 27, 37 22 C45 22, 53 25, 60 31 Z" stroke="url(#gold-foil-grad)" stroke-width="0.75" fill="rgba(71, 107, 92, 0.14)" />
+            <path d="M60 31 C72 31, 80 27, 83 22 C75 22, 67 25, 60 31 Z" stroke="url(#gold-foil-grad)" stroke-width="0.75" fill="rgba(71, 107, 92, 0.14)" />
+            <path d="M40 35 C50 40, 70 40, 80 35" stroke="url(#gold-foil-grad)" stroke-width="0.8" />
+            <circle cx="60" cy="41" r="1.8" fill="#9E3B52" />
+            <circle cx="30" cy="26" r="1.4" fill="#B58C3E" />
+            <circle cx="90" cy="26" r="1.4" fill="#B58C3E" />
+          </svg>
+
+          <p class="micro-label hero-overline reveal reveal-delay-1" id="heroOverline">
+            WITH THE BLESSINGS OF OUR FAMILIES
+          </p>
+
+          <div class="reveal reveal-delay-2">
+            <h2 class="couple-name gold-foil-text" id="brideFullName">Meera Kapoor</h2>
+            <p class="parentage-label">Daughter of</p>
+            <p class="parentage-names" id="brideParents">Smt. Sunita &amp; Shri Rajesh Kapoor</p>
+          </div>
+
+          <div class="couple-ampersand gold-foil-text reveal reveal-delay-3" aria-hidden="true">&amp;</div>
+
+          <div class="reveal reveal-delay-3">
+            <h2 class="couple-name gold-foil-text" id="groomFullName">Aarav Malhotra</h2>
+            <p class="parentage-label">Son of</p>
+            <p class="parentage-names" id="groomParents">Smt. Kavita &amp; Shri Vikram Malhotra</p>
+          </div>
+        </div>
+
+        <!-- Lower Centerpiece: Watercolor Udaipur Royal Courtyard Archway & Monogram Crest -->
+        <div class="hero-centerpiece reveal reveal-delay-4">
+          <div class="courtyard-vignette-wrap" id="courtyardVignetteWrap" aria-hidden="true">
+            <svg viewBox="0 0 330 250" fill="none">
+              <!-- Atmospheric Jewel-Toned Watercolor Sunset & Reflecting Courtyard Wash -->
+              <g filter="url(#wc-wash)" style="mix-blend-mode: multiply;">
+                <ellipse cx="165" cy="120" rx="108" ry="86" fill="#F3E5CA" opacity="0.58" />
+                <ellipse cx="165" cy="96" rx="82" ry="54" fill="#F3D8D6" opacity="0.52" />
+                <ellipse cx="165" cy="184" rx="98" ry="34" fill="#D9E6E2" opacity="0.62" />
+              </g>
+
+              <!-- Ornate Udaipur Heritage Courtyard Arched Framing -->
+              <path
+                d="M 58,224 L 58,108
+                   Q 64,84 88,76
+                   Q 104,54 134,48
+                   Q 152,32 165,24
+                   Q 178,32 196,48
+                   Q 226,54 242,76
+                   Q 266,84 272,108
+                   L 272,224 Z"
+                fill="rgba(250, 245, 238, 0.42)"
+                stroke="url(#gold-foil-grad)"
+                stroke-width="1.25"
+              />
+              <!-- Inner Scalloped Mughal Cusped Archway -->
+              <path
+                d="M 70,218 L 70,112
+                   Q 76,92 96,86
+                   Q 110,66 138,60
+                   Q 154,46 165,38
+                   Q 176,46 192,60
+                   Q 220,66 234,86
+                   Q 254,92 260,112
+                   L 260,218"
+                stroke="#173C44"
+                stroke-opacity="0.34"
+                stroke-width="0.8"
+              />
+              <!-- Twin Slender Courtyard Columns & Distant Palace Chhatri Silhouettes -->
+              <g stroke="#9E762D" stroke-opacity="0.48" stroke-width="0.72">
+                <line x1="78" y1="106" x2="78" y2="218" />
+                <line x1="252" y1="106" x2="252" y2="218" />
+                <!-- Distant Palace Domes Inside Courtyard -->
+                <path d="M116,184 L116,154 C116,144 128,136 136,128 C144,136 156,144 156,154 L156,184" stroke-opacity="0.28" />
+                <path d="M174,184 L174,154 C174,144 186,136 194,128 C202,136 214,144 214,154 L214,184" stroke-opacity="0.28" />
+                <line x1="70" y1="184" x2="260" y2="184" stroke-opacity="0.38" />
+                <!-- Shimmering Lotus Pool Water Ripples -->
+                <line x1="94" y1="196" x2="236" y2="196" stroke-opacity="0.28" />
+                <line x1="114" y1="205" x2="216" y2="205" stroke-opacity="0.22" />
+                <line x1="132" y1="213" x2="198" y2="213" stroke-opacity="0.18" />
+              </g>
+
+              <!-- Hanging Festive Marigold & Jasmine Toran Swags -->
+              <path d="M84,96 Q124,114 165,98 Q206,114 246,96" stroke="#B58C3E" stroke-width="0.7" stroke-opacity="0.65" />
+              <g filter="url(#wc-petal)" style="mix-blend-mode: multiply;">
+                <circle cx="104" cy="103" r="4.5" fill="#D49238" opacity="0.78" />
+                <circle cx="124" cy="107" r="4.2" fill="#9E3B52" opacity="0.68" />
+                <circle cx="144" cy="104" r="4.5" fill="#D49238" opacity="0.78" />
+                <circle cx="186" cy="104" r="4.5" fill="#D49238" opacity="0.78" />
+                <circle cx="206" cy="107" r="4.2" fill="#9E3B52" opacity="0.68" />
+                <circle cx="226" cy="103" r="4.5" fill="#D49238" opacity="0.78" />
+              </g>
+
+              <!-- Intertwined Gilded Monogram Wreath Rings -->
+              <circle cx="165" cy="144" r="48" stroke="url(#gold-foil-grad)" stroke-width="1.05" class="gold-sheen-stroke" />
+              <circle cx="165" cy="144" r="43" stroke="#173C44" stroke-opacity="0.25" stroke-width="0.65" stroke-dasharray="2 3.5" />
+
+              <!-- Watercolor Floral Clusters Framing Courtyard Base -->
+              <g filter="url(#wc-leaf)" style="mix-blend-mode: multiply;">
+                <ellipse cx="64" cy="216" rx="18" ry="8" fill="#476B5C" opacity="0.56" transform="rotate(-24 64 216)" />
+                <ellipse cx="266" cy="216" rx="18" ry="8" fill="#476B5C" opacity="0.56" transform="rotate(24 266 216)" />
+                <ellipse cx="88" cy="226" rx="16" ry="6.8" fill="#476B5C" opacity="0.46" transform="rotate(14 88 226)" />
+                <ellipse cx="242" cy="226" rx="16" ry="6.8" fill="#476B5C" opacity="0.46" transform="rotate(-14 242 226)" />
+              </g>
+              <g filter="url(#wc-petal)" style="mix-blend-mode: multiply;">
+                <circle cx="72" cy="222" r="11" fill="#9E3B52" opacity="0.62" />
+                <circle cx="58" cy="226" r="8" fill="#D49238" opacity="0.66" />
+                <circle cx="258" cy="222" r="11" fill="#9E3B52" opacity="0.62" />
+                <circle cx="272" cy="226" r="8" fill="#D49238" opacity="0.66" />
+                <circle cx="165" cy="224" r="9" fill="#C97A86" opacity="0.65" />
+                <circle cx="151" cy="226" r="6" fill="#D49238" opacity="0.64" />
+                <circle cx="179" cy="226" r="6" fill="#D49238" opacity="0.64" />
+              </g>
+
+              <!-- Bespoke Gilded Monogram Crest -->
+              <text
+                x="165"
+                y="153"
+                text-anchor="middle"
+                font-family="'Pinyon Script', cursive"
+                font-size="40"
+                fill="#173C44"
+                id="wreathMonogramText"
+              >M &amp; A</text>
+              <text
+                x="165"
+                y="173"
+                text-anchor="middle"
+                font-family="'Cinzel', serif"
+                font-size="7.8"
+                letter-spacing="2.8"
+                fill="#9E762D"
+                id="wreathYearText"
+              >UDAIPUR &bull; 2026</text>
+            </svg>
+          </div>
+
+          <!-- Optional Real Couple Photo Override -->
+          <img id="couplePhotoBlend" class="couple-photo-blend" alt="Bride and Groom Portrait" />
+        </div>
+      </div>
+
+      <!-- Lower Hero Watercolor Floral Garland Divider -->
+      <div class="floral-divider reveal" style="margin-top: 14px;" data-divider="hero"></div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: WELCOME BLESSING ("A BEAUTIFUL BEGINNING")
+         ====================================================================== -->
+    <section class="welcome-section" id="welcomeSection">
+      <div class="welcome-side-rule welcome-side-rule--left" aria-hidden="true"></div>
+      <div class="welcome-side-rule welcome-side-rule--right" aria-hidden="true"></div>
+
+      <h2 class="script-heading welcome-heading reveal" id="welcomeHeading">A Beautiful Beginning</h2>
+
+      <div class="welcome-body-wrap reveal reveal-delay-1">
+        <p class="welcome-body" id="welcomeBody">
+          <span class="illuminated-dropcap" id="welcomeDropCap">W</span><span id="welcomeBodyRest">ith grateful hearts and the cherished blessings of our elders, we joyously invite you to witness the sacred union of our lives—an evening of timeless heritage, glowing lamps, fragrant garlands, and celebration as we begin our forever together.</span>
+        </p>
+      </div>
+
+      <p class="welcome-signature gold-foil-text reveal reveal-delay-2" id="welcomeSignature">Meera &amp; Aarav</p>
+
+      <div class="floral-divider reveal reveal-delay-2" data-divider="welcome"></div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: INTERACTIVE 24K GOLD-LEAF "SCRATCH TO REVEAL" DATE MEDALLION
+         ====================================================================== -->
+    <section class="scratch-section" id="scratchSection">
+      <p class="micro-label reveal">A DATE TO HOLD CLOSE</p>
+
+      <div class="scratch-heading-slot reveal reveal-delay-1">
+        <h2 class="script-heading scratch-heading scratch-heading--before" id="scratchTitleBefore">Scratch to Reveal</h2>
+        <h2 class="script-heading scratch-heading scratch-heading--after gold-foil-text" id="scratchTitleAfter">Our Promise Begins</h2>
+      </div>
+
+      <div class="scratch-arch-outer reveal reveal-delay-2">
+        <!-- Royal Lotus & Star Apex Crest -->
+        <svg class="scratch-arch-crest" viewBox="0 0 116 38" fill="none" aria-hidden="true">
+          <path d="M10 26 C26 16, 42 13, 58 13 C74 13, 90 16, 106 26" stroke="url(#gold-foil-grad)" stroke-width="0.9" />
+          <path d="M58 3 C62 9, 64 14, 58 22 C52 14, 54 9, 58 3 Z" fill="#FAF5EE" stroke="url(#gold-foil-grad)" stroke-width="0.95" />
+          <path d="M58 21 C50 18, 45 13, 46 8 C51 11, 55 15, 58 21 Z" fill="rgba(158, 59, 82, 0.2)" stroke="url(#gold-foil-grad)" stroke-width="0.75" />
+          <path d="M58 21 C66 18, 71 13, 70 8 C65 11, 61 15, 58 21 Z" fill="rgba(158, 59, 82, 0.2)" stroke="url(#gold-foil-grad)" stroke-width="0.75" />
+          <circle cx="34" cy="18" r="1.6" fill="#B58C3E" />
+          <circle cx="82" cy="18" r="1.6" fill="#B58C3E" />
+        </svg>
+
+        <div class="scratch-arch-inner" id="scratchFrame">
+          <!-- Embossed Letterpress Revealed Date Layer -->
+          <div class="scratch-revealed-layer">
+            <svg class="scratch-watermark" viewBox="0 0 140 140" fill="none" aria-hidden="true">
+              <circle cx="70" cy="70" r="56" stroke="#9E762D" stroke-width="0.9" />
+              <circle cx="70" cy="70" r="48" stroke="#9E3B52" stroke-width="0.7" />
+              <path d="M70 16 L75 62 L122 70 L75 78 L70 124 L65 78 L18 70 L65 62 Z" stroke="#173C44" stroke-width="0.75" />
+            </svg>
+            <p class="scratch-revealed-label">SAVE THE DATE</p>
+            <p class="scratch-date-main" id="revealedDateMain">December 14, 2026</p>
+            <svg class="scratch-date-ornament" viewBox="0 0 96 14" fill="none" aria-hidden="true">
+              <line x1="4" y1="7" x2="36" y2="7" stroke="url(#gold-foil-grad)" stroke-width="0.8" />
+              <path d="M48 2 L53 7 L48 12 L43 7 Z" fill="#9E3B52" fill-opacity="0.72" stroke="#B58C3E" stroke-width="0.7" />
+              <line x1="60" y1="7" x2="92" y2="7" stroke="url(#gold-foil-grad)" stroke-width="0.8" />
+            </svg>
+            <p class="scratch-date-sub" id="revealedDateSub">Monday &nbsp;&bull;&nbsp; 6:30 PM Onwards</p>
+          </div>
+
+          <!-- Brushed 24k Champagne-Gold Leaf Metallic Foil Canvas -->
+          <canvas id="scratchCanvas" aria-label="Scratch off 24k gold foil to reveal wedding date"></canvas>
+        </div>
+
+        <!-- Gold-Dust Sparks & 24 Celebration Petals Overlay Canvas -->
+        <canvas id="scratchParticlesCanvas" aria-hidden="true"></canvas>
+      </div>
+
+      <button type="button" id="scratchFallbackBtn" class="scratch-fallback-btn reveal reveal-delay-3">
+        Tap to reveal
+      </button>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: GILDED EDITORIAL LIVE COUNTDOWN TIMER
+         ====================================================================== -->
+    <section class="countdown-section" id="countdownSection">
+      <div class="floral-divider reveal" data-divider="countdown"></div>
+      <p class="micro-label reveal reveal-delay-1" style="margin-top: 24px;">UNTIL THE CELEBRATION</p>
+      <h2 class="script-heading countdown-heading reveal reveal-delay-2">Counting Every Heartbeat</h2>
+
+      <div class="countdown-row reveal reveal-delay-3" aria-live="polite">
+        <div class="countdown-unit">
+          <span class="countdown-value gold-foil-text" id="cdDays">00</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <span class="countdown-sep" aria-hidden="true"></span>
+        <div class="countdown-unit">
+          <span class="countdown-value gold-foil-text" id="cdHours">00</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <span class="countdown-sep" aria-hidden="true"></span>
+        <div class="countdown-unit">
+          <span class="countdown-value gold-foil-text" id="cdMinutes">00</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <span class="countdown-sep" aria-hidden="true"></span>
+        <div class="countdown-unit">
+          <span class="countdown-value gold-foil-text" id="cdSeconds">00</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+
+      <p class="countdown-status" id="countdownStatus">The royal celebration has begun.</p>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 6: COLORFUL ROYAL CELEBRATION TIMELINE
+         ====================================================================== -->
+    <section class="timeline-section" id="timelineSection">
+      <div class="floral-divider reveal" data-divider="timeline"></div>
+      <p class="micro-label reveal reveal-delay-1" style="margin-top: 24px;">THE ROYAL CELEBRATION</p>
+      <h2 class="script-heading timeline-heading reveal reveal-delay-2">The Wedding Evening</h2>
+
+      <div class="timeline-list reveal reveal-delay-3" id="timelineList">
+        <div class="timeline-spine" aria-hidden="true"></div>
+        <!-- Curated 4-event royal schedule injected cleanly from INVITE_CONFIG -->
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 7: OPULENT MIDNIGHT-PEACOCK & GOLD FOIL VENUE CARD
+         ====================================================================== -->
+    <section class="venue-section" id="venueSection">
+      <div class="floral-divider reveal" data-divider="venue"></div>
+
+      <div class="venue-card reveal reveal-delay-1" id="venueCard">
+        <div class="venue-photo-bg" id="venuePhotoBg" aria-hidden="true"></div>
+
+        <!-- Intricate Gold-Foil Udaipur Palace Jharokha & Lantern Etching (18% opacity) -->
+        <svg class="venue-etching" viewBox="0 0 404 410" preserveAspectRatio="xMidYMax slice" fill="none" aria-hidden="true">
+          <g stroke="#E6C77E" stroke-width="0.9">
+            <!-- Grand Central Palace Jharokha Archway -->
+            <path d="M96,396 L96,192 C96,158 122,138 144,128 C166,118 188,100 202,76 C216,100 238,118 260,128 C282,138 308,158 308,192 L308,396" />
+            <path d="M110,396 L110,198 C110,170 130,152 150,142 C170,132 189,116 202,94 C215,116 234,132 254,142 C274,152 294,170 294,198 L294,396" stroke-width="0.65" />
+            <!-- Cusped Rajasthani Scallops -->
+            <path d="M122,196 Q132,176 148,172 Q156,152 176,148 Q188,128 202,118 Q216,128 228,148 Q248,152 256,172 Q272,176 282,196" stroke-width="0.7" />
+            <!-- Hanging Palace Lanterns -->
+            <line x1="152" y1="154" x2="152" y2="188" stroke-width="0.6" />
+            <path d="M146,194 L152,188 L158,194 L155,204 L149,204 Z" stroke-width="0.75" />
+            <line x1="252" y1="154" x2="252" y2="188" stroke-width="0.6" />
+            <path d="M246,194 L252,188 L258,194 L255,204 L249,204 Z" stroke-width="0.75" />
+            <line x1="202" y1="118" x2="202" y2="154" stroke-width="0.65" />
+            <path d="M195,161 L202,154 L209,161 L206,173 L198,173 Z" stroke-width="0.8" />
+            <!-- Palace Columns & Flanking Pavilion Arches -->
+            <line x1="88" y1="164" x2="88" y2="396" />
+            <line x1="102" y1="164" x2="102" y2="396" stroke-width="0.55" />
+            <line x1="302" y1="164" x2="302" y2="396" stroke-width="0.55" />
+            <line x1="316" y1="164" x2="316" y2="396" />
+            <path d="M22,396 L22,238 C22,212 42,198 55,184 C68,198 88,212 88,238" />
+            <path d="M316,238 C316,212 336,198 349,184 C362,198 382,212 382,238 L382,396" />
+            <!-- Grand Royal Chhatri Dome & Kalash Finials -->
+            <path d="M150,94 C155,58 178,36 202,26 C226,36 249,58 254,94" />
+            <line x1="202" y1="10" x2="202" y2="26" />
+            <circle cx="202" cy="18" r="2.6" />
+            <path d="M38,168 C40,148 48,136 55,130 C62,136 70,148 72,168" stroke-width="0.7" />
+            <path d="M332,168 C334,148 342,136 349,130 C356,136 364,148 366,168" stroke-width="0.7" />
+            <!-- Courtyard Reflecting Water Arch Lines -->
+            <line x1="16" y1="170" x2="388" y2="170" stroke-width="0.6" />
+            <line x1="38" y1="376" x2="366" y2="376" stroke-width="0.6" />
+            <line x1="78" y1="388" x2="326" y2="388" stroke-width="0.45" />
+          </g>
+        </svg>
+
+        <!-- Double Gold-Hairline Scalloped Inset Frame -->
+        <svg class="venue-scallop-frame" viewBox="0 0 384 384" preserveAspectRatio="none" fill="none" aria-hidden="true">
+          <path
+            d="M 18,4 L 366,4 Q 366,18 380,18 L 380,366 Q 366,366 366,380 L 18,380 Q 18,366 4,366 L 4,18 Q 18,18 18,4 Z"
+            stroke="url(#gold-foil-grad)"
+            stroke-opacity="0.52"
+            stroke-width="1.1"
+          />
+          <path
+            d="M 24,10 L 360,10 Q 360,24 374,24 L 374,360 Q 360,360 360,374 L 24,374 Q 24,360 10,360 L 10,24 Q 24,24 24,10 Z"
+            stroke="#E6C77E"
+            stroke-opacity="0.24"
+            stroke-width="0.7"
+          />
+        </svg>
+
+        <!-- 18 Warm Drifting Candlelight Bokeh Orbs & Golden Fireflies Canvas -->
+        <canvas id="venueBokehCanvas" aria-hidden="true"></canvas>
+
+        <div class="venue-content">
+          <p class="micro-label venue-label">THE ROYAL VENUE</p>
+          <h2 class="venue-name gold-foil-text--bright" id="venueName">The Taj Palace Courtyard</h2>
+          <p class="venue-address" id="venueAddress">
+            Pichola Lakefront, Heritage Promenade<br />Udaipur, Rajasthan 313001
+          </p>
+          <a
+            id="venueMapBtn"
+            class="venue-map-btn"
+            href="https://www.google.com/maps/search/?api=1&query=Lake+Pichola+Udaipur+Rajasthan"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            VIEW ON GOOGLE MAPS
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 8: DRESS CODE & TACTILE SILK-VELVET FABRIC SWATCHES
+         ====================================================================== -->
+    <section class="dresscode-section" id="dressCodeSection">
+      <div class="floral-divider reveal" data-divider="dresscode"></div>
+      <p class="micro-label reveal reveal-delay-1" style="margin-top: 24px;">DRESS CODE</p>
+      <h2 class="script-heading dresscode-heading reveal reveal-delay-2" id="dressCodeTitle">Royal Festive Formal</h2>
+      <p class="dresscode-note reveal reveal-delay-2" id="dressCodeNote">
+        We warmly invite our guests to celebrate in handwoven silks, zari lehengas, tailored bandhgalas, and jewel-toned evening ensembles inspired by our Udaipur palette.
+      </p>
+
+      <div class="swatches-row reveal reveal-delay-3" id="swatchesRow">
+        <!-- 5 Interactive 48px Silk-Velvet Medallions injected from INVITE_CONFIG -->
+      </div>
+      <p class="swatch-caption reveal reveal-delay-3" id="swatchCaption" aria-live="polite">
+        Tap a silk medallion to explore the evening palette
+      </p>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 9: BESPOKE LETTERPRESS RSVP & BLESSINGS REPLY SHEET
+         ====================================================================== -->
+    <section class="rsvp-section" id="rsvpSection">
+      <div class="floral-divider reveal" data-divider="rsvp"></div>
+      <p class="micro-label reveal reveal-delay-1" style="margin-top: 24px;">THE HONOUR OF YOUR PRESENCE</p>
+      <h2 class="script-heading rsvp-heading reveal reveal-delay-2">Kindly Reply</h2>
+      <p class="rsvp-sub reveal reveal-delay-2">Please grace us with your response &amp; heartfelt blessings</p>
+
+      <div class="rsvp-sheet reveal reveal-delay-3" id="rsvpSheet">
+        <canvas id="rsvpPetalsCanvas" aria-hidden="true"></canvas>
+
+        <!-- Engraved Reply Form -->
+        <form id="rsvpForm" novalidate>
+          <div class="rsvp-field">
+            <label for="rsvpName" class="rsvp-field-label">Guest Name(s)</label>
+            <input
+              type="text"
+              id="rsvpName"
+              class="rsvp-line-input"
+              placeholder="e.g., Shri Arjun &amp; Smt. Priya Verma"
+              autocomplete="name"
+              required
+            />
+          </div>
+
+          <div class="rsvp-field">
+            <span class="rsvp-field-label">Attendance</span>
+            <div class="rsvp-seal-grid" role="radiogroup" aria-label="Wedding attendance">
+              <button type="button" class="rsvp-seal-opt is-selected" data-attend="accept" aria-pressed="true">
+                <span class="rsvp-seal-dot" aria-hidden="true"></span>
+                <span>Joyfully Accepts</span>
+              </button>
+              <button type="button" class="rsvp-seal-opt" data-attend="decline" aria-pressed="false">
+                <span class="rsvp-seal-dot" aria-hidden="true"></span>
+                <span>Regretfully Declines</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="rsvp-field rsvp-guests-wrap" id="rsvpGuestsWrap">
+            <span class="rsvp-field-label">Number of Guests</span>
+            <div class="rsvp-count-row" id="rsvpCountRow" role="radiogroup" aria-label="Number of guests">
+              <button type="button" class="rsvp-count-btn" data-count="1">1</button>
+              <button type="button" class="rsvp-count-btn is-selected" data-count="2">2</button>
+              <button type="button" class="rsvp-count-btn" data-count="3">3</button>
+              <button type="button" class="rsvp-count-btn" data-count="4">4</button>
+              <button type="button" class="rsvp-count-btn" data-count="5">5</button>
+            </div>
+          </div>
+
+          <div class="rsvp-field" style="margin-bottom: 18px;">
+            <label for="rsvpNote" class="rsvp-field-label">Blessings &amp; Wishes (Optional)</label>
+            <textarea
+              id="rsvpNote"
+              class="rsvp-line-textarea"
+              rows="2"
+              placeholder="Share a warm blessing for Meera &amp; Aarav..."
+            ></textarea>
+          </div>
+
+          <p class="rsvp-error-msg" id="rsvpErrorMsg" role="alert"></p>
+
+          <button type="submit" class="rsvp-submit-btn">
+            SEAL &amp; SEND BLESSINGS
+          </button>
+        </form>
+
+        <!-- Gilded Wax-Seal Confirmation Stamp State -->
+        <div class="rsvp-confirmation" id="rsvpConfirmation">
+          <svg class="rsvp-stamp-badge" viewBox="0 0 100 100" aria-hidden="true">
+            <path
+              d="M50,6 C62,5 74,10 83,18 C92,26 96,38 94,50 C96,62 91,74 82,83 C73,92 61,96 49,95 C37,96 25,91 17,82 C9,73 5,61 7,49 C6,37 11,25 20,17 C29,9 40,5 50,6 Z"
+              fill="url(#wax-crimson-grad)"
+            />
+            <circle cx="50" cy="50" r="30" fill="url(#wax-well-crimson)" stroke="url(#gold-foil-grad)" stroke-width="1.2" />
+            <path d="M37,51 L46,60 L64,41" fill="none" stroke="#F6E5B5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <h3 class="rsvp-thanks-title" id="rsvpThanksTitle">With Warmest Gratitude</h3>
+          <p class="rsvp-thanks-detail" id="rsvpThanksDetail"></p>
+          <p class="rsvp-saved-note" id="rsvpSavedNote"></p>
+          <button type="button" class="rsvp-edit-btn" id="rsvpEditBtn">Update Response</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 10: DOUBLE-ARCH GOLD-FOIL CLOSING KEEPSAKE & ADD TO CALENDAR
+         ====================================================================== -->
+    <section class="closing-section" id="closingSection">
+      <div class="floral-divider reveal" data-divider="closing"></div>
+
+      <div class="closing-arch-wrap reveal reveal-delay-1">
+        <!-- Tall Scalloped Mughal Double-Arch Gold-Foil SVG Frame -->
+        <svg class="closing-arch-svg" viewBox="0 0 360 490" preserveAspectRatio="none" fill="none" aria-hidden="true">
+          <path
+            d="M 8,482 L 8,148
+               Q 12,114 36,98
+               Q 50,66 84,56
+               Q 108,30 144,24
+               Q 166,10 180,4
+               Q 194,10 216,24
+               Q 252,30 276,56
+               Q 310,66 324,98
+               Q 348,114 352,148
+               L 352,482 Z"
+            fill="rgba(255, 252, 246, 0.54)"
+            stroke="url(#gold-foil-vertical)"
+            stroke-width="1.5"
+          />
+          <path
+            d="M 16,474 L 16,152
+               Q 20,122 42,106
+               Q 56,76 88,66
+               Q 110,42 145,36
+               Q 166,22 180,16
+               Q 194,22 215,36
+               Q 250,42 272,66
+               Q 304,76 318,106
+               Q 340,122 344,152
+               L 344,474 Z"
+            stroke="rgba(181, 140, 62, 0.45)"
+            stroke-width="0.85"
+          />
+          <circle cx="180" cy="11" r="2.3" fill="#9E3B52" />
+        </svg>
+
+        <div class="closing-inner">
+          <p class="closing-message" id="closingMessage">
+            We cannot wait to celebrate this royal beginning with you.
+          </p>
+
+          <!-- Burnished Gold Monogram Crest -->
+          <svg class="closing-monogram-crest" viewBox="0 0 110 86" fill="none" aria-hidden="true">
+            <circle cx="55" cy="43" r="32" stroke="url(#gold-foil-grad)" stroke-width="1" />
+            <circle cx="55" cy="43" r="27" stroke="rgba(158, 59, 82, 0.35)" stroke-width="0.7" stroke-dasharray="2 3" />
+            <path d="M55 6 L57.4 13 L64 15 L57.4 17 L55 24 L52.6 17 L46 15 L52.6 13 Z" fill="#FAF5EE" stroke="url(#gold-foil-grad)" stroke-width="0.75" />
+            <text
+              x="55"
+              y="50"
+              text-anchor="middle"
+              font-family="'Pinyon Script', cursive"
+              font-size="28"
+              fill="#173C44"
+              id="closingCrestInitials"
+            >M &amp; A</text>
+          </svg>
+
+          <p class="closing-names gold-foil-text" id="closingNames">Meera &amp; Aarav</p>
+          <p class="closing-footer-line" id="closingFooterLine">
+            DECEMBER 14, 2026 &nbsp;&bull;&nbsp; THE TAJ PALACE COURTYARD, UDAIPUR
+          </p>
+
+          <button type="button" class="calendar-btn" id="addCalendarBtn">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.15" aria-hidden="true">
+              <rect x="2" y="3.2" width="12" height="10.8" rx="1" />
+              <line x1="2" y1="6.6" x2="14" y2="6.6" />
+              <line x1="5.2" y1="1.6" x2="5.2" y2="4.4" />
+              <line x1="10.8" y1="1.6" x2="10.8" y2="4.4" />
+            </svg>
+            <span>ADD TO CALENDAR</span>
+          </button>
+          <p class="calendar-feedback" id="calendarFeedback" aria-live="polite"></p>
+        </div>
+
+        <!-- Rich Colorful Watercolor Floral Wreath Along Closing Arch Base -->
+        <div class="closing-base-wreath" id="closingBaseWreath" aria-hidden="true"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    /* ==========================================================================
+       CENTRALIZED ROYAL INVITATION CONFIGURATION (CUSTOMIZE IN 60 SECONDS)
+       ========================================================================== */
+    const INVITE_CONFIG = {
+      // Couple & Family Details
+      brideFirst: "Meera",
+      brideFull: "Meera Kapoor",
+      brideParents: "Smt. Sunita & Shri Rajesh Kapoor",
+
+      groomFirst: "Aarav",
+      groomFull: "Aarav Malhotra",
+      groomParents: "Smt. Kavita & Shri Vikram Malhotra",
+
+      initials: "M & A",
+      monogramSubLabel: "UDAIPUR • 2026",
+
+      // Entry Gate Copy
+      entryTitle: "You're Invited",
+      entryTapCue: "Tap the Seal to Open",
+
+      // Hero & Welcome Blessing
+      heroOverline: "WITH THE BLESSINGS OF OUR FAMILIES",
+      welcomeHeading: "A Beautiful Beginning",
+      welcomeBody:
+        "With grateful hearts and the cherished blessings of our elders, we joyously invite you to witness the sacred union of our lives—an evening of timeless heritage, glowing lamps, fragrant garlands, and celebration as we begin our forever together.",
+
+      // Wedding Date & Calendar Event Metadata
+      targetDateISO: "2026-12-14T18:00:00+05:30",
+      eventEndISO: "2026-12-14T23:30:00+05:30",
+      formattedDate: "December 14, 2026",
+      formattedDateUpper: "DECEMBER 14, 2026",
+      formattedDayTime: "Monday  •  6:30 PM Onwards",
+
+      // Gold-Leaf Scratch Card Copy
+      scratchTitleBefore: "Scratch to Reveal",
+      scratchTitleAfter: "Our Promise Begins",
+
+      // Curated 4-Event Royal Celebration Timeline
+      schedule: [
+        {
+          time: "6:00 PM",
+          title: "Royal Baraat & Welcome",
+          subtitle: "Shehnai fanfare, rose-petal showers & chilled kesar badam welcome",
+          icon: "lotus",
+          jewel: "#D49238",
+          glow: "rgba(243, 219, 173, 0.42)"
+        },
+        {
+          time: "6:45 PM",
+          title: "Varmala Beneath the Stars",
+          subtitle: "Exchange of fragrant jasmine & rani-rose garlands in the courtyard",
+          icon: "garland",
+          jewel: "#9E3B52",
+          glow: "rgba(240, 206, 210, 0.42)"
+        },
+        {
+          time: "7:30 PM",
+          title: "Sacred Pheras",
+          subtitle: "Seven eternal vows around the ceremonial fire beneath a floral mandap",
+          icon: "diya",
+          jewel: "#C97D28",
+          glow: "rgba(246, 224, 178, 0.46)"
+        },
+        {
+          time: "8:45 PM",
+          title: "Courtyard Feast & Soirée",
+          subtitle: "Royal Mewar candlelight banquet, warm toasts & lakefront melodies",
+          icon: "chandelier",
+          jewel: "#173C44",
+          glow: "rgba(208, 226, 222, 0.48)"
+        }
+      ],
+
+      // Venue Information
+      venue: {
+        name: "The Taj Palace Courtyard",
+        cityShort: "THE TAJ PALACE COURTYARD, UDAIPUR",
+        addressLines: [
+          "Pichola Lakefront, Heritage Promenade",
+          "Udaipur, Rajasthan 313001"
+        ],
+        mapsUrl: "https://www.google.com/maps/search/?api=1&query=Lake+Pichola+Udaipur+Rajasthan"
+      },
+
+      // Dress Code & 5 Jewel Silk-Velvet Medallions
+      dressCode: {
+        heading: "Royal Festive Formal",
+        note: "We warmly invite our guests to celebrate in handwoven silks, zari lehengas, tailored bandhgalas, and jewel-toned evening ensembles inspired by our Udaipur palette.",
+        swatches: [
+          { name: "Royal Peacock", hex: "#173C44", pairing: "Royal Peacock — Deep velvet bandhgalas & banarasi silk" },
+          { name: "Rani Rose", hex: "#9E3B52", pairing: "Rani Rose — Handwoven zari drapes & ruby accents" },
+          { name: "Marigold Gold", hex: "#D49238", pairing: "Marigold Gold — Warm tissue silk & antique gold embroidery" },
+          { name: "Emerald Sage", hex: "#476B5C", pairing: "Emerald Sage — Soft chanderi weaves & heirloom polki" },
+          { name: "Champagne Ivory", hex: "#F0E6D6", pairing: "Champagne Ivory — Raw silk sherwanis & pearl detailing" }
+        ]
+      },
+
+      // Closing Keepsake Blessing
+      closingMessage: "We cannot wait to celebrate this royal beginning with you.",
+
+      // Optional External Override URLs (Leave empty "" for 100% zero-asset native mode)
+      musicUrl: "",       // Optional MP3 URL (overrides Web Audio acoustic harp/piano synth)
+      couplePhotoUrl: "", // Optional couple portrait URL (blended cleanly into Hero centerpiece)
+      venuePhotoUrl: ""   // Optional venue photo URL (blended behind midnight-peacock venue scrim)
+    };
+
+    /* ==========================================================================
+       1. ARTISANAL WATERCOLOR BOTANICAL & HERITAGE MOTIF SVG FACTORY
+       ========================================================================== */
+    const RoyalAtelierArt = {
+      /**
+       * Lush colorful watercolor corner floral garland (Rani rose, blush peony,
+       * royal marigold, white jasmine blossoms & emerald eucalyptus) with pigment bleed.
+       */
+      createHeroGarlandSVG() {
+        return `
+          <svg viewBox="0 0 220 246" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Soft atmospheric watercolor wash underneath blooms -->
+            <g filter="url(#wc-wash)" style="mix-blend-mode: multiply;">
+              <ellipse cx="66" cy="64" rx="56" ry="44" fill="#C97A86" opacity="0.24" />
+              <ellipse cx="122" cy="46" rx="46" ry="30" fill="#D49238" opacity="0.18" />
+              <ellipse cx="44" cy="144" rx="34" ry="50" fill="#476B5C" opacity="0.18" />
+            </g>
+
+            <!-- Hand-drawn slender emerald stems & gold tendrils -->
+            <g stroke="#3E5D50" stroke-opacity="0.62" stroke-width="0.95" stroke-linecap="round">
+              <path d="M12,18 C58,32 114,38 178,24" />
+              <path d="M20,12 C32,74 38,142 26,214" />
+              <path d="M36,44 C76,64 118,78 158,86" />
+              <path d="M34,82 C58,116 74,154 84,188" />
+            </g>
+
+            <!-- Watercolor Emerald Sage & Eucalyptus Foliage -->
+            <g filter="url(#wc-leaf)" style="mix-blend-mode: multiply;">
+              <ellipse cx="114" cy="24" rx="16" ry="8" fill="#476B5C" opacity="0.58" transform="rotate(-14 114 24)" />
+              <ellipse cx="146" cy="36" rx="15" ry="7.4" fill="#5D8272" opacity="0.52" transform="rotate(14 146 36)" />
+              <ellipse cx="174" cy="24" rx="12" ry="5.8" fill="#476B5C" opacity="0.48" transform="rotate(-18 174 24)" />
+              <ellipse cx="126" cy="70" rx="16" ry="7.5" fill="#476B5C" opacity="0.54" transform="rotate(24 126 70)" />
+              <ellipse cx="154" cy="88" rx="12" ry="5.5" fill="#5D8272" opacity="0.44" transform="rotate(14 154 88)" />
+              <ellipse cx="22" cy="126" rx="16" ry="8" fill="#476B5C" opacity="0.56" transform="rotate(-78 22 126)" />
+              <ellipse cx="46" cy="148" rx="15" ry="7.5" fill="#5D8272" opacity="0.48" transform="rotate(-48 46 148)" />
+              <ellipse cx="24" cy="182" rx="14" ry="6.5" fill="#476B5C" opacity="0.50" transform="rotate(-84 24 182)" />
+              <ellipse cx="66" cy="162" rx="13" ry="6.2" fill="#5D8272" opacity="0.46" transform="rotate(42 66 162)" />
+              <ellipse cx="80" cy="188" rx="10" ry="5" fill="#476B5C" opacity="0.42" transform="rotate(56 80 188)" />
+            </g>
+
+            <!-- Jewel-Toned Watercolor Rani Rose, Blush Peony, Marigold & Jasmine -->
+            <g filter="url(#wc-petal)" style="mix-blend-mode: multiply;">
+              <!-- Grand Rani Rose & Dusty Peony -->
+              <path d="M58,24 C80,20 96,36 92,58 C88,78 66,86 46,78 C28,70 24,48 36,32 C42,26 50,25 58,24 Z" fill="#D5959E" opacity="0.80" />
+              <path d="M62,33 C78,31 87,44 82,58 C77,72 58,76 46,68 C35,60 36,42 48,35 Z" fill="#B55267" opacity="0.72" />
+              <path d="M58,40 C69,38 75,47 71,57 C67,66 54,68 48,60 C43,52 48,42 58,40 Z" fill="#9E3B52" opacity="0.72" />
+              <ellipse cx="59" cy="52" rx="8" ry="6.5" fill="#7D283D" opacity="0.58" transform="rotate(-12 59 52)" />
+
+              <!-- Royal Marigold Blossom -->
+              <circle cx="104" cy="52" r="14.5" fill="#E6B25C" opacity="0.78" />
+              <circle cx="104" cy="52" r="10.5" fill="#D49238" opacity="0.72" />
+              <circle cx="104" cy="52" r="5.8" fill="#B8701E" opacity="0.62" />
+
+              <!-- Side Peony Bud -->
+              <path d="M26,82 C41,78 54,89 50,104 C47,117 31,123 19,114 C9,106 11,86 26,82 Z" fill="#C97A86" opacity="0.78" />
+              <ellipse cx="30" cy="99" rx="10" ry="8" fill="#9E3B52" opacity="0.64" transform="rotate(18 30 99)" />
+
+              <!-- Secondary Marigold Bud -->
+              <circle cx="52" cy="126" r="9.5" fill="#E3AB54" opacity="0.74" />
+              <circle cx="52" cy="126" r="5.5" fill="#C98026" opacity="0.66" />
+            </g>
+
+            <!-- Creamy White Jasmine Buds (Normal blend so ivory petals stay luminous) -->
+            <g filter="url(#wc-petal)">
+              <circle cx="88" cy="26" r="5.2" fill="#FFFDF8" opacity="0.92" />
+              <circle cx="88" cy="26" r="1.8" fill="#D49238" opacity="0.82" />
+              <circle cx="38" cy="140" r="5.4" fill="#FFFDF8" opacity="0.92" />
+              <circle cx="38" cy="140" r="1.8" fill="#D49238" opacity="0.82" />
+              <circle cx="134" cy="56" r="4.6" fill="#FFFDF8" opacity="0.88" />
+              <circle cx="134" cy="56" r="1.5" fill="#D49238" opacity="0.8" />
+            </g>
+
+            <!-- Fine Ink Rose Spirals & 24k Gold Foil Accent Dots -->
+            <g stroke="#2C1A20" stroke-opacity="0.28" stroke-width="0.6" stroke-linecap="round">
+              <path d="M52,50 C56,46 63,47 64,52 C65,56 59,59 55,56" />
+              <path d="M46,56 C52,65 67,65 72,56" />
+              <path d="M26,97 C30,94 35,96 34,101" />
+            </g>
+            <g stroke="url(#gold-foil-grad)" stroke-width="0.78" stroke-linecap="round">
+              <path d="M84,38 C110,48 138,50 166,42" />
+              <circle cx="166" cy="42" r="1.8" fill="#D49238" />
+              <circle cx="90" cy="124" r="1.5" fill="#B58C3E" />
+              <circle cx="126" cy="14" r="1.4" fill="#E6C77E" />
+            </g>
+          </svg>
+        `;
+      },
+
+      /**
+       * Colorful watercolor Rose, Marigold & Jasmine horizontal garland divider with gilded wings.
+       */
+      createGarlandDividerSVG() {
+        return `
+          <svg viewBox="0 0 264 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Gilded Hairline Wings -->
+            <line x1="6" y1="26" x2="68" y2="26" stroke="url(#gold-foil-grad)" stroke-width="0.8" />
+            <line x1="196" y1="26" x2="258" y2="26" stroke="url(#gold-foil-grad)" stroke-width="0.8" />
+            <path d="M68 26 L73 23 L78 26 L73 29 Z" fill="#B58C3E" opacity="0.65" />
+            <path d="M186 26 L191 23 L196 26 L191 29 Z" fill="#B58C3E" opacity="0.65" />
+
+            <!-- Graceful Emerald Stems -->
+            <g stroke="#476B5C" stroke-opacity="0.6" stroke-width="0.85" stroke-linecap="round">
+              <path d="M132,26 C112,25 94,20 74,26" />
+              <path d="M132,26 C152,25 170,20 190,26" />
+              <path d="M116,25 C106,32 95,35 84,31" />
+              <path d="M148,25 C158,32 169,35 180,31" />
+            </g>
+
+            <!-- Emerald Sage Foliage -->
+            <g filter="url(#wc-leaf)" style="mix-blend-mode: multiply;">
+              <ellipse cx="102" cy="19" rx="12" ry="5.2" fill="#476B5C" opacity="0.62" transform="rotate(-16 102 19)" />
+              <ellipse cx="162" cy="19" rx="12" ry="5.2" fill="#476B5C" opacity="0.62" transform="rotate(16 162 19)" />
+              <ellipse cx="86" cy="26" rx="9.5" ry="4.4" fill="#5D8272" opacity="0.54" transform="rotate(-6 86 26)" />
+              <ellipse cx="178" cy="26" rx="9.5" ry="4.4" fill="#5D8272" opacity="0.54" transform="rotate(6 178 26)" />
+              <ellipse cx="102" cy="33" rx="10" ry="4.5" fill="#476B5C" opacity="0.50" transform="rotate(14 102 33)" />
+              <ellipse cx="162" cy="33" rx="10" ry="4.5" fill="#476B5C" opacity="0.50" transform="rotate(-14 162 33)" />
+            </g>
+
+            <!-- Central Watercolor Rani Rose + Flanking Marigolds -->
+            <g filter="url(#wc-petal)" style="mix-blend-mode: multiply;">
+              <circle cx="114" cy="26" r="7.2" fill="#E3AB54" opacity="0.80" />
+              <circle cx="114" cy="26" r="4.2" fill="#C98026" opacity="0.68" />
+              <circle cx="150" cy="26" r="7.2" fill="#E3AB54" opacity="0.80" />
+              <circle cx="150" cy="26" r="4.2" fill="#C98026" opacity="0.68" />
+
+              <path d="M132,12 C142,12 148,19 146,28 C144,36 136,40 128,37 C120,35 117,27 120,19 C122,14 127,12 132,12 Z" fill="#C97A86" opacity="0.84" />
+              <ellipse cx="132" cy="25.5" rx="8" ry="6.8" fill="#9E3B52" opacity="0.78" />
+              <circle cx="132" cy="25" r="3.6" fill="#782538" opacity="0.64" />
+            </g>
+
+            <!-- Luminous Jasmine Accents -->
+            <g filter="url(#wc-petal)">
+              <circle cx="98" cy="26" r="3.8" fill="#FFFDF8" opacity="0.92" />
+              <circle cx="166" cy="26" r="3.8" fill="#FFFDF8" opacity="0.92" />
+            </g>
+
+            <path d="M129.5,24.5 C131,22.5 134.8,23 134.8,25.5 C134.8,27.5 131.5,28.5 130,27" stroke="#2C1A20" stroke-opacity="0.32" stroke-width="0.65" stroke-linecap="round" />
+          </svg>
+        `;
+      },
+
+      /**
+       * Rich curved colorful watercolor floral wreath adorning the base of the closing arch.
+       */
+      createClosingBaseWreathSVG() {
+        return `
+          <svg viewBox="0 0 300 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#wc-wash)" style="mix-blend-mode: multiply;">
+              <ellipse cx="150" cy="40" rx="110" ry="22" fill="#F3D8D6" opacity="0.45" />
+            </g>
+            <path d="M24,22 C74,56 226,56 276,22" stroke="url(#gold-foil-grad)" stroke-width="0.95" />
+            <g filter="url(#wc-leaf)" style="mix-blend-mode: multiply;">
+              <ellipse cx="54" cy="34" rx="16" ry="6.5" fill="#476B5C" opacity="0.6" transform="rotate(24 54 34)" />
+              <ellipse cx="92" cy="44" rx="17" ry="6.8" fill="#5D8272" opacity="0.58" transform="rotate(12 92 44)" />
+              <ellipse cx="122" cy="52" rx="15" ry="6.2" fill="#476B5C" opacity="0.56" transform="rotate(-8 122 52)" />
+              <ellipse cx="178" cy="52" rx="15" ry="6.2" fill="#476B5C" opacity="0.56" transform="rotate(8 178 52)" />
+              <ellipse cx="208" cy="44" rx="17" ry="6.8" fill="#5D8272" opacity="0.58" transform="rotate(-12 208 44)" />
+              <ellipse cx="246" cy="34" rx="16" ry="6.5" fill="#476B5C" opacity="0.6" transform="rotate(-24 246 34)" />
+            </g>
+            <g filter="url(#wc-petal)" style="mix-blend-mode: multiply;">
+              <circle cx="76" cy="39" r="9.5" fill="#D49238" opacity="0.74" />
+              <circle cx="110" cy="46" r="11" fill="#C97A86" opacity="0.78" />
+              <circle cx="150" cy="48" r="14.5" fill="#9E3B52" opacity="0.80" />
+              <circle cx="150" cy="48" r="8" fill="#772337" opacity="0.64" />
+              <circle cx="190" cy="46" r="11" fill="#C97A86" opacity="0.78" />
+              <circle cx="224" cy="39" r="9.5" fill="#D49238" opacity="0.74" />
+              <circle cx="131" cy="48" r="7.5" fill="#E3AB54" opacity="0.78" />
+              <circle cx="169" cy="48" r="7.5" fill="#E3AB54" opacity="0.78" />
+            </g>
+            <g filter="url(#wc-petal)">
+              <circle cx="94" cy="42" r="4.2" fill="#FFFDF8" opacity="0.92" />
+              <circle cx="206" cy="42" r="4.2" fill="#FFFDF8" opacity="0.92" />
+            </g>
+          </svg>
+        `;
+      },
+
+      /**
+       * Fine-line royal heritage motif icons for each timeline celebration.
+       */
+      getTimelineIconSVG(type) {
+        const icons = {
+          lotus: `
+            <svg class="timeline-motif-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 5 C17 10, 18 14, 14 20 C10 14, 11 10, 14 5 Z" fill="rgba(212,146,56,0.16)" />
+              <path d="M14 20 C8 17, 5 13, 6 9 C10 11, 12.5 15, 14 20 Z" />
+              <path d="M14 20 C20 17, 23 13, 22 9 C18 11, 15.5 15, 14 20 Z" />
+              <path d="M6 22 C10 24, 18 24, 22 22" />
+            </svg>`,
+          garland: `
+            <svg class="timeline-motif-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" aria-hidden="true">
+              <path d="M7 5 C7 14, 10 21, 14 23 C18 21, 21 14, 21 5" />
+              <circle cx="8" cy="11" r="2.2" fill="rgba(158,59,82,0.18)" />
+              <circle cx="10.5" cy="17.5" r="2.2" fill="rgba(212,146,56,0.22)" />
+              <circle cx="14" cy="21.5" r="2.6" fill="rgba(158,59,82,0.24)" />
+              <circle cx="17.5" cy="17.5" r="2.2" fill="rgba(212,146,56,0.22)" />
+              <circle cx="20" cy="11" r="2.2" fill="rgba(158,59,82,0.18)" />
+            </svg>`,
+          diya: `
+            <svg class="timeline-motif-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 4 C16.5 8, 17 11.5, 14 14 C11 11.5, 11.5 8, 14 4 Z" fill="rgba(223,158,66,0.28)" />
+              <path d="M5 17 C7 22, 21 22, 23 17 C19 18.8, 9 18.8, 5 17 Z" fill="rgba(212,146,56,0.14)" />
+              <line x1="10" y1="23.5" x2="18" y2="23.5" />
+            </svg>`,
+          chandelier: `
+            <svg class="timeline-motif-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="14" y1="3" x2="14" y2="10" />
+              <path d="M6 15 C8 19, 20 19, 22 15" />
+              <path d="M9 12 C11 15, 17 15, 19 12" />
+              <circle cx="6" cy="13.5" r="1.5" fill="rgba(212,146,56,0.35)" />
+              <circle cx="14" cy="10.5" r="1.6" fill="rgba(212,146,56,0.35)" />
+              <circle cx="22" cy="13.5" r="1.5" fill="rgba(212,146,56,0.35)" />
+              <path d="M14 18 L14 23 M11 21 L14 24 L17 21" />
+            </svg>`
+        };
+        return icons[type] || icons.lotus;
+      }
+    };
+
+    /* ==========================================================================
+       2. PROCEDURAL WEB AUDIO ENGINE (HARP + FELT-PIANO + SILK HARMONIC DRONE)
+       ========================================================================== */
+    class RoyalAmbientAudioEngine {
+      constructor(optionalMusicUrl) {
+        this.musicUrl = (optionalMusicUrl || "").trim();
+        this.isPlaying = false;
+        this.isInitialized = false;
+
+        this.ctx = null;
+        this.masterGain = null;
+        this.lowpass = null;
+        this.convolver = null;
+        this.droneOsc1 = null;
+        this.droneOsc2 = null;
+        this.droneGain = null;
+        this.stepTimer = null;
+
+        this.audioEl = null;
+        this.fadeRaf = null;
+
+        // ~56 BPM dreamy acoustic arpeggio (eighth note = ~536ms): Dmaj9 -> Bm7 -> Gmaj7 -> Asus4
+        this.stepDurationMs = 536;
+        this.stepIndex = 0;
+        this.progression = [
+          { bass: 146.83, pad: [220.0, 277.18, 329.63], arp: [293.66, 369.99, 440.0, 554.37, 659.25, 554.37, 440.0, 369.99] },
+          { bass: 123.47, pad: [185.0, 220.0, 293.66], arp: [246.94, 369.99, 440.0, 554.37, 587.33, 440.0, 369.99, 293.66] },
+          { bass: 98.0,   pad: [196.0, 246.94, 329.63], arp: [293.66, 369.99, 440.0, 493.88, 587.33, 493.88, 440.0, 369.99] },
+          { bass: 110.0,  pad: [220.0, 293.66, 329.63], arp: [293.66, 329.63, 440.0, 587.33, 554.37, 440.0, 329.63, 277.18] }
+        ];
+      }
+
+      /**
+       * Synthesizes a lush stereo hall reverb impulse response buffer.
+       */
+      buildHallImpulse(ctx, seconds = 3.4, decay = 2.6) {
+        const rate = ctx.sampleRate;
+        const length = Math.floor(rate * seconds);
+        const buffer = ctx.createBuffer(2, length, rate);
+
+        for (let ch = 0; ch < 2; ch++) {
+          const data = buffer.getChannelData(ch);
+          let smooth = 0;
+          for (let i = 0; i < length; i++) {
+            const env = Math.pow(1 - i / length, decay);
+            const white = Math.random() * 2 - 1;
+            smooth = smooth * 0.8 + white * 0.2;
+            data[i] = smooth * env * 0.65;
+          }
+        }
+        return buffer;
+      }
+
+      initSynth() {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return false;
+
+        this.ctx = new AudioCtx();
+
+        // Warm acoustic low-pass filter
+        this.lowpass = this.ctx.createBiquadFilter();
+        this.lowpass.type = "lowpass";
+        this.lowpass.frequency.value = 1080;
+        this.lowpass.Q.value = 0.62;
+
+        // Stereo hall reverb
+        this.convolver = this.ctx.createConvolver();
+        this.convolver.buffer = this.buildHallImpulse(this.ctx, 3.4, 2.5);
+
+        const dryGain = this.ctx.createGain();
+        dryGain.gain.value = 0.52;
+
+        const wetGain = this.ctx.createGain();
+        wetGain.gain.value = 0.48;
+
+        this.masterGain = this.ctx.createGain();
+        this.masterGain.gain.value = 0.0001;
+
+        // Ultra-soft warm harmonic drone (D2 + A2 silk pad evoking gentle tanpura warmth)
+        this.droneGain = this.ctx.createGain();
+        this.droneGain.gain.value = 0.024;
+        this.droneOsc1 = this.ctx.createOscillator();
+        this.droneOsc2 = this.ctx.createOscillator();
+        this.droneOsc1.type = "sine";
+        this.droneOsc2.type = "triangle";
+        this.droneOsc1.frequency.value = 73.42; // D2
+        this.droneOsc2.frequency.value = 110.0; // A2
+        this.droneOsc1.connect(this.droneGain);
+        this.droneOsc2.connect(this.droneGain);
+        this.droneGain.connect(this.lowpass);
+        this.droneOsc1.start();
+        this.droneOsc2.start();
+
+        this.lowpass.connect(dryGain);
+        this.lowpass.connect(this.convolver);
+        this.convolver.connect(wetGain);
+
+        dryGain.connect(this.masterGain);
+        wetGain.connect(this.masterGain);
+        this.masterGain.connect(this.ctx.destination);
+
+        this.isInitialized = true;
+        return true;
+      }
+
+      playVoice(freq, velocity, duration, isFeltPad = false, pan = 0) {
+        if (!this.ctx || !this.isPlaying) return;
+        const now = this.ctx.currentTime + 0.02 + Math.random() * 0.018;
+
+        const oscMain = this.ctx.createOscillator();
+        const oscWarm = this.ctx.createOscillator();
+        const voiceGain = this.ctx.createGain();
+        const warmGain = this.ctx.createGain();
+
+        oscMain.type = "sine";
+        oscWarm.type = "triangle";
+        oscMain.frequency.setValueAtTime(freq, now);
+        oscWarm.frequency.setValueAtTime(isFeltPad ? freq * 2 : freq, now);
+        oscWarm.detune.setValueAtTime((Math.random() - 0.5) * 4.5, now);
+
+        warmGain.gain.setValueAtTime(isFeltPad ? 0.055 : 0.15, now);
+
+        const attack = isFeltPad ? 0.14 : 0.02;
+        const peak = Math.max(0.01, velocity);
+
+        voiceGain.gain.setValueAtTime(0.0001, now);
+        voiceGain.gain.linearRampToValueAtTime(peak, now + attack);
+        voiceGain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+        oscMain.connect(voiceGain);
+        oscWarm.connect(warmGain);
+        warmGain.connect(voiceGain);
+
+        if (this.ctx.createStereoPanner) {
+          const panner = this.ctx.createStereoPanner();
+          panner.pan.setValueAtTime(pan, now);
+          voiceGain.connect(panner);
+          panner.connect(this.lowpass);
+        } else {
+          voiceGain.connect(this.lowpass);
+        }
+
+        oscMain.start(now);
+        oscWarm.start(now);
+        oscMain.stop(now + duration + 0.08);
+        oscWarm.stop(now + duration + 0.08);
+      }
+
+      scheduleStep() {
+        if (!this.isPlaying) return;
+        const barIdx = Math.floor(this.stepIndex / 8) % this.progression.length;
+        const beatInBar = this.stepIndex % 8;
+        const chord = this.progression[barIdx];
+
+        if (beatInBar === 0) {
+          this.playVoice(chord.bass, 0.135, 4.3, true, -0.14);
+          chord.pad.forEach((f, idx) => {
+            this.playVoice(f, 0.04, 4.0, true, (idx - 1) * 0.22);
+          });
+        }
+
+        const noteFreq = chord.arp[beatInBar];
+        const vel = 0.075 + Math.random() * 0.03 + (beatInBar === 0 || beatInBar === 4 ? 0.016 : 0);
+        const pan = ((beatInBar / 7) - 0.5) * 0.58;
+        this.playVoice(noteFreq, vel, 2.6, false, pan);
+
+        if (beatInBar === 4 && Math.random() > 0.35) {
+          this.playVoice(noteFreq * 2, 0.022, 2.2, false, 0.3);
+        }
+
+        this.stepIndex++;
+      }
+
+      start(fadeSeconds = 1.5) {
+        if (this.isPlaying) return;
+
+        if (this.musicUrl) {
+          try {
+            if (!this.audioEl) {
+              this.audioEl = new Audio(this.musicUrl);
+              this.audioEl.loop = true;
+              this.audioEl.volume = 0;
+            }
+            this.audioEl.play().catch(() => {});
+            this.isPlaying = true;
+            this.fadeAudioElement(0.65, fadeSeconds * 1000);
+          } catch (err) {
+            // Silent graceful fallback
+          }
+          return;
+        }
+
+        try {
+          if (!this.isInitialized && !this.initSynth()) return;
+          if (this.ctx.state === "suspended") this.ctx.resume();
+
+          this.isPlaying = true;
+          const now = this.ctx.currentTime;
+          this.masterGain.gain.cancelScheduledValues(now);
+          this.masterGain.gain.setValueAtTime(Math.max(0.0001, this.masterGain.gain.value), now);
+          this.masterGain.gain.linearRampToValueAtTime(0.62, now + fadeSeconds);
+
+          this.scheduleStep();
+          clearInterval(this.stepTimer);
+          this.stepTimer = setInterval(() => this.scheduleStep(), this.stepDurationMs);
+        } catch (err) {
+          // Safe degradation
+        }
+      }
+
+      pause(fadeSeconds = 0.7) {
+        if (!this.isPlaying) return;
+        this.isPlaying = false;
+
+        if (this.musicUrl && this.audioEl) {
+          this.fadeAudioElement(0, fadeSeconds * 1000, () => {
+            if (!this.isPlaying) this.audioEl.pause();
+          });
+          return;
+        }
+
+        clearInterval(this.stepTimer);
+        if (this.ctx && this.masterGain) {
+          const now = this.ctx.currentTime;
+          this.masterGain.gain.cancelScheduledValues(now);
+          this.masterGain.gain.setValueAtTime(this.masterGain.gain.value, now);
+          this.masterGain.gain.linearRampToValueAtTime(0.0001, now + fadeSeconds);
+        }
+      }
+
+      toggle() {
+        if (this.isPlaying) {
+          this.pause(0.65);
+        } else {
+          this.start(1.1);
+        }
+        return this.isPlaying;
+      }
+
+      fadeAudioElement(targetVol, durationMs, onDone) {
+        if (!this.audioEl) return;
+        cancelAnimationFrame(this.fadeRaf);
+        const startVol = this.audioEl.volume;
+        const startTime = performance.now();
+
+        const tick = (now) => {
+          const t = Math.min(1, (now - startTime) / durationMs);
+          this.audioEl.volume = startVol + (targetVol - startVol) * t;
+          if (t < 1) {
+            this.fadeRaf = requestAnimationFrame(tick);
+          } else if (onDone) {
+            onDone();
+          }
+        };
+        this.fadeRaf = requestAnimationFrame(tick);
+      }
+    }
+
+    /* ==========================================================================
+       3. CANOPY REVEAL CANVAS (WAX SEAL GOLD SPARKS + 24 PETALS & GOLD MOTES)
+       ========================================================================== */
+    function initCanopyCanvas() {
+      const canvas = document.getElementById("canopyCanvas");
+      if (!canvas) return { triggerBurst: () => {}, stop: () => {} };
+      const ctx = canvas.getContext("2d");
+
+      let width = 0;
+      let height = 0;
+      let rafId = null;
+      let active = false;
+      const particles = [];
+
+      function resize() {
+        const rect = canvas.getBoundingClientRect();
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        width = rect.width;
+        height = rect.height;
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+
+      function spawnRevealBurst() {
+        particles.length = 0;
+
+        // 22 radial golden spark motes bursting from the wax seal
+        const sealX = width * 0.5;
+        const sealY = height * 0.68;
+        for (let i = 0; i < 22; i++) {
+          const ang = (Math.PI * 2 * i) / 22 + (Math.random() - 0.5) * 0.25;
+          const speed = 1.2 + Math.random() * 2.8;
+          particles.push({
+            kind: "spark",
+            x: sealX,
+            y: sealY,
+            vx: Math.cos(ang) * speed,
+            vy: Math.sin(ang) * speed - 0.5,
+            size: 1.5 + Math.random() * 2.5,
+            alpha: 0.95,
+            decay: 0.018 + Math.random() * 0.014,
+            tint: i % 2 === 0 ? "246, 229, 181" : "230, 199, 126"
+          });
+        }
+
+        // 24 drifting translucent rose petals, marigold petals & gold-leaf motes
+        const palette = [
+          { kind: "petal", tint: "184, 72, 96" },   // Rani Rose
+          { kind: "petal", tint: "224, 158, 66" },  // Marigold
+          { kind: "petal", tint: "248, 224, 218" }, // Blush Ivory
+          { kind: "gold",  tint: "246, 225, 168" }  // Gold-leaf mote
+        ];
+
+        for (let i = 0; i < 24; i++) {
+          const style = palette[i % palette.length];
+          particles.push({
+            kind: style.kind,
+            tint: style.tint,
+            x: width * (0.08 + Math.random() * 0.84),
+            y: height * (0.12 + Math.random() * 0.78),
+            vx: (Math.random() - 0.5) * 0.42,
+            vy: style.kind === "gold" ? -(0.22 + Math.random() * 0.34) : -(0.16 + Math.random() * 0.28),
+            size: style.kind === "gold" ? 2.8 + Math.random() * 3.8 : 5.5 + Math.random() * 5.2,
+            alpha: 0,
+            maxAlpha: style.kind === "gold" ? 0.65 + Math.random() * 0.28 : 0.62 + Math.random() * 0.28,
+            angle: Math.random() * Math.PI * 2,
+            spin: (Math.random() - 0.5) * 0.028,
+            sway: Math.random() * Math.PI * 2
+          });
+        }
+      }
+
+      function draw() {
+        if (!active) return;
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = particles.length - 1; i >= 0; i--) {
+          const p = particles[i];
+          if (p.kind === "spark") {
+            p.x += p.vx;
+            p.y += p.vy;
+            p.vx *= 0.96;
+            p.vy *= 0.96;
+            p.alpha -= p.decay;
+            if (p.alpha <= 0) {
+              particles.splice(i, 1);
+              continue;
+            }
+            ctx.fillStyle = `rgba(${p.tint}, ${p.alpha})`;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fill();
+            continue;
+          }
+
+          p.sway += 0.02;
+          p.x += p.vx + Math.sin(p.sway) * 0.35;
+          p.y += p.vy;
+          p.angle += p.spin;
+          p.alpha = Math.min(p.maxAlpha, p.alpha + 0.024);
+
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.angle);
+
+          if (p.kind === "petal") {
+            ctx.fillStyle = `rgba(${p.tint}, ${p.alpha})`;
+            ctx.beginPath();
+            ctx.moveTo(0, -p.size);
+            ctx.bezierCurveTo(p.size * 0.92, -p.size * 0.46, p.size * 0.72, p.size * 0.68, 0, p.size);
+            ctx.bezierCurveTo(-p.size * 0.72, p.size * 0.68, -p.size * 0.92, -p.size * 0.46, 0, -p.size);
+            ctx.fill();
+          } else {
+            const g = ctx.createRadialGradient(0, 0, 0, 0, 0, p.size * 2.1);
+            g.addColorStop(0, `rgba(${p.tint}, ${p.alpha})`);
+            g.addColorStop(1, "rgba(246, 225, 168, 0)");
+            ctx.fillStyle = g;
+            ctx.beginPath();
+            ctx.arc(0, 0, p.size * 2.1, 0, Math.PI * 2);
+            ctx.fill();
+          }
+          ctx.restore();
+        }
+        rafId = requestAnimationFrame(draw);
+      }
+
+      resize();
+      window.addEventListener("resize", resize);
+
+      return {
+        triggerBurst() {
+          resize();
+          spawnRevealBurst();
+          active = true;
+          cancelAnimationFrame(rafId);
+          draw();
+        },
+        stop() {
+          active = false;
+          cancelAnimationFrame(rafId);
+        }
+      };
+    }
+
+    /* ==========================================================================
+       4. INTERACTIVE 24K GOLD-LEAF SCRATCH MEDALLION & 24-PETAL SHOWER
+       ========================================================================== */
+    function initScratchCard() {
+      const section = document.getElementById("scratchSection");
+      const canvas = document.getElementById("scratchCanvas");
+      const pCanvas = document.getElementById("scratchParticlesCanvas");
+      const fallbackBtn = document.getElementById("scratchFallbackBtn");
+      if (!canvas || !pCanvas) return;
+
+      const ctx = canvas.getContext("2d", { willReadFrequently: true });
+      const pCtx = pCanvas.getContext("2d");
+
+      let width = 0;
+      let height = 0;
+      let dpr = 1;
+      let isDrawing = false;
+      let isRevealed = false;
+      let lastPoint = null;
+      let strokeCounter = 0;
+
+      const sparks = [];
+      const petals = [];
+      let pRaf = null;
+
+      function setupCanvases() {
+        const rect = canvas.getBoundingClientRect();
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        width = rect.width;
+        height = rect.height;
+
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        const pRect = pCanvas.getBoundingClientRect();
+        pCanvas.width = Math.floor(pRect.width * dpr);
+        pCanvas.height = Math.floor(pRect.height * dpr);
+        pCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        if (!isRevealed) paint24kGoldFoil();
+      }
+
+      /**
+       * Procedurally paints realistic brushed 24k champagne-gold leaf metallic foil
+       * with fine brushed grain, shimmer speculars & subtle embossed lotus watermark.
+       */
+      function paint24kGoldFoil() {
+        ctx.globalCompositeOperation = "source-over";
+        ctx.clearRect(0, 0, width, height);
+
+        const grad = ctx.createLinearGradient(0, 0, width, height);
+        grad.addColorStop(0, "#C9A154");
+        grad.addColorStop(0.24, "#EDD28E");
+        grad.addColorStop(0.46, "#B98F3E");
+        grad.addColorStop(0.72, "#F2DC9F");
+        grad.addColorStop(1, "#A87E31");
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, width, height);
+
+        // Luminous warm pearl-gold specular sheen
+        const sheen = ctx.createRadialGradient(width * 0.34, height * 0.28, 8, width * 0.5, height * 0.46, width * 0.9);
+        sheen.addColorStop(0, "rgba(255, 249, 228, 0.52)");
+        sheen.addColorStop(0.46, "rgba(255, 244, 212, 0.12)");
+        sheen.addColorStop(1, "rgba(112, 78, 22, 0.22)");
+        ctx.fillStyle = sheen;
+        ctx.fillRect(0, 0, width, height);
+
+        // Directional brushed metallic gold hairlines
+        for (let i = 0; i < 180; i++) {
+          const y = Math.random() * height;
+          const x = Math.random() * width * 0.3;
+          const len = width * (0.45 + Math.random() * 0.7);
+          ctx.strokeStyle = i % 2 === 0 ? "rgba(255, 250, 232, 0.18)" : "rgba(110, 76, 20, 0.08)";
+          ctx.lineWidth = 0.65;
+          ctx.beginPath();
+          ctx.moveTo(x, y);
+          ctx.lineTo(x + len, y + (Math.random() - 0.5) * 1.4);
+          ctx.stroke();
+        }
+
+        // Fine 24k gold-leaf metallic grain speckle
+        for (let i = 0; i < 1100; i++) {
+          const gx = Math.random() * width;
+          const gy = Math.random() * height;
+          ctx.fillStyle = i % 3 === 0 ? "rgba(255, 251, 236, 0.28)" : "rgba(104, 72, 20, 0.11)";
+          ctx.fillRect(gx, gy, 1.1, 1.1);
+        }
+
+        // Subtle embossed lotus medallion & tactile cue on the foil
+        ctx.save();
+        const cx = width / 2;
+        const cy = height * 0.45;
+        ctx.strokeStyle = "rgba(112, 78, 24, 0.36)";
+        ctx.lineWidth = 0.9;
+        ctx.beginPath();
+        ctx.arc(cx, cy, 34, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(cx, cy, 28, 0, Math.PI * 2);
+        ctx.stroke();
+
+        // Delicate recessed lotus petal motif inside medallion
+        ctx.beginPath();
+        ctx.moveTo(cx, cy - 16);
+        ctx.quadraticCurveTo(cx + 9, cy - 2, cx, cy + 12);
+        ctx.quadraticCurveTo(cx - 9, cy - 2, cx, cy - 16);
+        ctx.stroke();
+
+        ctx.fillStyle = "rgba(86, 58, 16, 0.76)";
+        ctx.font = 'italic 16.5px "Cormorant Garamond", Georgia, serif';
+        ctx.textAlign = "center";
+        ctx.fillText("rub gold leaf gently", cx, height * 0.67);
+        ctx.restore();
+      }
+
+      function getPointerPos(e) {
+        const rect = canvas.getBoundingClientRect();
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        return { x: clientX - rect.left, y: clientY - rect.top };
+      }
+
+      function emitGoldDustSparks(x, y) {
+        for (let i = 0; i < 4; i++) {
+          sparks.push({
+            x: x + 44 + (Math.random() - 0.5) * 16,
+            y: y + 44 + (Math.random() - 0.5) * 16,
+            vx: (Math.random() - 0.5) * 1.7,
+            vy: 0.4 + Math.random() * 1.5,
+            size: 1.2 + Math.random() * 2.2,
+            alpha: 0.92,
+            color: i % 2 === 0 ? "246, 229, 181" : "196, 150, 62"
+          });
+        }
+        startParticleLoop();
+      }
+
+      function spawn24RevealPetals() {
+        const pw = pCanvas.getBoundingClientRect().width;
+        const ph = pCanvas.getBoundingClientRect().height;
+        petals.length = 0;
+
+        const styles = [
+          { kind: "petal", tint: "172, 62, 86" },  // Rani Rose
+          { kind: "petal", tint: "224, 156, 62" }, // Royal Marigold
+          { kind: "petal", tint: "242, 206, 208" },// Blush Peony
+          { kind: "fleck", tint: "238, 204, 126" } // 24k Gold-leaf fleck
+        ];
+
+        for (let i = 0; i < 24; i++) {
+          const st = styles[i % styles.length];
+          petals.push({
+            kind: st.kind,
+            tint: st.tint,
+            x: pw * (0.1 + Math.random() * 0.8),
+            y: ph * (0.06 + Math.random() * 0.52),
+            vx: (Math.random() - 0.5) * 0.5,
+            vy: 0.28 + Math.random() * 0.48,
+            size: st.kind === "fleck" ? 3 + Math.random() * 2.8 : 6 + Math.random() * 5.2,
+            angle: Math.random() * Math.PI * 2,
+            spin: (Math.random() - 0.5) * 0.032,
+            sway: Math.random() * Math.PI * 2,
+            alpha: 0,
+            life: 0,
+            maxLife: 240 + Math.random() * 115
+          });
+        }
+        startParticleLoop();
+      }
+
+      function startParticleLoop() {
+        if (pRaf) return;
+        const pw = pCanvas.getBoundingClientRect().width;
+        const ph = pCanvas.getBoundingClientRect().height;
+
+        const loop = () => {
+          pCtx.clearRect(0, 0, pw, ph);
+
+          for (let i = sparks.length - 1; i >= 0; i--) {
+            const s = sparks[i];
+            s.x += s.vx;
+            s.y += s.vy;
+            s.vy += 0.04;
+            s.alpha -= 0.032;
+            if (s.alpha <= 0) {
+              sparks.splice(i, 1);
+              continue;
+            }
+            pCtx.fillStyle = `rgba(${s.color}, ${s.alpha})`;
+            pCtx.beginPath();
+            pCtx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+            pCtx.fill();
+          }
+
+          for (let i = petals.length - 1; i >= 0; i--) {
+            const p = petals[i];
+            p.life++;
+            p.sway += 0.022;
+            p.x += p.vx + Math.sin(p.sway) * 0.38;
+            p.y += p.vy;
+            p.angle += p.spin;
+
+            const fadeIn = Math.min(1, p.life / 28);
+            const fadeOut = Math.max(0, 1 - Math.max(0, p.life - (p.maxLife - 72)) / 72);
+            p.alpha = fadeIn * fadeOut * 0.8;
+
+            if (p.life >= p.maxLife) {
+              petals.splice(i, 1);
+              continue;
+            }
+
+            pCtx.save();
+            pCtx.translate(p.x, p.y);
+            pCtx.rotate(p.angle);
+            pCtx.fillStyle = `rgba(${p.tint}, ${p.alpha})`;
+
+            if (p.kind === "fleck") {
+              pCtx.fillRect(-p.size * 0.5, -p.size * 0.35, p.size, p.size * 0.7);
+            } else {
+              pCtx.beginPath();
+              pCtx.moveTo(0, -p.size);
+              pCtx.bezierCurveTo(p.size * 0.88, -p.size * 0.45, p.size * 0.72, p.size * 0.65, 0, p.size);
+              pCtx.bezierCurveTo(-p.size * 0.72, p.size * 0.65, -p.size * 0.88, -p.size * 0.45, 0, -p.size);
+              pCtx.fill();
+            }
+            pCtx.restore();
+          }
+
+          if (sparks.length > 0 || petals.length > 0) {
+            pRaf = requestAnimationFrame(loop);
+          } else {
+            pRaf = null;
+          }
+        };
+        pRaf = requestAnimationFrame(loop);
+      }
+
+      function scratchDot(x, y) {
+        const radius = 26;
+        ctx.globalCompositeOperation = "destination-out";
+        const brush = ctx.createRadialGradient(x, y, radius * 0.25, x, y, radius);
+        brush.addColorStop(0, "rgba(0, 0, 0, 1)");
+        brush.addColorStop(0.7, "rgba(0, 0, 0, 0.85)");
+        brush.addColorStop(1, "rgba(0, 0, 0, 0)");
+        ctx.fillStyle = brush;
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      function scratchSegment(from, to) {
+        const dx = to.x - from.x;
+        const dy = to.y - from.y;
+        const dist = Math.hypot(dx, dy);
+        const steps = Math.max(1, Math.ceil(dist / 6));
+
+        for (let i = 0; i <= steps; i++) {
+          scratchDot(from.x + (dx * i) / steps, from.y + (dy * i) / steps);
+        }
+
+        if (strokeCounter % 2 === 0) emitGoldDustSparks(to.x, to.y);
+        strokeCounter++;
+      }
+
+      function checkClearedRatio() {
+        if (isRevealed) return;
+        try {
+          const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+          let cleared = 0;
+          let total = 0;
+          for (let i = 3; i < imgData.length; i += 64) {
+            total++;
+            if (imgData[i] < 90) cleared++;
+          }
+          if (total > 0 && cleared / total >= 0.4) completeReveal();
+        } catch (err) {
+          // Safe guard
+        }
+      }
+
+      function completeReveal() {
+        if (isRevealed) return;
+        isRevealed = true;
+        isDrawing = false;
+        canvas.classList.add("is-cleared");
+        section.classList.add("is-revealed");
+        spawn24RevealPetals();
+      }
+
+      function onStart(e) {
+        if (isRevealed) return;
+        if (e.cancelable) e.preventDefault();
+        isDrawing = true;
+        const pt = getPointerPos(e);
+        lastPoint = pt;
+        scratchDot(pt.x, pt.y);
+        emitGoldDustSparks(pt.x, pt.y);
+      }
+
+      function onMove(e) {
+        if (!isDrawing || isRevealed) return;
+        if (e.cancelable) e.preventDefault();
+        const pt = getPointerPos(e);
+        scratchSegment(lastPoint || pt, pt);
+        lastPoint = pt;
+        if (strokeCounter % 5 === 0) checkClearedRatio();
+      }
+
+      function onEnd() {
+        if (!isDrawing) return;
+        isDrawing = false;
+        lastPoint = null;
+        checkClearedRatio();
+      }
+
+      canvas.addEventListener("mousedown", onStart);
+      window.addEventListener("mousemove", onMove);
+      window.addEventListener("mouseup", onEnd);
+
+      canvas.addEventListener("touchstart", onStart, { passive: false });
+      canvas.addEventListener("touchmove", onMove, { passive: false });
+      window.addEventListener("touchend", onEnd);
+
+      fallbackBtn.addEventListener("click", completeReveal);
+
+      setupCanvases();
+      window.addEventListener("resize", () => {
+        if (!isRevealed) setupCanvases();
+      });
+    }
+
+    /* ==========================================================================
+       5. VENUE CARD 18 CANDLELIGHT BOKEH ORBS & GOLDEN FIREFLIES CANVAS
+       ========================================================================== */
+    function initVenueBokeh() {
+      const canvas = document.getElementById("venueBokehCanvas");
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+
+      let width = 0;
+      let height = 0;
+      const lights = [];
+
+      function resize() {
+        const rect = canvas.getBoundingClientRect();
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        width = rect.width;
+        height = rect.height;
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+
+      function seedLights() {
+        lights.length = 0;
+        for (let i = 0; i < 18; i++) {
+          const isFirefly = i >= 12;
+          lights.push({
+            isFirefly,
+            x: Math.random() * width,
+            y: Math.random() * height,
+            r: isFirefly ? 2.2 + Math.random() * 2.2 : 12 + Math.random() * 24,
+            vy: isFirefly ? -(0.12 + Math.random() * 0.2) : -(0.07 + Math.random() * 0.12),
+            vx: (Math.random() - 0.5) * (isFirefly ? 0.2 : 0.08),
+            baseAlpha: isFirefly ? 0.35 + Math.random() * 0.35 : 0.09 + Math.random() * 0.14,
+            phase: Math.random() * Math.PI * 2,
+            speed: isFirefly ? 0.03 + Math.random() * 0.025 : 0.008 + Math.random() * 0.01
+          });
+        }
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+
+        for (const l of lights) {
+          l.phase += l.speed;
+          l.y += l.vy;
+          l.x += l.vx + Math.sin(l.phase) * (l.isFirefly ? 0.22 : 0.08);
+
+          if (l.y < -l.r * 2) {
+            l.y = height + l.r * 2;
+            l.x = Math.random() * width;
+          }
+
+          const alpha = l.baseAlpha * (0.55 + 0.45 * Math.sin(l.phase));
+          const grad = ctx.createRadialGradient(l.x, l.y, 0, l.x, l.y, l.r * (l.isFirefly ? 2.4 : 1));
+          grad.addColorStop(0, `rgba(252, 224, 158, ${alpha})`);
+          grad.addColorStop(0.5, `rgba(222, 168, 86, ${alpha * 0.45})`);
+          grad.addColorStop(1, "rgba(222, 168, 86, 0)");
+
+          ctx.fillStyle = grad;
+          ctx.beginPath();
+          ctx.arc(l.x, l.y, l.r * (l.isFirefly ? 2.4 : 1), 0, Math.PI * 2);
+          ctx.fill();
+        }
+        requestAnimationFrame(animate);
+      }
+
+      resize();
+      seedLights();
+      animate();
+      window.addEventListener("resize", () => {
+        resize();
+        seedLights();
+      });
+    }
+
+    /* ==========================================================================
+       6. GILDED LIVE COUNTDOWN TIMER
+       ========================================================================== */
+    function initCountdown() {
+      const targetTime = new Date(INVITE_CONFIG.targetDateISO).getTime();
+      const elDays = document.getElementById("cdDays");
+      const elHours = document.getElementById("cdHours");
+      const elMinutes = document.getElementById("cdMinutes");
+      const elSeconds = document.getElementById("cdSeconds");
+      const elStatus = document.getElementById("countdownStatus");
+
+      const pad = (n) => String(Math.max(0, n)).padStart(2, "0");
+
+      function update() {
+        const diff = targetTime - Date.now();
+        if (Number.isNaN(targetTime) || diff <= 0) {
+          elDays.textContent = "00";
+          elHours.textContent = "00";
+          elMinutes.textContent = "00";
+          elSeconds.textContent = "00";
+          elStatus.style.display = "block";
+          return;
+        }
+        elDays.textContent = pad(Math.floor(diff / (1000 * 60 * 60 * 24)));
+        elHours.textContent = pad(Math.floor((diff / (1000 * 60 * 60)) % 24));
+        elMinutes.textContent = pad(Math.floor((diff / (1000 * 60)) % 60));
+        elSeconds.textContent = pad(Math.floor((diff / 1000) % 60));
+      }
+
+      update();
+      setInterval(update, 1000);
+    }
+
+    /* ==========================================================================
+       7. BESPOKE LETTERPRESS RSVP & BLESSINGS ENGINE (WITH LOCALSTORAGE & PETALS)
+       ========================================================================== */
+    function initRsvpCard() {
+      const STORAGE_KEY = "royal_wedding_rsvp_meera_aarav_v1";
+      const form = document.getElementById("rsvpForm");
+      const nameInput = document.getElementById("rsvpName");
+      const noteInput = document.getElementById("rsvpNote");
+      const errorMsg = document.getElementById("rsvpErrorMsg");
+      const guestsWrap = document.getElementById("rsvpGuestsWrap");
+      const sealBtns = document.querySelectorAll(".rsvp-seal-opt");
+      const countBtns = document.querySelectorAll(".rsvp-count-btn");
+      const confirmationEl = document.getElementById("rsvpConfirmation");
+      const thanksTitle = document.getElementById("rsvpThanksTitle");
+      const thanksDetail = document.getElementById("rsvpThanksDetail");
+      const savedNoteEl = document.getElementById("rsvpSavedNote");
+      const editBtn = document.getElementById("rsvpEditBtn");
+      const petalsCanvas = document.getElementById("rsvpPetalsCanvas");
+
+      let attendance = "accept";
+      let guestCount = 2;
+
+      function setAttendance(val) {
+        attendance = val;
+        sealBtns.forEach((btn) => {
+          const active = btn.dataset.attend === val;
+          btn.classList.toggle("is-selected", active);
+          btn.setAttribute("aria-pressed", String(active));
+        });
+        guestsWrap.classList.toggle("is-dimmed", val === "decline");
+      }
+
+      function setGuestCount(val) {
+        guestCount = Number(val);
+        countBtns.forEach((btn) => {
+          btn.classList.toggle("is-selected", Number(btn.dataset.count) === guestCount);
+        });
+      }
+
+      sealBtns.forEach((btn) => {
+        btn.addEventListener("click", () => setAttendance(btn.dataset.attend));
+      });
+
+      countBtns.forEach((btn) => {
+        btn.addEventListener("click", () => setGuestCount(btn.dataset.count));
+      });
+
+      function burstRsvpPetals() {
+        if (!petalsCanvas) return;
+        const ctx = petalsCanvas.getContext("2d");
+        const rect = petalsCanvas.getBoundingClientRect();
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        petalsCanvas.width = Math.floor(rect.width * dpr);
+        petalsCanvas.height = Math.floor(rect.height * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        const colors = ["158, 59, 82", "212, 146, 56", "238, 204, 126", "201, 122, 134"];
+        const items = Array.from({ length: 20 }, (_, i) => ({
+          x: rect.width * (0.15 + Math.random() * 0.7),
+          y: rect.height * (0.05 + Math.random() * 0.35),
+          vx: (Math.random() - 0.5) * 0.8,
+          vy: 0.45 + Math.random() * 0.65,
+          size: 4.5 + Math.random() * 4.5,
+          angle: Math.random() * Math.PI * 2,
+          spin: (Math.random() - 0.5) * 0.04,
+          life: 0,
+          maxLife: 130 + Math.random() * 60,
+          tint: colors[i % colors.length]
+        }));
+
+        const tick = () => {
+          ctx.clearRect(0, 0, rect.width, rect.height);
+          let alive = false;
+          for (const p of items) {
+            p.life++;
+            if (p.life >= p.maxLife) continue;
+            alive = true;
+            p.x += p.vx + Math.sin(p.life * 0.05) * 0.35;
+            p.y += p.vy;
+            p.angle += p.spin;
+            const alpha = Math.min(1, p.life / 16) * (1 - p.life / p.maxLife) * 0.85;
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate(p.angle);
+            ctx.fillStyle = `rgba(${p.tint}, ${alpha})`;
+            ctx.beginPath();
+            ctx.ellipse(0, 0, p.size * 0.6, p.size, 0, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+          }
+          if (alive) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      }
+
+      function showConfirmation(record, animatePetals = false) {
+        form.style.display = "none";
+        confirmationEl.classList.add("is-visible");
+
+        if (record.attendance === "accept") {
+          thanksTitle.textContent = "We Are Truly Honoured";
+          const guestWord = record.guestCount === 1 ? "1 cherished guest" : `${record.guestCount} cherished guests`;
+          thanksDetail.textContent = `Dear ${record.name}, we look forward with immense joy to welcoming ${guestWord} to ${INVITE_CONFIG.venue.name}.`;
+        } else {
+          thanksTitle.textContent = "Forever in Our Hearts";
+          thanksDetail.textContent = `Dear ${record.name}, you will be dearly missed on our wedding evening, and we hold your warm wishes close.`;
+        }
+
+        if (record.note) {
+          savedNoteEl.textContent = `“${record.note}”`;
+          savedNoteEl.style.display = "block";
+        } else {
+          savedNoteEl.style.display = "none";
+        }
+
+        if (animatePetals) burstRsvpPetals();
+      }
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const guestName = nameInput.value.trim();
+        const note = noteInput.value.trim();
+
+        if (!guestName) {
+          errorMsg.textContent = "Kindly enter your name so we may welcome you warmly.";
+          nameInput.focus();
+          return;
+        }
+        errorMsg.textContent = "";
+
+        const record = {
+          name: guestName,
+          attendance,
+          guestCount: attendance === "accept" ? guestCount : 0,
+          note
+        };
+
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(record));
+        } catch (err) {
+          // Ignore storage quota / privacy mode restrictions gracefully
+        }
+
+        showConfirmation(record, true);
+      });
+
+      editBtn.addEventListener("click", () => {
+        confirmationEl.classList.remove("is-visible");
+        form.style.display = "block";
+      });
+
+      // Restore previously confirmed RSVP on return visits
+      try {
+        const savedRaw = localStorage.getItem(STORAGE_KEY);
+        if (savedRaw) {
+          const parsed = JSON.parse(savedRaw);
+          if (parsed && parsed.name) {
+            nameInput.value = parsed.name;
+            noteInput.value = parsed.note || "";
+            setAttendance(parsed.attendance === "decline" ? "decline" : "accept");
+            if (parsed.guestCount >= 1 && parsed.guestCount <= 5) {
+              setGuestCount(parsed.guestCount);
+            }
+            showConfirmation(parsed, false);
+          }
+        }
+      } catch (err) {
+        // Clean start if localStorage unavailable
+      }
+    }
+
+    /* ==========================================================================
+       8. REAL .ICS ADD-TO-CALENDAR FILE GENERATOR (PURE VANILLA JS)
+       ========================================================================== */
+    function initAddToCalendar() {
+      const btn = document.getElementById("addCalendarBtn");
+      const feedback = document.getElementById("calendarFeedback");
+      if (!btn) return;
+
+      function toICSDateUTC(isoString) {
+        const d = new Date(isoString);
+        const pad = (n) => String(n).padStart(2, "0");
+        return (
+          d.getUTCFullYear() +
+          pad(d.getUTCMonth() + 1) +
+          pad(d.getUTCDate()) +
+          "T" +
+          pad(d.getUTCHours()) +
+          pad(d.getUTCMinutes()) +
+          pad(d.getUTCSeconds()) +
+          "Z"
+        );
+      }
+
+      btn.addEventListener("click", () => {
+        try {
+          const dtStart = toICSDateUTC(INVITE_CONFIG.targetDateISO);
+          const dtEnd = toICSDateUTC(INVITE_CONFIG.eventEndISO);
+          const dtStamp = toICSDateUTC(new Date().toISOString());
+          const couple = `${INVITE_CONFIG.brideFirst} & ${INVITE_CONFIG.groomFirst}`;
+          const location = `${INVITE_CONFIG.venue.name}, ${INVITE_CONFIG.venue.addressLines.join(", ")}`;
+          const description = `With the blessings of our families, we invite you to celebrate the royal wedding evening of ${INVITE_CONFIG.brideFull} & ${INVITE_CONFIG.groomFull}. Dress Code: ${INVITE_CONFIG.dressCode.heading}.`;
+
+          const icsContent = [
+            "BEGIN:VCALENDAR",
+            "VERSION:2.0",
+            "PRODID:-//Royal Atelier//Wedding Invitation//EN",
+            "CALSCALE:GREGORIAN",
+            "METHOD:PUBLISH",
+            "BEGIN:VEVENT",
+            `UID:wedding-${dtStart}@royalatelier`,
+            `DTSTAMP:${dtStamp}`,
+            `DTSTART:${dtStart}`,
+            `DTEND:${dtEnd}`,
+            `SUMMARY:Wedding Celebration of ${couple}`,
+            `LOCATION:${location.replace(/,/g, "\\,")}`,
+            `DESCRIPTION:${description.replace(/,/g, "\\,")}`,
+            "END:VEVENT",
+            "END:VCALENDAR"
+          ].join("\r\n");
+
+          const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+          link.href = url;
+          link.download = `${INVITE_CONFIG.brideFirst}-${INVITE_CONFIG.groomFirst}-Wedding.ics`;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          setTimeout(() => URL.revokeObjectURL(url), 1500);
+
+          feedback.textContent = "Calendar keepsake downloaded (.ics)";
+        } catch (err) {
+          feedback.textContent = "Please save December 14, 2026 in your calendar.";
+        }
+      });
+    }
+
+    /* ==========================================================================
+       9. HYDRATE ALL STATIONERY SECTIONS FROM INVITE_CONFIG
+       ========================================================================== */
+    function hydrateInvitation() {
+      const couplePair = `${INVITE_CONFIG.brideFirst} & ${INVITE_CONFIG.groomFirst}`;
+      document.title = `${couplePair} — Royal Wedding Invitation`;
+
+      // Entry Gate
+      document.getElementById("entryTitle").textContent = INVITE_CONFIG.entryTitle;
+      document.getElementById("entryTapCue").textContent = INVITE_CONFIG.entryTapCue;
+      document.getElementById("waxInitials").textContent = INVITE_CONFIG.initials;
+      document.getElementById("waxInitialsShadow").textContent = INVITE_CONFIG.initials;
+
+      // Hero Section
+      document.getElementById("heroOverline").textContent = INVITE_CONFIG.heroOverline;
+      document.getElementById("brideFullName").textContent = INVITE_CONFIG.brideFull;
+      document.getElementById("brideParents").textContent = INVITE_CONFIG.brideParents;
+      document.getElementById("groomFullName").textContent = INVITE_CONFIG.groomFull;
+      document.getElementById("groomParents").textContent = INVITE_CONFIG.groomParents;
+      document.getElementById("wreathMonogramText").textContent = INVITE_CONFIG.initials;
+      document.getElementById("wreathYearText").textContent = INVITE_CONFIG.monogramSubLabel;
+
+      if (INVITE_CONFIG.couplePhotoUrl && INVITE_CONFIG.couplePhotoUrl.trim()) {
+        const photoEl = document.getElementById("couplePhotoBlend");
+        const vignetteWrap = document.getElementById("courtyardVignetteWrap");
+        photoEl.src = INVITE_CONFIG.couplePhotoUrl.trim();
+        photoEl.onload = () => {
+          vignetteWrap.style.display = "none";
+          photoEl.style.display = "block";
+        };
+      }
+
+      // Inject Lush Watercolor Garlands & Dividers
+      document.getElementById("heroGarlandLeft").innerHTML = RoyalAtelierArt.createHeroGarlandSVG();
+      document.getElementById("heroGarlandRight").innerHTML = RoyalAtelierArt.createHeroGarlandSVG();
+      document.querySelectorAll(".floral-divider").forEach((el) => {
+        el.innerHTML = RoyalAtelierArt.createGarlandDividerSVG();
+      });
+      document.getElementById("closingBaseWreath").innerHTML = RoyalAtelierArt.createClosingBaseWreathSVG();
+
+      // Welcome Blessing with Illuminated Drop-Cap
+      document.getElementById("welcomeHeading").textContent = INVITE_CONFIG.welcomeHeading;
+      const bodyStr = INVITE_CONFIG.welcomeBody.trim();
+      document.getElementById("welcomeDropCap").textContent = bodyStr.charAt(0);
+      document.getElementById("welcomeBodyRest").textContent = bodyStr.slice(1);
+      document.getElementById("welcomeSignature").textContent = couplePair;
+
+      // Scratch Card
+      document.getElementById("scratchTitleBefore").textContent = INVITE_CONFIG.scratchTitleBefore;
+      document.getElementById("scratchTitleAfter").textContent = INVITE_CONFIG.scratchTitleAfter;
+      document.getElementById("revealedDateMain").textContent = INVITE_CONFIG.formattedDate;
+      document.getElementById("revealedDateSub").textContent = INVITE_CONFIG.formattedDayTime;
+
+      // Colorful Royal Celebration Timeline
+      const timelineList = document.getElementById("timelineList");
+      INVITE_CONFIG.schedule.forEach((ev) => {
+        const item = document.createElement("div");
+        item.className = "timeline-item";
+        item.style.setProperty("--event-jewel", ev.jewel);
+        item.style.setProperty("--event-glow", ev.glow);
+        item.innerHTML = `
+          <div class="timeline-time">${ev.time}</div>
+          <div class="timeline-node-col" aria-hidden="true">
+            <span class="timeline-jewel"></span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-title-row">
+              ${RoyalAtelierArt.getTimelineIconSVG(ev.icon)}
+              <h3 class="timeline-event-title">${ev.title}</h3>
+            </div>
+            <p class="timeline-event-sub">${ev.subtitle}</p>
+          </div>
+        `;
+        timelineList.appendChild(item);
+      });
+
+      // Midnight-Peacock Venue Card
+      document.getElementById("venueName").textContent = INVITE_CONFIG.venue.name;
+      document.getElementById("venueAddress").innerHTML = INVITE_CONFIG.venue.addressLines.join("<br />");
+      document.getElementById("venueMapBtn").href = INVITE_CONFIG.venue.mapsUrl;
+
+      if (INVITE_CONFIG.venuePhotoUrl && INVITE_CONFIG.venuePhotoUrl.trim()) {
+        const bgEl = document.getElementById("venuePhotoBg");
+        bgEl.style.backgroundImage = `url("${INVITE_CONFIG.venuePhotoUrl.trim()}")`;
+        bgEl.classList.add("has-photo");
+      }
+
+      // Dress Code & Interactive Silk-Velvet Medallions
+      document.getElementById("dressCodeTitle").textContent = INVITE_CONFIG.dressCode.heading;
+      document.getElementById("dressCodeNote").textContent = INVITE_CONFIG.dressCode.note;
+
+      const swatchesRow = document.getElementById("swatchesRow");
+      const swatchCaption = document.getElementById("swatchCaption");
+      INVITE_CONFIG.dressCode.swatches.forEach((sw, index) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "swatch-btn" + (index === 0 ? " is-active" : "");
+        btn.setAttribute("aria-label", sw.pairing);
+        btn.innerHTML = `
+          <span class="silk-swatch" style="--swatch-color: ${sw.hex};"></span>
+          <span class="swatch-name">${sw.name}</span>
+        `;
+
+        const selectSwatch = () => {
+          swatchesRow.querySelectorAll(".swatch-btn").forEach((b) => b.classList.remove("is-active"));
+          btn.classList.add("is-active");
+          swatchCaption.textContent = sw.pairing;
+        };
+
+        btn.addEventListener("click", selectSwatch);
+        btn.addEventListener("mouseenter", selectSwatch);
+        swatchesRow.appendChild(btn);
+      });
+      if (INVITE_CONFIG.dressCode.swatches[0]) {
+        swatchCaption.textContent = INVITE_CONFIG.dressCode.swatches[0].pairing;
+      }
+
+      // Closing Keepsake Arch
+      document.getElementById("closingMessage").textContent = INVITE_CONFIG.closingMessage;
+      document.getElementById("closingCrestInitials").textContent = INVITE_CONFIG.initials;
+      document.getElementById("closingNames").textContent = couplePair;
+      document.getElementById("closingFooterLine").textContent =
+        `${INVITE_CONFIG.formattedDateUpper}  •  ${INVITE_CONFIG.venue.cityShort}`;
+    }
+
+    /* ==========================================================================
+       10. SCROLL REVEAL OBSERVER & ROYAL ENTRY GATE CHOREOGRAPHY
+       ========================================================================== */
+    function initScrollReveals() {
+      const els = document.querySelectorAll(".reveal");
+      if (!("IntersectionObserver" in window)) {
+        els.forEach((el) => el.classList.add("is-visible"));
+        return;
+      }
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -22px 0px" }
+      );
+      els.forEach((el) => observer.observe(el));
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      hydrateInvitation();
+      initCountdown();
+      initScratchCard();
+      initVenueBokeh();
+      initRsvpCard();
+      initAddToCalendar();
+
+      const music = new RoyalAmbientAudioEngine(INVITE_CONFIG.musicUrl);
+      const canopy = initCanopyCanvas();
+      const entryGate = document.getElementById("entryGate");
+      const audioBtn = document.getElementById("audioToggleBtn");
+      let hasOpened = false;
+
+      function syncAudioButton(playing) {
+        audioBtn.classList.toggle("is-playing", playing);
+        audioBtn.setAttribute("aria-pressed", String(playing));
+      }
+
+      function openRoyalInvitation() {
+        if (hasOpened) return;
+        hasOpened = true;
+
+        // 1. Fade in procedural acoustic harp, felt-piano & silk drone (1.5s)
+        music.start(1.5);
+        syncAudioButton(true);
+        audioBtn.classList.add("is-ready");
+
+        // 2. Wax seal lifts with golden sparks, 3D scalloped flap unfolds, sheer silk drapes part
+        entryGate.classList.add("is-opening");
+        canopy.triggerBurst();
+
+        // 3. Smoothly unlock vertical scroll into the gilded Jharokha Hero
+        setTimeout(() => {
+          document.body.classList.remove("scroll-locked");
+          entryGate.classList.add("is-dismissed");
+          initScrollReveals();
+
+          setTimeout(() => {
+            canopy.stop();
+            entryGate.style.display = "none";
+          }, 960);
+        }, 1650);
+      }
+
+      entryGate.addEventListener("click", openRoyalInvitation);
+      entryGate.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openRoyalInvitation();
+        }
+      });
+
+      audioBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        syncAudioButton(music.toggle());
+      });
+    });
+  </script>
+</body>
+</html>
